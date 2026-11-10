@@ -1,0 +1,3 @@
+'YMOSBridge.compact_reflection_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.reflection_positive_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E2_reflection_positive' depends on axioms: [propext, Classical.choice, Quot.sound]

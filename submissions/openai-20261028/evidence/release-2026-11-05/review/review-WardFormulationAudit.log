@@ -1,0 +1,4 @@
+'YMReview.WardAudit.windows_exist' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.WardAudit.phase_translation_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.WardAudit.phase_translation_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.WardAudit.phase_window_independent' depends on axioms: [propext, Classical.choice, Quot.sound]

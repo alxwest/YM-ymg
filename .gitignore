@@ -1,0 +1,9 @@
+.DS_Store
+**/.lake/
+**/.tools/
+**/runs/
+**/__pycache__/
+*.pyc
+# The assessment is distributed as a PDF; its LaTeX source is kept separately.
+/docs/assessment-*.tex
+/submissions/*/docs/assessment.tex

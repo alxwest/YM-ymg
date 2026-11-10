@@ -1,0 +1,98 @@
+{
+  "checked_utc": "2026-11-03T19:21:28.429513+00:00",
+  "passed": true,
+  "lean_version": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "source_root": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+  "seconds": 40.009,
+  "warnings": 0,
+  "modules_recompiled": 2,
+  "declarations_audited": [
+    {
+      "name": "YMReview.OPE.from_source",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "YMReview.OPE.phase_difference",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "YMReview.OPE.constructed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "YMReview.OPE.channel_assembly",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "YMReview.OPE.single_field",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "no_admissions": true,
+  "standard_axioms_only": true,
+  "source_inputs_match_repository": {
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "lake-manifest.json": "389c72d12e69c19b8a699df76405b2b1538f8f46ae77837fd2e972dda52724c3",
+    "ChallengeSpec.lean": "e48b0be2b72d16b9b87c6c1923b3ae814270387bf9312b5cb0661dfa3e243749",
+    "Solution.lean": "1838214ba7159a2babe703000cfd9c43905fb909c1f27b73c46aae48c11ece24",
+    "Construction.lean": "86286ed17925b3e729cd2f721347e27054ea935f2653ceaa35b3b49fc25c343c",
+    "HierarchyBridge.lean": "82c27a4ecb393c65566a09addd97d70aea7cc62b990d383293adde53d0fc423a",
+    "YM/Nonperturbative/HeadlineSpec.lean": "df0eb870b2ece0a17c96816e265558cb8cbd713c47b5214aca375602571ac1fc",
+    "YM/Nonperturbative/Headlines.lean": "8c36180f8cae5ff1d6575358daf880e593aec140b6e0e28df9c14c2c3738a194",
+    "YM/Nonperturbative/Continuum.lean": "dc710c47a991b8bc08daf0bd12f675e0e2e92c849c298bd18d57872d3b9859ad",
+    "YM/OPE/Orbits/Cuts.lean": "463919871d88c9b9f58e198feba224b7cef5ba9ce1c6aa5a3cdf560936a8aec0",
+    "YM/OPE/Orbits/Stars.lean": "13d012d273a83254e4ea50beb1d9e17ae2335eb698ffa6c0a580ce0bacd748b7",
+    "YM/OPE/Orbits/System.lean": "b88bcd5a9806de9909cd6fd1d6c035bd0abde59c4212d79674f47797b7824516",
+    "YM/OPE/Orbits/Kernel.lean": "8e70cea9a1578157baf47a5904ef3beb7119edbeea5a0679b50276d069dcca0e",
+    "YM/OPE/Nesting/Endpoint.lean": "522dd62bd2c412bba21e2c71ac1f9523663fcbc95d87a7d00265ac45766303a8"
+  },
+  "modules": [
+    {
+      "module": "OPESpec",
+      "sha256": "3ea7ffb5f7b386036ddb9bab7753d5bcc3e198853aee70b09f06be67891813dc",
+      "log": "logs/OPESpec.check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "OPECheck",
+      "sha256": "ef5926e323e8fa47b8096a04e5a4c4cdaeba7a90545be9613e77c6eda5f75578",
+      "log": "logs/OPECheck.check.log",
+      "log_sha256": "5cab3e5c20aedca87641f149a6ea48cb00b78eb6c4829f7532d2f3d6f1ae3c7d"
+    }
+  ],
+  "submission_build_reused": true,
+  "additional_analytic_premises_at_endpoint": false,
+  "common_radius_before_phase": true,
+  "same_hierarchy_as_public_properties": true,
+  "combined_acceptance_and_comparator_inputs_unchanged": true,
+  "comparator_run_on_this_target": false,
+  "human_semantic_signoff_complete": false,
+  "scope": "Explicit-radius coefficient and remainder bounds with a common coefficient family for all phases, spectators and finite truncations in one hierarchy; two-state difference bound, exact channel assembly and single-field recovery.",
+  "not_claimed": [
+    "All-orders perturbative matching of coefficients.",
+    "Convergence of the infinite OPE at fixed distance.",
+    "Equality of coefficients across distinct IR extractions.",
+    "Equality of condensates or uniqueness of phase.",
+    "Independent restatement and audit of the full nested-tree estimates."
+  ]
+}

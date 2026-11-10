@@ -1,0 +1,14 @@
+{
+  "platform": "macOS-15.7.2-arm64-arm-64bit",
+  "architecture": "arm64",
+  "lean": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "lake": "Lake version 5.0.0-src+8c9756b (Lean version 4.32.0)",
+  "elan": "elan 4.2.4 (227caca13 2026-08-25)",
+  "source_directory": "/Users/oai/Documents/YM-construction-challenge",
+  "build_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+  "toolchain_directory": "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0",
+  "toolchain_sha256": "4faa4757f7ca5e7d9588a9de779550fa58bdf01498edb966f15029e2ea117e4e",
+  "project_build_cache_present_at_start": false,
+  "dependency_cache": "Mathlib official cache; project sources compiled locally",
+  "LEAN_NUM_THREADS": 8
+}

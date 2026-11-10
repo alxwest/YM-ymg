@@ -1,0 +1,18 @@
+{
+  "stage": "verify-joint",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-DmaxHeartbeats=0",
+    "-DmaxRecDepth=4096",
+    "VerifyJoint.lean"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+  "started_utc": "2026-10-29T05:35:35.729407+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "elapsed_seconds": 530.93,
+  "finished_utc": "2026-10-29T05:44:26.662228+00:00"
+}

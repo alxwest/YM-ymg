@@ -1,0 +1,18 @@
+'YMReview.Examples.LeadingTrace.selected_state_is_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.centering_uses_the_phase_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LeadingTrace.centered_one_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.two_point_is_selected_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.separated_kernel_is_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.source_and_OS_fields_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.centered_trace_has_mixed_lattice_origin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LeadingTrace.mixed_expectations_are_phase_averages' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LeadingTrace.radial_identification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.coefficient_is_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.leading_from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LeadingTrace.constructed_with_trace' depends on axioms: [propext, Classical.choice, Quot.sound]

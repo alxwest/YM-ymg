@@ -1,0 +1,11 @@
+'YMReview.Examples.OSAxioms.kernel_is_the_selected_correlation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.OSAxioms.separated_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.pairing_is_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.pairing_is_the_selected_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.E0_continuity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.E0_prime_uniform_arity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.E2_full_target_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.E4_separated_groups' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OSAxioms.complete_OS_on_this_hierarchy' depends on axioms: [propext, Classical.choice, Quot.sound]

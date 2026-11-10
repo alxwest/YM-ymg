@@ -1,0 +1,209 @@
+{
+  "started_utc": "2026-11-05T22:36:57.139869+00:00",
+  "stage": "comparator",
+  "status": "passed",
+  "source": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+  "platform": "macOS-15.7.2-arm64-arm-64bit",
+  "run_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator",
+  "commands": [
+    {
+      "name": "control-accept",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/controls/accept",
+      "started_utc": "2026-11-05T22:36:58.203992+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:37:00.854996+00:00",
+      "seconds": 2.651,
+      "expected_behavior": true,
+      "log": "control-accept.log"
+    },
+    {
+      "name": "control-statement_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/controls/statement_mismatch",
+      "started_utc": "2026-11-05T22:37:00.855318+00:00",
+      "exit_code": 1,
+      "finished_utc": "2026-11-05T22:37:01.980769+00:00",
+      "seconds": 1.125,
+      "expected_behavior": true,
+      "log": "control-statement_mismatch.log"
+    },
+    {
+      "name": "control-forbidden_axiom",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/controls/forbidden_axiom",
+      "started_utc": "2026-11-05T22:37:01.981106+00:00",
+      "exit_code": 1,
+      "finished_utc": "2026-11-05T22:37:03.119021+00:00",
+      "seconds": 1.138,
+      "expected_behavior": true,
+      "log": "control-forbidden_axiom.log"
+    },
+    {
+      "name": "control-definition_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/controls/definition_mismatch",
+      "started_utc": "2026-11-05T22:37:03.119395+00:00",
+      "exit_code": 1,
+      "finished_utc": "2026-11-05T22:37:04.241573+00:00",
+      "seconds": 1.122,
+      "expected_behavior": true,
+      "log": "control-definition_mismatch.log"
+    },
+    {
+      "name": "comparator-ope",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/project/ope.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/project",
+      "started_utc": "2026-11-05T22:37:05.918599+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:55:39.606847+00:00",
+      "seconds": 1113.679,
+      "expected_behavior": true,
+      "log": "comparator-ope.log"
+    }
+  ],
+  "source_build_present_at_start": true,
+  "LEAN_NUM_THREADS": "2",
+  "comparator_mode": "upstream development launcher; no Landrun isolation or external kernel",
+  "integrity_before": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "os_correspondence": {
+    "passed": true,
+    "declarations": [
+      {
+        "name": "OSInnerProduct",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OsterwalderSchraderAxioms",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OSArityLinearGrowthCondition",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Growth.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "BorchersSequence",
+        "upstream": "Specification/Wightman.lean",
+        "local": "YangMills/OSRecon/Vendored/OSConj.lean",
+        "whole_declaration_matches": true
+      }
+    ],
+    "limitation": "Text correspondence after documented normalization; full upstream projects are not jointly compiled."
+  },
+  "prepared_project": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-ope-comparator/project",
+  "tools": [
+    {
+      "name": "comparator",
+      "url": "https://github.com/leanprover/comparator.git",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "binary_sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738"
+    },
+    {
+      "name": "lean4export",
+      "url": "https://github.com/leanprover/lean4export.git",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "binary_sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e"
+    }
+  ],
+  "launcher_sha256": "167507c89d8b3c7667ad78b50df7b19f89883751a01efd1457404fa34a994e8b",
+  "environment_overrides": {
+    "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+    "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+  },
+  "controls_passed": true,
+  "dependencies": {
+    "lean": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+    "packages": [
+      {
+        "name": "plausible",
+        "revision": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+        "tracked_changes": false
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "tracked_changes": false
+      },
+      {
+        "name": "importGraph",
+        "revision": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+        "tracked_changes": false
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+        "tracked_changes": false
+      },
+      {
+        "name": "aesop",
+        "revision": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+        "tracked_changes": false
+      },
+      {
+        "name": "Qq",
+        "revision": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+        "tracked_changes": false
+      },
+      {
+        "name": "batteries",
+        "revision": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+        "tracked_changes": false
+      },
+      {
+        "name": "Cli",
+        "revision": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+        "tracked_changes": false
+      },
+      {
+        "name": "mathlib",
+        "revision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+        "tracked_changes": false
+      }
+    ]
+  },
+  "integrity_after": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "finished_utc": "2026-11-05T22:55:39.928721+00:00"
+}

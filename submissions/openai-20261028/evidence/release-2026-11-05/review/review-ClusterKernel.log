@@ -1,0 +1,2 @@
+'YMOSBridge.scalarKernel_cone_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.scalarKernel_radial_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]

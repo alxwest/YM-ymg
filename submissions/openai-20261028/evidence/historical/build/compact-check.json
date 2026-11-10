@@ -1,0 +1,16 @@
+{
+  "stage": "compact-check",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "verification/CompactCheck.lean"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+  "started_utc": "2026-10-29T05:44:58.747925+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "elapsed_seconds": 10.59,
+  "finished_utc": "2026-10-29T05:45:09.342538+00:00"
+}

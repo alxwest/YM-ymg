@@ -1,0 +1,25 @@
+{
+  "source_import_graph_matches_fresh_solution_usage": true,
+  "solution_modules": 9469,
+  "reference_project_imports": [
+    "Challenge",
+    "ChallengeSpec",
+    "PublicTheory",
+    "PublicWilson"
+  ],
+  "all_warning_records_identical_between_clean_and_incremental_build": true,
+  "warning_total": 2453,
+  "unknown_project_imports": [],
+  "unchanged_lean_sources": 9477,
+  "reports_written": [
+    "audit-report.txt",
+    "project-map.txt",
+    "project-map.mmd",
+    "definition-review.tsv",
+    "warning-details.tsv",
+    "module-index.tsv",
+    "component-summary.tsv",
+    "import-edges.tsv",
+    "project-index.json"
+  ]
+}

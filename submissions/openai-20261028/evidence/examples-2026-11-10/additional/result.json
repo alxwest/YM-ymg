@@ -1,0 +1,538 @@
+{
+  "date": "2026-11-10",
+  "status": "passed",
+  "scope": "Ordinary Lean compilation of five additional commented examples, plus the unchanged OPESpec and OPECheck dependencies, against the existing October acceptance build.",
+  "compiler_version": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "source_comparison_counts": {
+    "submission": 9477,
+    "review_existing": 41,
+    "review_dependencies_compiled_here": 2
+  },
+  "source_mismatches": [],
+  "review_modules_absent_from_existing_acceptance_environment_and_compiled_here": [
+    "OPESpec.lean",
+    "OPECheck.lean"
+  ],
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "2",
+    "LEAN_PATH": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/Cli/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/batteries/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/Qq/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/aesop/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/importGraph/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/plausible/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/mathlib/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project/.lake/build/lib/lean:/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/lib/lean"
+  },
+  "example_results": [
+    {
+      "file": "docs/examples/OSAxioms-20261028.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/OSAxioms-20261028.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples/OSAxioms-20261028.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 12.08,
+      "source_sha256": "41436834656174bee5743c148357fd941d5a41450722a81ddc2236500fce97d8",
+      "log": "OSAxioms-20261028.log",
+      "log_sha256": "9a4fcda590f1aa2fa15acd7334b4ff5653a604a2a42cdcd71402b13de1545bc4",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": [
+        {
+          "name": "YMReview.Examples.OSAxioms.kernel_is_the_selected_correlation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.separated_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.pairing_is_integrable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.pairing_is_the_selected_integral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.E0_continuity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.E0_prime_uniform_arity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.E2_full_target_form",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.E4_separated_groups",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OSAxioms.complete_OS_on_this_hierarchy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "docs/examples/OperatorContent-20261028.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/OperatorContent-20261028.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples/OperatorContent-20261028.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 3.53,
+      "source_sha256": "3c0cb1eb1efee12313f2a645ea7fd9bc8e6c5f629f511607e6531057021d4897",
+      "log": "OperatorContent-20261028.log",
+      "log_sha256": "8cc7fb74a374bdc0fea2bd5ae2a9a517fe38772e8b73a2c7889a38194ab3a610",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": [
+        {
+          "name": "YMReview.Examples.OperatorContent.every_registered_polynomial_appears",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OperatorContent.free_sector_dictionary",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OperatorContent.free_residual_vanishes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OperatorContent.interacting_field_dictionary",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OperatorContent.each_phase_retains_the_dictionary",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OperatorContent.full_word_domain_is_dense",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.OperatorContent.surviving_field_has_nonzero_operator",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "docs/examples/TranslationWard-20261028.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/TranslationWard-20261028.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples/TranslationWard-20261028.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 3.21,
+      "source_sha256": "5d5da9a434a31e277f251e3607dd6937ec7268869f22cda4707a891028a89e22",
+      "log": "TranslationWard-20261028.log",
+      "log_sha256": "5fc8ec6fed741c2f6138663c88c6c4b41770032d6599e62e4ac31b1024c6356d",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": [
+        {
+          "name": "YMReview.Examples.TranslationWard.admissible_shell_exists",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.TranslationWard.tensor_generates_translations",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.TranslationWard.shell_integrand_is_integrable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.TranslationWard.shell_charge_is_window_independent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "docs/examples/LatticeAndScale-20261028.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/LatticeAndScale-20261028.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples/LatticeAndScale-20261028.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 13.32,
+      "source_sha256": "4a85e9b74893e8535c34faf8398ce7052be35cd4fd35bdd0abf8220eeb5d2527",
+      "log": "LatticeAndScale-20261028.log",
+      "log_sha256": "9ec59ded1a00a51740b9b2e45e4339f5f22bfef8fe43ebfdff6dc5052ff337d1",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": [
+        {
+          "name": "YMReview.Examples.LatticeAndScale.same_plaquette",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.coupling_conversion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.normalized_law_on_each_lattice",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.finite_moments_are_the_family_moments",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.reference_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.side_length_in_physical_units",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.one_positive_reference_coupling",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.kinetic_path_agrees_across_volumes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.insertion_has_the_prescribed_reference_value",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.selected_positivity_reaches_the_lattice_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.LatticeAndScale.positive_probe_on_the_accepted_witness",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "docs/examples/CommonOPE-20261028.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/CommonOPE-20261028.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples/CommonOPE-20261028.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 13.6,
+      "source_sha256": "e041afb3989bd80942e969839e6615621ac4f8bb5d4aa8c09c07e4aa9e3d1e6a",
+      "log": "CommonOPE-20261028.log",
+      "log_sha256": "1354ae01c5bd962d4eef0435b3093bdecfa1e56e3609ec1d904b97d340a53ccb",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": [
+        {
+          "name": "YMReview.Examples.CommonOPE.explicit_radius_from_source",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.CommonOPE.coefficient_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.CommonOPE.remainder_uniform_in_state",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.CommonOPE.difference_of_states",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.CommonOPE.channel_assembly",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.CommonOPE.single_insertion_recovered",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.Examples.CommonOPE.constructed_with_public_properties",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    }
+  ],
+  "dependency_results": [
+    {
+      "file": "checks/OPESpec.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/OPESpec.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/checks/OPESpec.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 8.42,
+      "source_sha256": "3ea7ffb5f7b386036ddb9bab7753d5bcc3e198853aee70b09f06be67891813dc",
+      "log": "OPESpec.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": []
+    },
+    {
+      "file": "checks/OPECheck.lean",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-additional-20261110/OPECheck.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/checks/OPECheck.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+      "exit_code": 0,
+      "elapsed_seconds": 13.11,
+      "source_sha256": "ef5926e323e8fa47b8096a04e5a4c4cdaeba7a90545be9613e77c6eda5f75578",
+      "log": "OPECheck.log",
+      "log_sha256": "5cab3e5c20aedca87641f149a6ea48cb00b78eb6c4829f7532d2f3d6f1ae3c7d",
+      "warnings": 0,
+      "errors": 0,
+      "axioms": [
+        {
+          "name": "YMReview.OPE.from_source",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.OPE.phase_difference",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.OPE.constructed",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.OPE.channel_assembly",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "YMReview.OPE.single_field",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    }
+  ],
+  "axiom_audit": {
+    "printed_example_theorems": 38,
+    "printed_dependency_theorems": 5,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "all_within_permitted_set": true,
+    "new_example_source_scan": "No axiom, unsafe, sorry or admit tokens outside comments."
+  },
+  "warnings": 0,
+  "errors": 0,
+  "comparator_run": false,
+  "fresh_dependency_rebuild": false,
+  "limitation": "The submitted and 41 existing review Lean sources were compared with the reused build environment. These comparisons are not a fresh rebuild or an independent audit of every imported compiled object. The two OPE modules were compiled from the unchanged packaged review sources for these examples.",
+  "earlier_examples_record": "../result.json"
+}

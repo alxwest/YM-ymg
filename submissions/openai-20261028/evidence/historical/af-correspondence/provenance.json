@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-31",
+  "group_head": "359646c30e6c9003e62524c6b2a83d4573594d61",
+  "submission_toolchain": "leanprover/lean4:v4.32.0",
+  "target_declarations": [
+    {
+      "name": "uvLog",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    },
+    {
+      "name": "freeTraceTwoPoint",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    },
+    {
+      "name": "freeTraceTwoPoint_pos",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    },
+    {
+      "name": "KernelUVPowerLaw",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    },
+    {
+      "name": "KernelUVAsymptoticallyFree",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    },
+    {
+      "name": "norm_tendsto_punctured",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    },
+    {
+      "name": "uvLog_tendsto_atTop",
+      "declaration_and_proof_identical_modulo_comments_whitespace": true
+    }
+  ],
+  "gauge_copy": "byte-for-byte",
+  "two_loop_copy": "only ShortDistance import redirected",
+  "scalar_kernel_copy": "byte-for-byte from completed OS bridge",
+  "spacetime": "EuclideanSpace R (Fin 4), the Euclidean norm, not the plain function-space sup norm",
+  "scope": "Selected exact target declarations jointly checked on submission Lean 4.32; not a joint build of full OSforGFF or group repository.",
+  "source_snapshots": [
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/Endpoint.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/Endpoint.lean",
+      "sha256": "cbc593717e66e020f99dacc87981524884031340fb56a354ad6116943a5d42d5"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/Atlas/Sink.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/Atlas/Sink.lean",
+      "sha256": "a35b0ebdd9629ef3055273dcab104ae2539b7f93d1c36ab19d100618adb473ef"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/Verse/Day.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/Verse/Day.lean",
+      "sha256": "8363f0fe1449aaa34636a7fcd69d5132f8533163d7779efa656969cf718b4bbc"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/Chart/Nectar.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/Chart/Nectar.lean",
+      "sha256": "3c7b8392a43aca361191155f37a935e97d12b5ef9a5eed7f7b32428d95b43309"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/LogScaling.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/LogScaling.lean",
+      "sha256": "c920b4ff541c38582eba5b802ed740a075873b93f18c17b3faee39dab3d66d3c"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/WilsonTrace.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/WilsonTrace.lean",
+      "sha256": "f0a1eda20afaf5e570777856d58c06354ae6d3b230a8eae6ce86fb605773bc82"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/TraceExtension/Centered.lean",
+      "copy": "evidence/submitted/YM/TraceExtension/Centered.lean",
+      "sha256": "9e690a32ea0ae8a322396cb4dd89f74bed29b0fed60272f14debd14315375101"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Trace/Center.lean",
+      "copy": "evidence/submitted/YM/Trace/Center.lean",
+      "sha256": "5263bfbf4ec5b3c20906b1a9211534bb6633b71208915481a3b13f35077b5489"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Pert/Asymptotics/RawAxis.lean",
+      "copy": "evidence/submitted/YM/Pert/Asymptotics/RawAxis.lean",
+      "sha256": "e14d64967d4bf633852c0f73bd8a1484f8d7ba4ab6da466e99cd88107c8f44dd"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/RG/History.lean",
+      "copy": "evidence/submitted/YM/RG/History.lean",
+      "sha256": "ab604669cec205cd92020d34e4e672417ab40a0f484621067803548ba7bf81f6"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Shoot/Race.lean",
+      "copy": "evidence/submitted/YM/Shoot/Race.lean",
+      "sha256": "e4917c542dfe6c3557fd5760fe7c35f292c4a1eeca6285db54e4906c4c4cf305"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Price/Waits.lean",
+      "copy": "evidence/submitted/YM/Price/Waits.lean",
+      "sha256": "0818f9c5698f1aa689e76cd4fb1fcf84e453dd918374988da173633f1ea2b9e2"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Space/Configurations.lean",
+      "copy": "evidence/submitted/YM/Space/Configurations.lean",
+      "sha256": "fe1c94f9ae1c5f5b41a6551bb258c4f7dff03579fe089c1c3c55233fc1b1a8e0"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Core/ShortDistance.lean",
+      "copy": "evidence/group/YangMills/Core/ShortDistance.lean",
+      "sha256": "45f906e4d373ca2641e82a7486d36c1a030b872cbdbf79226a3c8bae0346ebf6"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Core/GaugeGroup.lean",
+      "copy": "evidence/group/YangMills/Core/GaugeGroup.lean",
+      "sha256": "136d59e698dde46cdf99e1fa37ce2b94ee210053f0d5f9b2e3b37938f3d4cfd7"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Core/TwoLoop.lean",
+      "copy": "evidence/group/YangMills/Core/TwoLoop.lean",
+      "sha256": "480311f4a836c7ed27e38f2de21b7546dcf0a451b586f5f6a61a237a1155b730"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Core/Tests.lean",
+      "copy": "evidence/group/YangMills/Core/Tests.lean",
+      "sha256": "a3aa6f60aa7701ad87e7c37772e7c4cef1f7c599ff487e644fc6d7e6ca42e16e"
+    }
+  ]
+}

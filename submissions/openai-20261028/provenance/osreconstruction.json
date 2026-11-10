@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/xiyin137/OSreconstruction",
+  "commit": "32feb1f595b2b1cfe4e091736b170fdcad780a1a",
+  "axiom_declarations_commit": "32b6102bd0291915c01155d1ac1786ec159a226a",
+  "files": [
+    {
+      "path": "provenance/osreconstruction/Specification.lean",
+      "source_path": "os-reconstruction/OSReconstruction/Specification.lean",
+      "sha256": "2077a663d350e97d7a4a4e82bf31e8a7719cfff781fc4059c51638f8d3afe118"
+    },
+    {
+      "path": "provenance/osreconstruction/Specification/Wightman.lean",
+      "source_path": "os-reconstruction/OSReconstruction/Specification/Wightman.lean",
+      "sha256": "a6ee8103f40eb8eeabcdd04a7c33cb9e1a73560e47ccd06a47804b705d2842ce"
+    }
+  ]
+}

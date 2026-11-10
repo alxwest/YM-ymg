@@ -1,0 +1,12 @@
+{
+  "challenge_module": "AcceptanceChallenge",
+  "solution_module": "CombinedAcceptance",
+  "theorem_names": [
+    "YMReview.Acceptance.combined_acceptance"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

@@ -1,0 +1,15 @@
+'YMReview.Examples.OperatorContent.every_registered_polynomial_appears' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.OperatorContent.free_sector_dictionary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OperatorContent.free_residual_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OperatorContent.interacting_field_dictionary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.OperatorContent.each_phase_retains_the_dictionary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.OperatorContent.full_word_domain_is_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.OperatorContent.surviving_field_has_nonzero_operator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

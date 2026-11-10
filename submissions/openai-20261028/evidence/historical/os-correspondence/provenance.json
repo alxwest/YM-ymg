@@ -1,0 +1,172 @@
+{
+  "repositories": [
+    {
+      "path": "/Users/oai/Documents/GitHub/yang-mills",
+      "head": "359646c30e6c9003e62524c6b2a83d4573594d61",
+      "status": ""
+    },
+    {
+      "path": "/Users/oai/Documents/GitHub/OSreconstruction",
+      "head": "32feb1f595b2b1cfe4e091736b170fdcad780a1a",
+      "status": ""
+    }
+  ],
+  "copies": [
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/Vendored/Spacetime.lean",
+      "copy": "YangMills/OSRecon/Vendored/Spacetime.lean",
+      "source_sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668",
+      "copy_sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668",
+      "declarations_unchanged": true,
+      "adaptation": "none"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/Vendored/TensorProduct.lean",
+      "copy": "YangMills/OSRecon/Vendored/TensorProduct.lean",
+      "source_sha256": "78cbd9de644663ed556c3f05f752a040128e7882af28e9627da50a3f5b39f06e",
+      "copy_sha256": "78cbd9de644663ed556c3f05f752a040128e7882af28e9627da50a3f5b39f06e",
+      "declarations_unchanged": true,
+      "adaptation": "none"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/Vendored/ZeroDiagonal.lean",
+      "copy": "YangMills/OSRecon/Vendored/ZeroDiagonal.lean",
+      "source_sha256": "fa510d3adde29ef395faf93352ecc74596ecc97aad8b5600d9c2bd4b565427bd",
+      "copy_sha256": "160576436d6e809bdf249d1029033ec11f08c7836f63f488d297296dcdc4284d",
+      "declarations_unchanged": true,
+      "adaptation": "Lean 4.32 elaboration setting only"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/Vendored/OSConj.lean",
+      "copy": "YangMills/OSRecon/Vendored/OSConj.lean",
+      "source_sha256": "d717b96a013c4f8850e7b5315bdaf97287aeacd5a8cec3382e1a4e34b806f880",
+      "copy_sha256": "d717b96a013c4f8850e7b5315bdaf97287aeacd5a8cec3382e1a4e34b806f880",
+      "declarations_unchanged": true,
+      "adaptation": "none"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/Vendored/Axioms.lean",
+      "copy": "YangMills/OSRecon/Vendored/Axioms.lean",
+      "source_sha256": "a0e70dabf0c0ef181193cebdd26ce688e5f431ecbe159e9160ff06e0b6699089",
+      "copy_sha256": "a0e70dabf0c0ef181193cebdd26ce688e5f431ecbe159e9160ff06e0b6699089",
+      "declarations_unchanged": true,
+      "adaptation": "none"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/Growth.lean",
+      "copy": "YangMills/OSRecon/Growth.lean",
+      "source_sha256": "9ceba1c37449effbb1aae62623ceb8aa7ad333f75e1ba95d76c005e3a9f29840",
+      "copy_sha256": "9ceba1c37449effbb1aae62623ceb8aa7ad333f75e1ba95d76c005e3a9f29840",
+      "declarations_unchanged": true,
+      "adaptation": "none"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Analysis/DiagonalFlatBounds.lean",
+      "copy": "ImportedDiagonalFlatBounds.lean",
+      "source_sha256": "6beff2415e118fc387328b7f2a2ba1d000e260a82e897005c2a5da4df21baf75",
+      "copy_sha256": "0dfa0b6b39af9009d848e0d9293cf695a9e69735e6e32d3a8c0ef218651b5ecb",
+      "declarations_unchanged": true,
+      "adaptation": "Import redirected to exact minimal center-weight excerpts"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Analysis/DifferentiatedKernels.lean",
+      "copy": "ImportedCenterWeights.lean",
+      "source_sha256": "9e98d5d4e409f576777426408be50bab5a79ef8f9a2f328fad2d94828f71de39",
+      "copy_sha256": "0df3139e83cc4dea488b032f686689e1b6546aecebb49eb5a60240e725583961",
+      "exact_source_line_ranges": [
+        [
+          44,
+          54
+        ],
+        [
+          84,
+          95
+        ]
+      ],
+      "adaptation": "Only needed declarations and section context extracted; Mathlib imports supplied explicitly"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Analysis/SchwartzKernels.lean",
+      "copy": "ImportedSchwartzDomain.lean",
+      "source_sha256": "3bda260104ebfc3916224c3b3f6033489274cda06ad740b88f46c42af2b54979",
+      "copy_sha256": "da32cc3c49063f761648b6f5792caf431ac9a3a1111559fd21ae18e1cb4e1e11",
+      "declarations_unchanged": true,
+      "exact_source_line_ranges": [
+        [
+          25,
+          44
+        ]
+      ],
+      "adaptation": "Exact complexDomCongr declarations; minimal Mathlib import and namespace wrapper"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Analysis/SchwartzSupportedDensity.lean",
+      "copy": "ImportedSchwartzCutoffs.lean",
+      "source_sha256": "4d5c45cfd3401246369da69e882c9ea72c66bb85b8ef111d77eed23c6b7acaad",
+      "copy_sha256": "6f6fdb12027c5de0654c8733a8a7f25d37c033cbbd8ffb1db9cdced1eb9077ad",
+      "declarations_unchanged": true,
+      "exact_source_line_ranges": [
+        [
+          1,
+          182
+        ]
+      ],
+      "adaptation": "Exact initial source section; import redirected to minimal domain equivalence; namespace closed"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/Analysis/SchwartzExternalProduct.lean",
+      "copy": "ImportedSchwartzProduct.lean",
+      "source_sha256": "36f0aa1cbda371d8876008b21ecbef2d3e727bc36d60c6d1acbc0b2c7a8f9c83",
+      "copy_sha256": "a327d573d777d2552f520c3e8c684c0c1e49ae0a3f61858326f039fc009f8e51",
+      "declarations_unchanged": true,
+      "exact_source_line_ranges": [
+        [
+          1,
+          221
+        ]
+      ],
+      "adaptation": "Exact initial source section; import redirected to minimal domain equivalence; namespace closed"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/yang-mills/YangMills/OSRecon/ReflectionApproximation.lean",
+      "copy": "ImportedReflectionApproximation.lean",
+      "source_sha256": "0e8054e323a7f1364093794ee0cc5727750f89a9902ba0242f0ecac4bbd73c39",
+      "copy_sha256": "9f6ad873fd0df355dcb3a02d62478dda666a5f323bcd72007d5d4d012d3df20f",
+      "declarations_unchanged": true,
+      "adaptation": "Three imports redirected to audited target and exact analytic excerpts; all declarations and proofs unchanged"
+    }
+  ],
+  "declaration_comparisons": [
+    {
+      "name": "OSInnerProduct",
+      "whole_declaration_matches": true,
+      "upstream": "/Users/oai/Documents/GitHub/OSreconstruction/os-reconstruction/OSReconstruction/Specification.lean",
+      "upstream_file_sha256": "2077a663d350e97d7a4a4e82bf31e8a7719cfff781fc4059c51638f8d3afe118",
+      "local": "YangMills/OSRecon/Vendored/Axioms.lean"
+    },
+    {
+      "name": "OsterwalderSchraderAxioms",
+      "whole_declaration_matches": true,
+      "upstream": "/Users/oai/Documents/GitHub/OSreconstruction/os-reconstruction/OSReconstruction/Specification.lean",
+      "upstream_file_sha256": "2077a663d350e97d7a4a4e82bf31e8a7719cfff781fc4059c51638f8d3afe118",
+      "local": "YangMills/OSRecon/Vendored/Axioms.lean"
+    },
+    {
+      "name": "OSArityLinearGrowthCondition",
+      "whole_declaration_matches": true,
+      "upstream": "/Users/oai/Documents/GitHub/OSreconstruction/os-reconstruction/OSReconstruction/Specification.lean",
+      "upstream_file_sha256": "2077a663d350e97d7a4a4e82bf31e8a7719cfff781fc4059c51638f8d3afe118",
+      "local": "YangMills/OSRecon/Growth.lean"
+    },
+    {
+      "name": "BorchersSequence",
+      "whole_declaration_matches": true,
+      "upstream": "/Users/oai/Documents/GitHub/OSreconstruction/os-reconstruction/OSReconstruction/Specification/Wightman.lean",
+      "upstream_file_sha256": "a6ee8103f40eb8eeabcdd04a7c33cb9e1a73560e47ccd06a47804b705d2842ce",
+      "local": "YangMills/OSRecon/Vendored/OSConj.lean"
+    }
+  ],
+  "normalizations": "Whole declaration comparison using group script normalize: comments/whitespace, Nat/Real/Complex spellings, explicit versus section d binder, public seminorm abbreviation. No removal of field bodies.",
+  "comparison_script_sha256": "cfc4d50620031ad82d262f87375fa78e30b2b7a43e572334c1d1e151a944e0a9",
+  "limitation": "Source correspondence across Lean versions, not a joint build of the full original Lean 4.33.0-rc1 repositories. The copied target and bridge are kernel checked together in Lean 4.32.0."
+}

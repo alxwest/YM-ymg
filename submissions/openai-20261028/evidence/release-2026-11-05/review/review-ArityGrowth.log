@@ -1,0 +1,3 @@
+'YMOSBridge.scalarKernel_all_arity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.targetKernel_all_arity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E0_prime_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

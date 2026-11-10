@@ -1,0 +1,1724 @@
+{
+  "started_utc": "2026-11-05T22:45:42.194690+00:00",
+  "stage": "review",
+  "status": "passed",
+  "source": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+  "platform": "macOS-15.7.2-arm64-arm-64bit",
+  "run_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final",
+  "commands": [
+    {
+      "name": "review-ClusterCore",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ClusterCore.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ClusterCore.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:45:47.154868+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:45:52.603780+00:00",
+      "seconds": 5.449,
+      "expected_behavior": true,
+      "log": "review-ClusterCore.log"
+    },
+    {
+      "name": "review-ClusterCones",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ClusterCones.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ClusterCones.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:45:52.604130+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:45:56.381440+00:00",
+      "seconds": 3.777,
+      "expected_behavior": true,
+      "log": "review-ClusterCones.log"
+    },
+    {
+      "name": "review-SourceScalar",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/SourceScalar.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/SourceScalar.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:45:56.381844+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:00.082024+00:00",
+      "seconds": 3.7,
+      "expected_behavior": true,
+      "log": "review-SourceScalar.log"
+    },
+    {
+      "name": "review-ClusterKernel",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ClusterKernel.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ClusterKernel.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:00.082545+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:03.903848+00:00",
+      "seconds": 3.821,
+      "expected_behavior": true,
+      "log": "review-ClusterKernel.log"
+    },
+    {
+      "name": "review-YangMills.OSRecon.Vendored.Spacetime",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/YangMills/OSRecon/Vendored/Spacetime.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/YangMills/OSRecon/Vendored/Spacetime.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:03.904455+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:07.304763+00:00",
+      "seconds": 3.4,
+      "expected_behavior": true,
+      "log": "review-YangMills.OSRecon.Vendored.Spacetime.log"
+    },
+    {
+      "name": "review-YangMills.OSRecon.Vendored.TensorProduct",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/YangMills/OSRecon/Vendored/TensorProduct.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/YangMills/OSRecon/Vendored/TensorProduct.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:07.305284+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:11.511951+00:00",
+      "seconds": 4.206,
+      "expected_behavior": true,
+      "log": "review-YangMills.OSRecon.Vendored.TensorProduct.log"
+    },
+    {
+      "name": "review-YangMills.OSRecon.Vendored.ZeroDiagonal",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/YangMills/OSRecon/Vendored/ZeroDiagonal.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/YangMills/OSRecon/Vendored/ZeroDiagonal.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:11.512420+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:15.330245+00:00",
+      "seconds": 3.818,
+      "expected_behavior": true,
+      "log": "review-YangMills.OSRecon.Vendored.ZeroDiagonal.log"
+    },
+    {
+      "name": "review-YangMills.OSRecon.Vendored.OSConj",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/YangMills/OSRecon/Vendored/OSConj.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/YangMills/OSRecon/Vendored/OSConj.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:15.330749+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:19.198321+00:00",
+      "seconds": 3.867,
+      "expected_behavior": true,
+      "log": "review-YangMills.OSRecon.Vendored.OSConj.log"
+    },
+    {
+      "name": "review-YangMills.OSRecon.Vendored.Axioms",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/YangMills/OSRecon/Vendored/Axioms.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/YangMills/OSRecon/Vendored/Axioms.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:19.198831+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:22.864344+00:00",
+      "seconds": 3.665,
+      "expected_behavior": true,
+      "log": "review-YangMills.OSRecon.Vendored.Axioms.log"
+    },
+    {
+      "name": "review-Coordinates",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/Coordinates.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/Coordinates.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:22.864829+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:26.646496+00:00",
+      "seconds": 3.781,
+      "expected_behavior": true,
+      "log": "review-Coordinates.log"
+    },
+    {
+      "name": "review-ImportedCenterWeights",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedCenterWeights.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedCenterWeights.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:26.646996+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:29.906931+00:00",
+      "seconds": 3.26,
+      "expected_behavior": true,
+      "log": "review-ImportedCenterWeights.log"
+    },
+    {
+      "name": "review-ImportedDiagonalFlatBounds",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedDiagonalFlatBounds.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedDiagonalFlatBounds.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:29.907426+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:33.957336+00:00",
+      "seconds": 4.05,
+      "expected_behavior": true,
+      "log": "review-ImportedDiagonalFlatBounds.log"
+    },
+    {
+      "name": "review-TargetKernel",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/TargetKernel.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/TargetKernel.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:33.957866+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:37.584583+00:00",
+      "seconds": 3.626,
+      "expected_behavior": true,
+      "log": "review-TargetKernel.log"
+    },
+    {
+      "name": "review-ClusterTarget",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ClusterTarget.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ClusterTarget.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:37.585107+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:41.501791+00:00",
+      "seconds": 3.916,
+      "expected_behavior": true,
+      "log": "review-ClusterTarget.log"
+    },
+    {
+      "name": "review-Temperedness",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/Temperedness.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/Temperedness.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:41.502286+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:46.282703+00:00",
+      "seconds": 4.78,
+      "expected_behavior": true,
+      "log": "review-Temperedness.log"
+    },
+    {
+      "name": "review-ClusterDomination",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ClusterDomination.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ClusterDomination.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:46.283166+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:50.144727+00:00",
+      "seconds": 3.861,
+      "expected_behavior": true,
+      "log": "review-ClusterDomination.log"
+    },
+    {
+      "name": "review-ImportedSchwartzDomain",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedSchwartzDomain.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedSchwartzDomain.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:50.145274+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:53.490833+00:00",
+      "seconds": 3.345,
+      "expected_behavior": true,
+      "log": "review-ImportedSchwartzDomain.log"
+    },
+    {
+      "name": "review-ImportedSchwartzProduct",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedSchwartzProduct.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedSchwartzProduct.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:53.491376+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:46:57.743576+00:00",
+      "seconds": 4.252,
+      "expected_behavior": true,
+      "log": "review-ImportedSchwartzProduct.log"
+    },
+    {
+      "name": "review-ClusterSchwartz",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ClusterSchwartz.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ClusterSchwartz.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:46:57.744164+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:01.706771+00:00",
+      "seconds": 3.962,
+      "expected_behavior": true,
+      "log": "review-ClusterSchwartz.log"
+    },
+    {
+      "name": "review-Invariance",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/Invariance.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/Invariance.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:01.707322+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:05.452358+00:00",
+      "seconds": 3.745,
+      "expected_behavior": true,
+      "log": "review-Invariance.log"
+    },
+    {
+      "name": "review-ReflectionTransport",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ReflectionTransport.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ReflectionTransport.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:05.452948+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:09.428022+00:00",
+      "seconds": 3.975,
+      "expected_behavior": true,
+      "log": "review-ReflectionTransport.log"
+    },
+    {
+      "name": "review-ImportedSchwartzCutoffs",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedSchwartzCutoffs.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedSchwartzCutoffs.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:09.428630+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:13.458642+00:00",
+      "seconds": 4.03,
+      "expected_behavior": true,
+      "log": "review-ImportedSchwartzCutoffs.log"
+    },
+    {
+      "name": "review-ImportedReflectionApproximation",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedReflectionApproximation.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedReflectionApproximation.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:13.459203+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:17.058757+00:00",
+      "seconds": 3.599,
+      "expected_behavior": true,
+      "log": "review-ImportedReflectionApproximation.log"
+    },
+    {
+      "name": "review-ReflectionPositivity",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ReflectionPositivity.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ReflectionPositivity.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:17.059422+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:20.773643+00:00",
+      "seconds": 3.714,
+      "expected_behavior": true,
+      "log": "review-ReflectionPositivity.log"
+    },
+    {
+      "name": "review-YangMills.OSRecon.Growth",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/YangMills/OSRecon/Growth.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/YangMills/OSRecon/Growth.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:20.774199+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:24.591096+00:00",
+      "seconds": 3.817,
+      "expected_behavior": true,
+      "log": "review-YangMills.OSRecon.Growth.log"
+    },
+    {
+      "name": "review-ArityGrowth",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ArityGrowth.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ArityGrowth.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:24.591722+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:29.349347+00:00",
+      "seconds": 4.757,
+      "expected_behavior": true,
+      "log": "review-ArityGrowth.log"
+    },
+    {
+      "name": "review-RemainingObligations",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/RemainingObligations.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/RemainingObligations.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:47:29.349968+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:48:04.425726+00:00",
+      "seconds": 35.075,
+      "expected_behavior": true,
+      "log": "review-RemainingObligations.log"
+    },
+    {
+      "name": "review-CompleteOS",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/CompleteOS.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/CompleteOS.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:48:04.426269+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:48:25.001869+00:00",
+      "seconds": 20.575,
+      "expected_behavior": true,
+      "log": "review-CompleteOS.log"
+    },
+    {
+      "name": "review-ImportedAFGauge",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedAFGauge.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedAFGauge.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:48:25.002404+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:48:27.327890+00:00",
+      "seconds": 2.325,
+      "expected_behavior": true,
+      "log": "review-ImportedAFGauge.log"
+    },
+    {
+      "name": "review-ImportedAFSpecification",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedAFSpecification.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedAFSpecification.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:48:27.328493+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:48:30.971318+00:00",
+      "seconds": 3.642,
+      "expected_behavior": true,
+      "log": "review-ImportedAFSpecification.log"
+    },
+    {
+      "name": "review-AFSourceBridge",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/AFSourceBridge.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/AFSourceBridge.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:48:30.971946+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:48:47.410726+00:00",
+      "seconds": 16.438,
+      "expected_behavior": true,
+      "log": "review-AFSourceBridge.log"
+    },
+    {
+      "name": "review-CommonScaleAudit",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/CommonScaleAudit.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/CommonScaleAudit.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:48:47.411735+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:48:51.035124+00:00",
+      "seconds": 3.623,
+      "expected_behavior": true,
+      "log": "review-CommonScaleAudit.log"
+    },
+    {
+      "name": "review-NonzeroPhysicalObservable",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/NonzeroPhysicalObservable.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/NonzeroPhysicalObservable.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:48:51.035718+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:49:11.284841+00:00",
+      "seconds": 20.249,
+      "expected_behavior": true,
+      "log": "review-NonzeroPhysicalObservable.log"
+    },
+    {
+      "name": "review-TwoPointPhysicalObservable",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/TwoPointPhysicalObservable.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/TwoPointPhysicalObservable.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:49:11.285591+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:49:32.291007+00:00",
+      "seconds": 21.005,
+      "expected_behavior": true,
+      "log": "review-TwoPointPhysicalObservable.log"
+    },
+    {
+      "name": "review-CompletenessAudit",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/CompletenessAudit.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/CompletenessAudit.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:49:32.291692+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:49:36.100299+00:00",
+      "seconds": 3.808,
+      "expected_behavior": true,
+      "log": "review-CompletenessAudit.log"
+    },
+    {
+      "name": "review-WardFormulationAudit",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/WardFormulationAudit.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/WardFormulationAudit.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:49:36.100937+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:49:39.775385+00:00",
+      "seconds": 3.674,
+      "expected_behavior": true,
+      "log": "review-WardFormulationAudit.log"
+    },
+    {
+      "name": "review-ImportedLGTData",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/ImportedLGTData.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/ImportedLGTData.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:49:39.776094+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:49:51.906008+00:00",
+      "seconds": 12.129,
+      "expected_behavior": true,
+      "log": "review-ImportedLGTData.log"
+    },
+    {
+      "name": "review-LGTWilsonBridge",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/LGTWilsonBridge.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/LGTWilsonBridge.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:49:51.906712+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:50:05.029079+00:00",
+      "seconds": 13.122,
+      "expected_behavior": true,
+      "log": "review-LGTWilsonBridge.log"
+    },
+    {
+      "name": "review-AcceptanceSpec",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/AcceptanceSpec.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/AcceptanceSpec.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:50:05.029810+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:50:25.045225+00:00",
+      "seconds": 20.015,
+      "expected_behavior": true,
+      "log": "review-AcceptanceSpec.log"
+    },
+    {
+      "name": "review-CombinedAcceptance",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/CombinedAcceptance.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/CombinedAcceptance.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:50:25.045904+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:50:45.676892+00:00",
+      "seconds": 20.63,
+      "expected_behavior": true,
+      "log": "review-CombinedAcceptance.log"
+    },
+    {
+      "name": "review-AxiomAudit",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/AxiomAudit.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/AxiomAudit.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:50:45.677660+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:51:07.181697+00:00",
+      "seconds": 21.503,
+      "expected_behavior": true,
+      "log": "review-AxiomAudit.log"
+    },
+    {
+      "name": "review-OPESpec",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/OPESpec.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/OPESpec.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:51:07.182424+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:51:18.929286+00:00",
+      "seconds": 11.746,
+      "expected_behavior": true,
+      "log": "review-OPESpec.log"
+    },
+    {
+      "name": "review-OPECheck",
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-review-final/review-objects/OPECheck.olean",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/checks/OPECheck.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+      "started_utc": "2026-11-05T22:51:18.930086+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:51:39.172995+00:00",
+      "seconds": 20.242,
+      "expected_behavior": true,
+      "log": "review-OPECheck.log"
+    }
+  ],
+  "source_build_present_at_start": true,
+  "LEAN_NUM_THREADS": "2",
+  "mathlib_cache_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/cache/mathlib",
+  "input_manifest_hashes": {
+    "provenance/package-files.json": "e7f32de3196b2ce8f8d4c00ac4507713187a9429a8dd566021653278411bdaa9",
+    "provenance/review-imports.json": "f1045a64c01149afb0c0c9d97714ded36e725373ce0f127a3e477e0584860507",
+    "provenance/october-import.json": "1ee2d290dfa6786ccd7888a4db7be48cbb55aad72a53e2533b2e1834b2ff1bb8"
+  },
+  "comparator_mode": "upstream development launcher; no Landrun isolation or external kernel",
+  "integrity_before": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "os_correspondence": {
+    "passed": true,
+    "declarations": [
+      {
+        "name": "OSInnerProduct",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OsterwalderSchraderAxioms",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OSArityLinearGrowthCondition",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Growth.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "BorchersSequence",
+        "upstream": "Specification/Wightman.lean",
+        "local": "YangMills/OSRecon/Vendored/OSConj.lean",
+        "whole_declaration_matches": true
+      }
+    ],
+    "limitation": "Text correspondence after documented normalization; full upstream projects are not jointly compiled."
+  },
+  "dependencies": {
+    "lean": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+    "packages": [
+      {
+        "name": "plausible",
+        "revision": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+        "tracked_changes": false
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "tracked_changes": false
+      },
+      {
+        "name": "importGraph",
+        "revision": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+        "tracked_changes": false
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+        "tracked_changes": false
+      },
+      {
+        "name": "aesop",
+        "revision": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+        "tracked_changes": false
+      },
+      {
+        "name": "Qq",
+        "revision": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+        "tracked_changes": false
+      },
+      {
+        "name": "batteries",
+        "revision": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+        "tracked_changes": false
+      },
+      {
+        "name": "Cli",
+        "revision": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+        "tracked_changes": false
+      },
+      {
+        "name": "mathlib",
+        "revision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+        "tracked_changes": false
+      }
+    ]
+  },
+  "review": {
+    "modules": 43,
+    "warnings": 0,
+    "declarations": [
+      {
+        "name": "YMReview.Acceptance.finite_law_on_family",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.lattice_and_scale",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.phase_and_os",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.translation_ward",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.operator_content",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.leading_trace",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.accepted_of_source",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.combined_acceptance",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.from_source",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.phase_difference",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.constructed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.channel_assembly",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.single_field",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "all_reported_declarations": [
+      {
+        "name": "YMOSBridge.chamber_ground_projection",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.chamber_mixed_heat_limit",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.chamber_word_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.phase_word_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.phase_mixed_heat_limit",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.chamber_vacuum_transverse",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.chamber_transverse_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.chamber_word_placements",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.chamber_word_cone_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.scalarKernel_rotation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.scalarKernel_real",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.scalarKernel_capped",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.scalarKernel_cone_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.scalarKernel_radial_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.targetKernel_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.targetKernel_radial_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.targetKernel_cluster_tendsto",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.schwinger_integrable",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E0_linear",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E0_tempered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.translated_kernel_majorant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.cluster_integral_product",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.weighted_kernel_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.schwinger_cluster_sequence",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E0_reality",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E1_translation_invariant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E1_rotation_invariant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E3_symmetric",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.normalized_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.compact_reflection_positive",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.reflection_positive_family",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E2_reflection_positive",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.scalarKernel_all_arity_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.targetKernel_all_arity_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E0_prime_growth",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.constructed_reflection_positive_family",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E0_prime",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.completeOS",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.constructed_tempered_family",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E4_cluster_norm",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.E4_cluster",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.verifiedOS",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.verifiedOS_growth",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMOSBridge.constructed_OS_family",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.reference_spacing",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.physical_side",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.reference_coupling",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.same_reference_coupling",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.positive_common_reference",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.shared_kinetic_paths",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.normalized_kinetic_metric",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.normalized_loop_jets",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.normalized_regular_remainders",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.reference_insertion",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.same_insertion_readout",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.CommonScale.calibrated_reset",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.NonzeroScale.nonzero_field_detected",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.NonzeroScale.Probe.dimension_ge_four",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.NonzeroScale.Probe.positive",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.NonzeroScale.Probe.converges",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.NonzeroScale.probe_from_trace",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.NonzeroScale.constructed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.joined_eq_opposed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.phaseValue_selected",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.phaseValue_nonneg",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.phaseValue_continuous_and_average",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.unselected_positive_of_selected",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.selected_positive_somewhere",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.nonzero_unselected_two_point",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.mass_limit",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.TwoPointScale.constructed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.raw_register_exhaustive",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.free_no_extra_nulls",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.free_sector_exhaustive",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.local_field_content",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.phase_field_content",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.registered_words_dense",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OperatorCompleteness.quotient_fields_not_lost",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YM.EveryPhase.recognizes",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.WardAudit.windows_exist",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.WardAudit.phase_translation_derivative",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.WardAudit.phase_translation_integrable",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.WardAudit.phase_window_independent",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.finite_law_on_family",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.lattice_and_scale",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.phase_and_os",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.translation_ward",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.operator_content",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.leading_trace",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.accepted_of_source",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Acceptance.combined_acceptance",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.from_source",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.phase_difference",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.constructed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.channel_assembly",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.OPE.single_field",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "fresh_review_objects": true
+  },
+  "integrity_after": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "finished_utc": "2026-11-05T22:51:39.981350+00:00"
+}

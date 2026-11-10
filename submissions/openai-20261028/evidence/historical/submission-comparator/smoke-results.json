@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-30T13:21:42.969825+00:00",
+  "mode": "macOS development shim; no Landrun isolation",
+  "results": [
+    {
+      "case": "accept",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.66,
+      "expected_behavior_observed": true,
+      "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-accept.log"
+    },
+    {
+      "case": "statement_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.96,
+      "expected_behavior_observed": true,
+      "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-statement_mismatch.log"
+    },
+    {
+      "case": "forbidden_axiom",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.96,
+      "expected_behavior_observed": true,
+      "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-forbidden_axiom.log"
+    }
+  ],
+  "passed": true
+}

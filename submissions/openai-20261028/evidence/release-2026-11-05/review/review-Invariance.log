@@ -1,0 +1,5 @@
+'YMOSBridge.E0_reality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E1_translation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E1_rotation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E3_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.normalized_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

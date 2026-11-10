@@ -1,0 +1,109 @@
+YM CONSTRUCTION CHALLENGE — BUILD, AXIOM AND WARNING AUDIT
+Generated: 2026-10-29T13:34:05.270260+00:00
+
+RESULT: PASS for compilation and the stated formal checks.
+This is not a conclusion that the formal problem captures every intended physical claim.
+
+BUILD EVIDENCE
+Lean 4.32.0, Apple silicon; permanent user-account installation via Elan.
+Clean build: lake build WilsonReference WilsonConstruction
+  Exit 0; 183.94 minutes; 9,470 project modules freshly compiled.
+  Project artifacts were absent at the start. The official Mathlib dependency cache was used.
+Incremental confirmation: same command; exit 0; 4.30 seconds.
+Errors in the clean-build log: 0. Warnings: 2,453 across 1,063 source files.
+The incremental build replayed the same 2,453 warning records; these are not additional warnings.
+All 9,477 supplied Lean source files still match their manifest hashes. No proof sources were edited.
+
+AXIOMS AND PROOF HOLES
+FullInventory.lean imports ConcreteSU2 and inspects every imported project declaration,
+using module ownership to distinguish project declarations from Lean and Mathlib.
+  Imported project modules: 9,469 (9,467 own at least one declaration).
+  Project declarations inspected: 250,319, including generated declarations.
+  Project axiom declarations (.axiomInfo): 0.
+  Direct sorryAx references: 0.
+  Unsafe declarations: 0.
+  Partial declarations: 302; all have the generated suffix ._unsafe_rec.
+  Reference Challenge module imported by the construction: false.
+
+The 302 partial declarations are compiler recursion helpers. Cross-checking their names
+against the freshly generated usage table places all 302 outside the 17 headline proof
+dependency closures. Lean generates these helpers with DefinitionSafety.partial in
+Lean/Elab/PreDefinition/Basic.lean (addAndCompilePartialRec). They are not additional axioms.
+The existing replay rejects partial/unsafe declarations if they occur in a headline dependency.
+
+VerifyJoint passed exact equality of the reference and solution theorem types and checked
+the reachable shared public definitions. It replayed 100,168 project declarations in a
+kernel environment initially containing only the pinned external libraries. It also
+audited 14,364 external boundary declarations and 17 headline theorems.
+Each headline uses only [propext, Classical.choice, Quot.sound].
+These are the permitted foundational axioms, not new project axioms.
+
+The one deliberate placeholder is Challenge.lean:6 (warning located at theorem line 5).
+It is the reference statement stub. VerifyJoint loads it in a separate environment;
+Solution.lean proves the same statement without importing that stub.
+A source scan excluding comments and strings found zero axiom commands and only that sorry.
+Here “new axioms” means project-declared assumptions beyond the permitted foundations;
+this is not a historical comparison against the earlier challenge revision mentioned in README.
+
+WARNINGS — EXACT COUNTS
+  827  linter.unusedVariables
+  797  linter.unusedSectionVars
+  331  linter.unusedSimpArgs
+  273  linter.unusedTactic
+   66  deprecated
+   50  linter.unnecessarySeqFocus
+   44  linter.unreachableTactic
+   36  linter.unnecessarySimpa
+    8  linter.dupNamespace
+    7  tactic_suggestion
+    5  linter.defProp
+    3  unused_name
+    3  linter.overlappingInstances
+    2  exponentiation_threshold
+    1  reference_sorry
+
+INTERPRETATION
+827 unused-variable and 797 unused-section-variable warnings, plus 3 unused-name warnings:
+  Potential cleanup or stronger-than-needed hypotheses. Some variables may be used implicitly;
+  do not remove hypotheses blindly. These diagnostics do not establish a semantic defect.
+331 unused simp arguments; 273 ineffective tactics; 44 unreachable tactics;
+50 unnecessary sequence-focus patterns; 36 unnecessary simpa calls:
+  Proof-script cleanup. The final proof terms passed the checks described above.
+66 deprecated names, tactics or imports: future toolchain maintenance; the pinned build succeeds.
+8 duplicated namespaces, 7 tactic suggestions, 5 proposition definitions:
+  Style/maintainability diagnostics.
+3 overlapping-instance warnings:
+  YM/MultipleContact/Multi/Letting.lean:94 and :111 duplicate DecidableEq P.
+  YM/Pert/Bulk/Projected.lean:34 duplicates Fintype β.
+2 exponentiation-threshold warnings:
+  YM/FullVolume/Sym/Purse.lean:59 and YM/FullVolume/Luna/Hours.lean:34.
+  Exponent 301 exceeded evaluation threshold 256; the operation was left unevaluated.
+  Both modules compiled successfully.
+1 reference sorry warning: isolated stub described above.
+The root-level public definitions, bridges and solution emitted no warnings; the only
+root-level warning is the reference stub.
+
+COVERAGE AND LIMITS
+The 17 headline proof terms reach 100,168 of 250,319 imported project declarations.
+The other 150,151 are outside those proof terms; 2,946 imported modules own no reached declaration.
+Outside does not mean useless: elaboration helpers, compiler helpers and independent results
+can be imported without appearing in the final proof terms.
+All imported declarations received the axiom/placeholder inventory; the independent kernel
+replay covered the reached 100,168, not all 250,319.
+The compact OPE estimate check and fresh declaration-usage check also passed.
+The standalone Comparator executable was not run.
+Assessing the intended Yang–Mills problem requires reviewing the definitions and witness
+connections. The attached project map supplies that route.
+
+FILES
+build.log / build.json: original clean build.
+build-confirmation.log / build-confirmation.json: incremental build.
+verify-joint.log: exact statement, endpoint axioms and independent kernel replay.
+full-inventory.log / full-inventory.json / FullInventory.lean: extended declaration scan.
+warning-details.tsv / warning-details.json: every warning with location and complete message.
+warning-summary.json: exact warning categories, notable warnings and deprecation messages.
+partial-declarations.tsv: the 302 compiler helpers and their proof-usage status.
+project-map.txt: semantic reading guide and review questions.
+module-index.tsv / component-summary.tsv / import-edges.tsv / project-index.json: source index.
+
+Working source: /Users/oai/Documents/YM-construction-challenge-derived/work/ym-rebuild/source

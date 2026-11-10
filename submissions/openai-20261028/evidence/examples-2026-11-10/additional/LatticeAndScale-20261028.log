@@ -1,0 +1,27 @@
+'YMReview.Examples.LatticeAndScale.same_plaquette' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LatticeAndScale.coupling_conversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LatticeAndScale.normalized_law_on_each_lattice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.finite_moments_are_the_family_moments' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.reference_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.LatticeAndScale.side_length_in_physical_units' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.one_positive_reference_coupling' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.kinetic_path_agrees_across_volumes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.insertion_has_the_prescribed_reference_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.selected_positivity_reaches_the_lattice_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.Examples.LatticeAndScale.positive_probe_on_the_accepted_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

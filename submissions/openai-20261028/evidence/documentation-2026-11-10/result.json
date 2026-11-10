@@ -1,0 +1,61 @@
+{
+  "started_utc": "2026-11-10T16:06:58.178968+00:00",
+  "stage": "integrity",
+  "status": "passed",
+  "source": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+  "platform": "macOS-15.7.2-arm64-arm-64bit",
+  "run_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-repository-review-20261110/integrity-final",
+  "commands": [],
+  "source_build_present_at_start": true,
+  "LEAN_NUM_THREADS": null,
+  "mathlib_cache_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/cache/mathlib",
+  "input_manifest_hashes": {
+    "provenance/package-files.json": "a830512523a5b23bbed421c88be540d98435c33446e04151934bcbdb83df62e6",
+    "provenance/review-imports.json": "f1045a64c01149afb0c0c9d97714ded36e725373ce0f127a3e477e0584860507",
+    "provenance/october-import.json": "1ee2d290dfa6786ccd7888a4db7be48cbb55aad72a53e2533b2e1834b2ff1bb8"
+  },
+  "comparator_mode": "upstream development launcher; no Landrun isolation or external kernel",
+  "integrity_before": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "os_correspondence": {
+    "passed": true,
+    "declarations": [
+      {
+        "name": "OSInnerProduct",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OsterwalderSchraderAxioms",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OSArityLinearGrowthCondition",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Growth.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "BorchersSequence",
+        "upstream": "Specification/Wightman.lean",
+        "local": "YangMills/OSRecon/Vendored/OSConj.lean",
+        "whole_declaration_matches": true
+      }
+    ],
+    "limitation": "Text correspondence after documented normalization; full upstream projects are not jointly compiled."
+  },
+  "integrity_after": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "finished_utc": "2026-11-10T16:06:58.644063+00:00"
+}

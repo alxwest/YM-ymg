@@ -1,0 +1,194 @@
+{
+  "source_log": "/Users/oai/Documents/Codex/2026-10-28/thre/outputs/ym-rebuild/build.log",
+  "total": 2453,
+  "affected_files": 1063,
+  "error_lines": [],
+  "categories": {
+    "linter.unusedVariables": 827,
+    "linter.unusedSectionVars": 797,
+    "linter.unusedSimpArgs": 331,
+    "linter.unusedTactic": 273,
+    "deprecated": 66,
+    "linter.unnecessarySeqFocus": 50,
+    "linter.unreachableTactic": 44,
+    "linter.unnecessarySimpa": 36,
+    "linter.dupNamespace": 8,
+    "tactic_suggestion": 7,
+    "linter.defProp": 5,
+    "unused_name": 3,
+    "linter.overlappingInstances": 3,
+    "exponentiation_threshold": 2,
+    "reference_sorry": 1
+  },
+  "top_files": [
+    [
+      "YM/Next/STATIONARY/Films/ThinTrace.lean",
+      25
+    ],
+    [
+      "YM/Next/STATIONARY/FrameEst/Stencils.lean",
+      24
+    ],
+    [
+      "YM/Next/STATIONARY/Spectral/Slabs.lean",
+      16
+    ],
+    [
+      "YM/Pert/Align/Atom.lean",
+      14
+    ],
+    [
+      "YM/Pert/Fourier/Source.lean",
+      13
+    ],
+    [
+      "YM/MultipleContact/Center/Base.lean",
+      12
+    ],
+    [
+      "YM/OPE/Shape.lean",
+      11
+    ],
+    [
+      "YM/PertExtension/Series.lean",
+      11
+    ],
+    [
+      "YM/OPE/Nesting/Grove.lean",
+      10
+    ],
+    [
+      "YM/OPE/Nesting/Weights.lean",
+      10
+    ],
+    [
+      "YM/Next/STATIONARY/FrameEst/Averages.lean",
+      9
+    ],
+    [
+      "YM/Next/STATIONARY/Films/Frame.lean",
+      9
+    ],
+    [
+      "YM/MultipleContact/Bunch/Arrangement.lean",
+      9
+    ],
+    [
+      "YM/FullVolume/E6/Grails.lean",
+      9
+    ],
+    [
+      "YM/Next/STATIONARY/Shape/GaugeJets.lean",
+      8
+    ],
+    [
+      "YM/PhysicalNext/ACTUAL_SECTOR_FACTOR_DICTIONARY/Windows.lean",
+      8
+    ],
+    [
+      "YM/TraceExtension/Perfect/Crawl.lean",
+      8
+    ],
+    [
+      "YM/Pert/Fourier/Periodic.lean",
+      8
+    ],
+    [
+      "YM/MultipleContact/Multi/Evidence.lean",
+      8
+    ],
+    [
+      "YM/TraceExtension/Loft/Canto.lean",
+      8
+    ]
+  ],
+  "root_file_warnings": [
+    {
+      "file": "Challenge.lean",
+      "line": 5,
+      "column": 8,
+      "message": "declaration uses `sorry`",
+      "details": "",
+      "category": "reference_sorry"
+    }
+  ],
+  "deprecations": {
+    "`push_neg` has been deprecated. Prefer using `push Not` instead.": 7,
+    "`Finsupp.support_single_ne_zero` has been deprecated: Use `Finsupp.support_single` instead": 6,
+    "`ContinuousLinearMap.add_apply` has been deprecated: Use `_root_.add_apply` instead": 4,
+    "`iteratedFDeriv_zero_fun` has been deprecated: Use `iteratedFDeriv_fun_zero` instead": 4,
+    "`mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead": 4,
+    "`MultilinearMap.sum_apply` has been deprecated: Use `sum_apply` instead": 4,
+    "`tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead": 4,
+    "`ContinuousLinearMap.smul_apply` has been deprecated: Use `_root_.smul_apply` instead": 4,
+    "`ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead": 3,
+    "`MultilinearMap.smul_apply` has been deprecated: Use `smul_apply` instead": 3,
+    "`ContinuousLinearMap.mul_apply` has been deprecated: Use `mul_apply_eq_comp` instead": 3,
+    "`ContinuousMultilinearMap.sum_apply` has been deprecated: Use `sum_apply` instead": 2,
+    "`ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead": 2,
+    "`continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead": 2,
+    "`ContinuousMultilinearMap.sum_apply` has been deprecated: Use `_root_.sum_apply` instead": 2,
+    "`AEMeasurable.ennreal_tsum` has been deprecated: Use `AEMeasurable.tsum` from `Mathlib.MeasureTheory.Constructions.Polish.Basic` instead": 1,
+    "`Fin.lt_iff_val_lt_val` has been deprecated: Use `Fin.lt_def` instead": 1,
+    "`mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead": 1,
+    "`ofReal_norm_eq_enorm` has been deprecated: Use `ofReal_norm` instead": 1,
+    "`continuous_finset_prod` has been deprecated: Use `continuous_finsetProd` instead": 1,
+    "`continuousOn_finset_sum` has been deprecated: Use `continuousOn_finsetSum` instead": 1,
+    "`ContinuousLinearMap.sum_apply` has been deprecated: Use `_root_.sum_apply` instead": 1,
+    "`MultilinearMap.sub_apply` has been deprecated: Use `sub_apply` instead": 1,
+    "`ContinuousLinearMap.sub_apply` has been deprecated: Use `_root_.sub_apply` instead": 1,
+    "`ContinuousLinearMap.zero_apply` has been deprecated: Use `_root_.zero_apply` instead": 1,
+    "'Mathlib.Topology.Algebra.Module.WeakDual' has been deprecated: please replace this import by": 1,
+    "`ContinuousMultilinearMap.sub_apply` has been deprecated: Use `sub_apply` instead": 1
+  },
+  "notable": [
+    {
+      "file": "Challenge.lean",
+      "line": 5,
+      "column": 8,
+      "message": "declaration uses `sorry`",
+      "details": "",
+      "category": "reference_sorry"
+    },
+    {
+      "file": "YM/MultipleContact/Multi/Letting.lean",
+      "line": 94,
+      "column": 6,
+      "message": "Overlapping instance parameters in `render_exp`:",
+      "details": "⚠️ There are 2 `[DecidableEq P]` instances; one is sufficient.\n\nNote: This linter can be disabled with `set_option linter.overlappingInstances false`",
+      "category": "linter.overlappingInstances"
+    },
+    {
+      "file": "YM/MultipleContact/Multi/Letting.lean",
+      "line": 111,
+      "column": 6,
+      "message": "Overlapping instance parameters in `render_cont`:",
+      "details": "⚠️ There are 2 `[DecidableEq P]` instances; one is sufficient.\n\nNote: This linter can be disabled with `set_option linter.overlappingInstances false`",
+      "category": "linter.overlappingInstances"
+    },
+    {
+      "file": "YM/Pert/Bulk/Projected.lean",
+      "line": 34,
+      "column": 6,
+      "message": "Overlapping instance parameters in `cost_any`:",
+      "details": "⚠️ There are 2 `[Fintype β]` instances; one is sufficient.\n\nNote: This linter can be disabled with `set_option linter.overlappingInstances false`",
+      "category": "linter.overlappingInstances"
+    },
+    {
+      "file": "YM/FullVolume/Sym/Purse.lean",
+      "line": 59,
+      "column": 93,
+      "message": "exponent 301 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold",
+      "details": "",
+      "category": "exponentiation_threshold"
+    },
+    {
+      "file": "YM/FullVolume/Luna/Hours.lean",
+      "line": 34,
+      "column": 126,
+      "message": "exponent 301 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold",
+      "details": "",
+      "category": "exponentiation_threshold"
+    }
+  ]
+}

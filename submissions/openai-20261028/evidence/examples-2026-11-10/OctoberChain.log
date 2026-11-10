@@ -1,0 +1,7 @@
+'YMReview.Chain.actual_insertion_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Chain.every_primary_is_represented' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Chain.nonconstant_primary_survives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Chain.every_field_word_has_lattice_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Chain.phase_second_moments_are_ground_products' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Chain.reconstructed_words_are_selected_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Chain.same_continuation_same_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,22 @@
+Cloning into '/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator'...
+HEAD is now at d03acab chore: bump toolchain to v4.34.0 (#90)
+Cloning into '/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export'...
+HEAD is now at 4e79152 chore: bump toolchain to v4.32.0 (#41)
+[
+  {
+    "name": "comparator",
+    "url": "https://github.com/leanprover/comparator.git",
+    "requested_revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+    "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+    "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  {
+    "name": "lean4export",
+    "url": "https://github.com/leanprover/lean4export.git",
+    "requested_revision": "v4.32.0",
+    "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+    "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export",
+    "toolchain": "leanprover/lean4:v4.32.0"
+  }
+]

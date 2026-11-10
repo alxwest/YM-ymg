@@ -1,0 +1,166 @@
+{
+  "completed_utc": "2026-10-30T13:37:01.488819+00:00",
+  "result": "PASS",
+  "target_theorems": [
+    "YangMills.jointExistence"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "configuration": {
+    "challenge_module": "Challenge",
+    "solution_module": "Solution",
+    "theorem_names": [
+      "YangMills.jointExistence"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "configuration_sha256": "23e159f10cdb40b780ad8b42a2fc62d2f8e995ee932d955c97e54526d476b967",
+  "standard_comparator": true,
+  "mode": "macOS development using upstream fake-landrun.sh",
+  "landrun_sandbox_used": false,
+  "external_kernel_used": false,
+  "project_lean": "leanprover/lean4:v4.32.0",
+  "comparator_kernel_lean": "leanprover/lean4:v4.34.0",
+  "run": {
+    "stage": "ym-comparator",
+    "command": [
+      "/Users/oai/.elan/bin/lake",
+      "env",
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "comparator.json"
+    ],
+    "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+    "environment_overrides": {
+      "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+      "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+    },
+    "started_utc": "2026-10-30T13:22:15.609988+00:00",
+    "status": "passed",
+    "pid": 47369,
+    "exit_code": 0,
+    "elapsed_seconds": 879.1,
+    "finished_utc": "2026-10-30T13:36:54.719084+00:00",
+    "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/ym-comparator.log"
+  },
+  "tool_pins": [
+    {
+      "name": "comparator",
+      "url": "https://github.com/leanprover/comparator.git",
+      "requested_revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator",
+      "toolchain": "leanprover/lean4:v4.34.0"
+    },
+    {
+      "name": "lean4export",
+      "url": "https://github.com/leanprover/lean4export.git",
+      "requested_revision": "v4.32.0",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export",
+      "toolchain": "leanprover/lean4:v4.32.0"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738",
+      "bytes": 104342048
+    },
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export",
+      "sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e",
+      "bytes": 171077280
+    },
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+      "sha256": "167507c89d8b3c7667ad78b50df7b19f89883751a01efd1457404fa34a994e8b",
+      "bytes": 1431
+    }
+  ],
+  "tool_checkouts": [
+    {
+      "name": "comparator",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "tracked_changes": ""
+    },
+    {
+      "name": "lean4export",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "tracked_changes": ""
+    }
+  ],
+  "smoke_tests": {
+    "date": "2026-10-30T13:21:42.969825+00:00",
+    "mode": "macOS development shim; no Landrun isolation",
+    "results": [
+      {
+        "case": "accept",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 2.66,
+        "expected_behavior_observed": true,
+        "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-accept.log"
+      },
+      {
+        "case": "statement_mismatch",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 0.96,
+        "expected_behavior_observed": true,
+        "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-statement_mismatch.log"
+      },
+      {
+        "case": "forbidden_axiom",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 0.96,
+        "expected_behavior_observed": true,
+        "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-forbidden_axiom.log"
+      }
+    ],
+    "passed": true
+  },
+  "negative_test_rejection_reasons_verified": true,
+  "source_files_checked": 9507,
+  "source_files_changed_during_run": [],
+  "preexisting_manifest_differences": [
+    {
+      "path": "verification/declaration-usage.tsv",
+      "expected": "1f16d6cbf7cd650c7edccd08f95967ce92cd7e36ec68cfdd081621aec126c5e9",
+      "actual": "9dc9a62a163d973cb37a94abc74280e7925a83a608e26b731a124d0202be4d2a",
+      "explanation": "Regenerated usage report differs only in source-line numbers; mathematical source files match the supplied manifest.",
+      "changed_rows": 3
+    }
+  ],
+  "log_sha256": "e7a3a17020e5be52a54ed32505bf1f099a970b2684a5cb502a00c9b8efa60a59",
+  "warning_lines": 2457,
+  "scope": "Checks the submitted public YangMills.jointExistence theorem, not a strengthened independent OS or full-IR target.",
+  "limitations": [
+    "No Linux/Landrun isolation claim.",
+    "No second-kernel (e.g. Nanoda) check.",
+    "No mathematical interpretation of the trusted definitions is certified.",
+    "No full fixed-family IR convergence or independent OS adapter is supplied by this result."
+  ]
+}

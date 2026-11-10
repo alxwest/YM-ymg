@@ -1,0 +1,307 @@
+{
+  "acceptance_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+  "ope_commit": "baa97b7d5ea7e8f830c667f3494a510e09f72001",
+  "files": [
+    {
+      "path": "checks/ClusterCore.lean",
+      "sha256": "8ad237a735261da37012470880e91e713891eef682d703ed443a58c67f81d7ff",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ClusterCore.lean"
+    },
+    {
+      "path": "checks/ClusterCones.lean",
+      "sha256": "4492d6f336246a82585b0d3538bea6284679ddb3822755a9c7cd6b2cdb677b9f",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ClusterCones.lean"
+    },
+    {
+      "path": "checks/SourceScalar.lean",
+      "sha256": "8c39b1a21513d5270c2dacf27857614b2e282dd292b8afe09cafa808dc39be37",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/SourceScalar.lean"
+    },
+    {
+      "path": "checks/ClusterKernel.lean",
+      "sha256": "dc25d6d7dc572fecdf2fabccbef8cfcd2861ef497799044259cfb791a01b4c66",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ClusterKernel.lean"
+    },
+    {
+      "path": "checks/YangMills/OSRecon/Vendored/Spacetime.lean",
+      "sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/YangMills/OSRecon/Vendored/Spacetime.lean"
+    },
+    {
+      "path": "checks/YangMills/OSRecon/Vendored/TensorProduct.lean",
+      "sha256": "78cbd9de644663ed556c3f05f752a040128e7882af28e9627da50a3f5b39f06e",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/YangMills/OSRecon/Vendored/TensorProduct.lean"
+    },
+    {
+      "path": "checks/YangMills/OSRecon/Vendored/ZeroDiagonal.lean",
+      "sha256": "160576436d6e809bdf249d1029033ec11f08c7836f63f488d297296dcdc4284d",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/YangMills/OSRecon/Vendored/ZeroDiagonal.lean"
+    },
+    {
+      "path": "checks/YangMills/OSRecon/Vendored/OSConj.lean",
+      "sha256": "d717b96a013c4f8850e7b5315bdaf97287aeacd5a8cec3382e1a4e34b806f880",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/YangMills/OSRecon/Vendored/OSConj.lean"
+    },
+    {
+      "path": "checks/YangMills/OSRecon/Vendored/Axioms.lean",
+      "sha256": "a0e70dabf0c0ef181193cebdd26ce688e5f431ecbe159e9160ff06e0b6699089",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/YangMills/OSRecon/Vendored/Axioms.lean"
+    },
+    {
+      "path": "checks/Coordinates.lean",
+      "sha256": "58e73fa62750293ff0770f795de30485ffa79334acf7b4ca1c4daadc28e5c0e1",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/Coordinates.lean"
+    },
+    {
+      "path": "checks/ImportedCenterWeights.lean",
+      "sha256": "0df3139e83cc4dea488b032f686689e1b6546aecebb49eb5a60240e725583961",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedCenterWeights.lean"
+    },
+    {
+      "path": "checks/ImportedDiagonalFlatBounds.lean",
+      "sha256": "0dfa0b6b39af9009d848e0d9293cf695a9e69735e6e32d3a8c0ef218651b5ecb",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedDiagonalFlatBounds.lean"
+    },
+    {
+      "path": "checks/TargetKernel.lean",
+      "sha256": "e8510fa51b8dd8bf19696fa8003042ecd0b1a3205088dbddee445fd6b842d685",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/TargetKernel.lean"
+    },
+    {
+      "path": "checks/ClusterTarget.lean",
+      "sha256": "fa4330a75ad94b410324fb943f5d7cee59164ae11c9b23995e614a85cfca9ee3",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ClusterTarget.lean"
+    },
+    {
+      "path": "checks/Temperedness.lean",
+      "sha256": "cdc87faf64a63b8070a2dcbb55097c2a4d35bee84fdcb34cfc9a7ce60fd6913a",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/Temperedness.lean"
+    },
+    {
+      "path": "checks/ClusterDomination.lean",
+      "sha256": "03a2d2c42b486907a9b068d3c2c07334e2b366c143941ff3481c165d792e49c1",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ClusterDomination.lean"
+    },
+    {
+      "path": "checks/ImportedSchwartzDomain.lean",
+      "sha256": "da32cc3c49063f761648b6f5792caf431ac9a3a1111559fd21ae18e1cb4e1e11",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedSchwartzDomain.lean"
+    },
+    {
+      "path": "checks/ImportedSchwartzProduct.lean",
+      "sha256": "a327d573d777d2552f520c3e8c684c0c1e49ae0a3f61858326f039fc009f8e51",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedSchwartzProduct.lean"
+    },
+    {
+      "path": "checks/ClusterSchwartz.lean",
+      "sha256": "9ac62c789edac0662fe1ebbe7af9dd16781ddf5fe4330ff6cc724869b69307f5",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ClusterSchwartz.lean"
+    },
+    {
+      "path": "checks/Invariance.lean",
+      "sha256": "2a0e8864657b99c66e0a0e864e201e71b6a70f92fcf69e087e0e53ce03599f8d",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/Invariance.lean"
+    },
+    {
+      "path": "checks/ReflectionTransport.lean",
+      "sha256": "21c7c59a934a1eb5988d33b5b977bc39c21f6f8c9a34c08586f42c6e8b665d9c",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ReflectionTransport.lean"
+    },
+    {
+      "path": "checks/ImportedSchwartzCutoffs.lean",
+      "sha256": "6f6fdb12027c5de0654c8733a8a7f25d37c033cbbd8ffb1db9cdced1eb9077ad",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedSchwartzCutoffs.lean"
+    },
+    {
+      "path": "checks/ImportedReflectionApproximation.lean",
+      "sha256": "9f6ad873fd0df355dcb3a02d62478dda666a5f323bcd72007d5d4d012d3df20f",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedReflectionApproximation.lean"
+    },
+    {
+      "path": "checks/ReflectionPositivity.lean",
+      "sha256": "a5a1e3456b05c69d0357ceea09c9162ea38a0574099213412e7bbc5f09c88ea0",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ReflectionPositivity.lean"
+    },
+    {
+      "path": "checks/YangMills/OSRecon/Growth.lean",
+      "sha256": "9ceba1c37449effbb1aae62623ceb8aa7ad333f75e1ba95d76c005e3a9f29840",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/YangMills/OSRecon/Growth.lean"
+    },
+    {
+      "path": "checks/ArityGrowth.lean",
+      "sha256": "cefb98ba14f6da76bb189a669a8e31f9f8ef2d8ad1ac749df9050820a8fa7a5c",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ArityGrowth.lean"
+    },
+    {
+      "path": "checks/RemainingObligations.lean",
+      "sha256": "03c85631c118dce51b71f8d85ece01866e7fb62d250ef019d3e10cffba48cc02",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/RemainingObligations.lean"
+    },
+    {
+      "path": "checks/CompleteOS.lean",
+      "sha256": "4c4fdc2170e3443c86c55b66407752744f46783abf7a255476f8bc6b2e31936e",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/CompleteOS.lean"
+    },
+    {
+      "path": "checks/ImportedAFGauge.lean",
+      "sha256": "136d59e698dde46cdf99e1fa37ce2b94ee210053f0d5f9b2e3b37938f3d4cfd7",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedAFGauge.lean"
+    },
+    {
+      "path": "checks/ImportedAFSpecification.lean",
+      "sha256": "a80bf741dd9f71a7ee465601f253a6d09fd2ade88dd4acae2d0446013cab86eb",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedAFSpecification.lean"
+    },
+    {
+      "path": "checks/AFSourceBridge.lean",
+      "sha256": "d018eec939692bec6c39d763c19f3544d67537f92f6308b7a5deccc7e78bb149",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/AFSourceBridge.lean"
+    },
+    {
+      "path": "checks/CommonScaleAudit.lean",
+      "sha256": "ac9b14ad7532a98156eecd33a29ee05647f5798f2ea0c5f3d13a2d6c711d41d5",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/CommonScaleAudit.lean"
+    },
+    {
+      "path": "checks/NonzeroPhysicalObservable.lean",
+      "sha256": "34bf80e0c29281fefb6055ee6f12dbd853401a8ec07682f91e8656e36778b0ef",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/NonzeroPhysicalObservable.lean"
+    },
+    {
+      "path": "checks/TwoPointPhysicalObservable.lean",
+      "sha256": "bd2a2cc959f3c7f70d2a0e98b9f455f18f165767f0c81f71593e328385ea0ec0",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/TwoPointPhysicalObservable.lean"
+    },
+    {
+      "path": "checks/CompletenessAudit.lean",
+      "sha256": "36c15bb8b5e360610afb3eb18dc5d597abc2bbe231a9b6588c23467840f6b3a9",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/CompletenessAudit.lean"
+    },
+    {
+      "path": "checks/WardFormulationAudit.lean",
+      "sha256": "5943d1d891f931404368d63a5b75e86e07b2c8a0c85b7df79aa2cb6056b48682",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/WardFormulationAudit.lean"
+    },
+    {
+      "path": "checks/ImportedLGTData.lean",
+      "sha256": "7e1ff512f0112e0d355033bdc84a49c7b19c1b92b029a4c2cc2a45a8ada47b04",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/ImportedLGTData.lean"
+    },
+    {
+      "path": "checks/LGTWilsonBridge.lean",
+      "sha256": "59a4c89ba23ad012d9d2e893cf1da936cdeae0b40e0fac423ccf149ae8b80962",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/dependencies/LGTWilsonBridge.lean"
+    },
+    {
+      "path": "checks/AcceptanceSpec.lean",
+      "sha256": "c303146d967bda49354b97ef6b7c6a4c94bd3952835a50aabeaa55a233b4f2e9",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/AcceptanceSpec.lean"
+    },
+    {
+      "path": "checks/CombinedAcceptance.lean",
+      "sha256": "40f8c57aa96db688784fe57491c87ad6cc69f061d58174802b8593ac83ef0d92",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/CombinedAcceptance.lean"
+    },
+    {
+      "path": "checks/AxiomAudit.lean",
+      "sha256": "776d80a3f7c64f11693b460c808f7306c1573563cb6e94a94fb33176068f126a",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+      "source_path": "review/development/ym-acceptance/AxiomAudit.lean"
+    },
+    {
+      "path": "checks/OPESpec.lean",
+      "sha256": "3ea7ffb5f7b386036ddb9bab7753d5bcc3e198853aee70b09f06be67891813dc",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "baa97b7d5ea7e8f830c667f3494a510e09f72001",
+      "source_path": "review/development/ym-ope-audit/OPESpec.lean"
+    },
+    {
+      "path": "checks/OPECheck.lean",
+      "sha256": "ef5926e323e8fa47b8096a04e5a4c4cdaeba7a90545be9613e77c6eda5f75578",
+      "source_repository": "https://github.com/YM-lean/OpenAI-YM",
+      "source_commit": "baa97b7d5ea7e8f830c667f3494a510e09f72001",
+      "source_path": "review/development/ym-ope-audit/OPECheck.lean"
+    }
+  ]
+}

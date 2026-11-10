@@ -1,0 +1,15 @@
+{
+  "stage": "build",
+  "command": [
+    "lake",
+    "build",
+    "WilsonReference",
+    "WilsonConstruction"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+  "started_utc": "2026-10-29T02:31:39.339457+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "elapsed_seconds": 11036.28,
+  "finished_utc": "2026-10-29T05:35:35.654536+00:00"
+}

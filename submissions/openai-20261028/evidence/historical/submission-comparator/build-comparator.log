@@ -1,0 +1,20 @@
+info: downloading https://releases.lean-lang.org/lean4/v4.34.0/lean-4.34.0-darwin_aarch64.tar.zst
+info: installing /Users/oai/.elan/toolchains/leanprover--lean4---v4.34.0
+info: lean4export: cloning https://github.com/leanprover/lean4export
+info: lean4export: checking out revision '076e8e57707e813375e8f9da8bf989799ace9680'
+✔ [1/4] Built Comparator.Util (307ms)
+✔ [5/16] Built Export.Parse (647ms)
+✔ [6/16] Built Comparator.Axioms (249ms)
+✔ [7/16] Built Comparator.Util:c.o (1.1s)
+✔ [8/16] Built Comparator.Axioms:c.o (245ms)
+✔ [9/16] Built Comparator.Compare (288ms)
+✔ [10/16] Built Comparator (201ms)
+✔ [11/16] Built Comparator.Compare:c.o (198ms)
+✔ [12/16] Built Comparator:c.o (37ms)
+✔ [13/16] Built Main (1.0s)
+✔ [14/16] Built Export.Parse:c.o (1.8s)
+✔ [15/16] Built Main:c.o (375ms)
+ℹ [16/16] Built comparator:exe (573ms)
+info: stderr:
+ld64.lld: warning: directory not found for option -L/usr/local/lib
+Build completed successfully (16 jobs).

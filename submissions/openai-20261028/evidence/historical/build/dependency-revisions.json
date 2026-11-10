@@ -1,0 +1,59 @@
+{
+  "all_pinned_revisions_match": true,
+  "packages": [
+    {
+      "package": "plausible",
+      "expected": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+      "actual": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+      "matches": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "expected": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "actual": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "matches": true
+    },
+    {
+      "package": "importGraph",
+      "expected": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+      "actual": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+      "matches": true
+    },
+    {
+      "package": "proofwidgets",
+      "expected": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+      "actual": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+      "matches": true
+    },
+    {
+      "package": "aesop",
+      "expected": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+      "actual": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+      "matches": true
+    },
+    {
+      "package": "Qq",
+      "expected": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+      "actual": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+      "matches": true
+    },
+    {
+      "package": "batteries",
+      "expected": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+      "actual": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+      "matches": true
+    },
+    {
+      "package": "Cli",
+      "expected": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+      "actual": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+      "matches": true
+    },
+    {
+      "package": "mathlib",
+      "expected": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "actual": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "matches": true
+    }
+  ]
+}

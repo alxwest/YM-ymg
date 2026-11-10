@@ -1,0 +1,41 @@
+{
+  "recorded_utc": "2026-11-05T22:57:04.603778+00:00",
+  "status": "passed",
+  "submission_files": 9508,
+  "submission_commit": "ade60ed27fe7035ef328dbe7f368b1e7a24b6ab1",
+  "license": "Apache-2.0",
+  "original_sources_unchanged": true,
+  "full_clean_source_build": "Historical 29 October build passed; this packaging run reused its verified build cache.",
+  "packaged_build": "Passed; incremental with source build cache and dependency cache reused.",
+  "review": {
+    "fresh_modules": 43,
+    "warnings": 0,
+    "endpoints_audited": 13,
+    "all_axiom_reports": 96,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "os_declarations_compared": 4,
+  "comparator_controls": 4,
+  "comparator": {
+    "submission": "Historical 30 October pass",
+    "combined": "Historical 3 November pass",
+    "ope": "New 5 November pass"
+  },
+  "tools_bootstrapped_from_pins": true,
+  "bootstrap_binaries_identical_to_tools_used_for_ope": true,
+  "linux_isolation": false,
+  "external_kernel": false,
+  "final_human_assessment": "pending",
+  "references": {
+    "build": "build/result.json",
+    "review": "review/result.json",
+    "tools": "tools/result.json",
+    "controls": "controls/result.json",
+    "ope-comparator": "ope-comparator/result.json"
+  },
+  "note": "OPE and tool-bootstrap records retain the runner source used for those runs. The final runner corrects endpoint diagnostic aggregation and records input-manifest hashes; all imported Lean sources are unchanged."
+}

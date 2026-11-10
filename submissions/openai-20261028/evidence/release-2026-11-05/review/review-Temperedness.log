@@ -1,0 +1,3 @@
+'YMOSBridge.schwinger_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E0_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E0_tempered' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-10",
+  "scope": "Recompile LeadingTrace after adding literature references and the informal normalization calculation; formal code unchanged.",
+  "file": "docs/examples/LeadingTrace-20261028.lean",
+  "source_sha256": "8c90d7f53ba793498bf37b9e848bd1d1d7d553bca91f361790852a43f6b5f31b",
+  "previous_source_sha256": "4b44dd86d9be66610b548b4e3ada2a9637bd15ba3c18b7980f4c8d9e4a1b7588",
+  "only_change_is_insertion_inside_existing_block_comment": true,
+  "exit_code": 0,
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "--root=/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples",
+    "-o",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/check-reference-placement/LeadingTrace-20261028.olean",
+    "/Users/oai/Documents/Codex/repos/yang-mills-group/YM-draft/submissions/openai-20261028/docs/examples/LeadingTrace-20261028.lean"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "2",
+    "LEAN_PATH": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-commented-examples-20261110:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/Cli/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/batteries/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/Qq/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/aesop/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/importGraph/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/plausible/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/packages/mathlib/.lake/build/lib/lean:/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project/.lake/build/lib/lean:/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/lib/lean"
+  },
+  "log": "LeadingTrace-20261028.log",
+  "log_sha256": "170035dc8fff10b46c6511b1b47c450c132500e7d65bbd4b238d31f1e01e0fc9",
+  "warnings": 0,
+  "errors": 0,
+  "compiler_version": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "comparator_run": false,
+  "fresh_dependency_rebuild": false,
+  "status": "passed",
+  "axiom_audit": {
+    "printed_theorems": 12,
+    "all_within_permitted_set": true,
+    "declarations": [
+      {
+        "name": "YMReview.Examples.LeadingTrace.selected_state_is_fixed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.centering_uses_the_phase_mean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.centered_one_point",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.two_point_is_selected_kernel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.separated_kernel_is_real",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.source_and_OS_fields_agree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.centered_trace_has_mixed_lattice_origin",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.mixed_expectations_are_phase_averages",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.radial_identification",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.coefficient_is_fixed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.leading_from_source",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "YMReview.Examples.LeadingTrace.constructed_with_trace",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ]
+  }
+}

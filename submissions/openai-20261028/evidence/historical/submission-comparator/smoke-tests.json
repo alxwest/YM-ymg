@@ -1,0 +1,16 @@
+{
+  "stage": "smoke-tests",
+  "command": [
+    "python3",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/run_smoke_tests.py"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator",
+  "environment_overrides": {},
+  "started_utc": "2026-10-30T13:21:38.309242+00:00",
+  "status": "passed",
+  "pid": 47138,
+  "exit_code": 0,
+  "elapsed_seconds": 4.66,
+  "finished_utc": "2026-10-30T13:21:42.972226+00:00",
+  "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/smoke-tests.log"
+}

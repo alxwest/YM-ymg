@@ -1,0 +1,9 @@
+'YMReview.Examples.CommonOPE.explicit_radius_from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.CommonOPE.coefficient_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.CommonOPE.remainder_uniform_in_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.CommonOPE.difference_of_states' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.CommonOPE.channel_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.CommonOPE.single_insertion_recovered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Examples.CommonOPE.constructed_with_public_properties' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

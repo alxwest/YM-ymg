@@ -1,0 +1,24 @@
+OpenAI pure Yang–Mills construction: October submission and group verification
+
+The original October submission is reproduced without changes in submission/.
+Its NOTICE, LICENSE, THIRD_PARTY.md and third_party_licenses/ are retained there.
+
+The verification package contains work from the Yang–Mills verification group,
+including the previously developed Cherkis–Douglas–Jaffe–Nissim–Rajasekaran
+problem formulation and the Douglas–Mei–Yin Osterwalder–Schrader specification.
+The OS declarations and supporting formalizations derive from
+xiyin137/OSreconstruction and math-commons/yang-mills. Selected lattice gauge
+theory definitions derive from mrdouglasny/lgt. Existing source headers and
+copyright notices have been preserved. Copies of the upstream Apache-2.0
+licenses are in provenance/licenses/.
+
+The Lean bridges in checks/ were assembled from the group's earlier review
+work; their exact source commits and hashes are in provenance/review-imports.json.
+Vendored and excerpted files may redirect imports, add namespace/section
+wrappers or use a Lean-version compatibility setting. The changes and source
+correspondences are recorded in provenance/ and evidence/historical/.
+Original upstream snapshots in provenance/ are supplied for comparison, not
+as additional compiled dependencies. scripts/verify.py and the release
+documentation are new packaging and reproduction work, licensed Apache-2.0.
+
+Attribution does not imply endorsement of this review by any upstream author.

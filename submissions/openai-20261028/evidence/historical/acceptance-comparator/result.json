@@ -1,0 +1,254 @@
+{
+  "completed_utc": "2026-11-03T13:47:55.247981+00:00",
+  "result": "PASS",
+  "repository_commit": "1dec9fa5d3ab19794d082573bc885709ec68aa3a",
+  "target_theorems": [
+    "YMReview.Acceptance.combined_acceptance"
+  ],
+  "configuration": {
+    "challenge_module": "AcceptanceChallenge",
+    "solution_module": "CombinedAcceptance",
+    "theorem_names": [
+      "YMReview.Acceptance.combined_acceptance"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "configuration_sha256": "710440530a850faf6cddb2daac24d43b4ab2b94351f647ef118cd63257d211f4",
+  "standard_comparator": true,
+  "mode": "macOS development; unmodified upstream fake-landrun.sh; no external kernel",
+  "landrun_sandbox_used": false,
+  "external_kernel_used": false,
+  "project_lean": "leanprover/lean4:v4.32.0",
+  "comparator_kernel_lean": "leanprover/lean4:v4.34.0",
+  "run": {
+    "stage": "acceptance-comparator",
+    "command": [
+      "/Users/oai/.elan/bin/lake",
+      "env",
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "comparator.json"
+    ],
+    "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+    "environment_overrides": {
+      "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+      "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+    },
+    "started_utc": "2026-11-03T13:31:17.395576+00:00",
+    "status": "passed",
+    "pid": 11268,
+    "exit_code": 0,
+    "elapsed_seconds": 964.31,
+    "finished_utc": "2026-11-03T13:47:21.710016+00:00",
+    "log": "acceptance-comparator.log"
+  },
+  "controls": {
+    "checked_utc": "2026-11-03T13:31:17.395315+00:00",
+    "results": [
+      {
+        "stage": "control-accept",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/accept",
+        "environment_overrides": {
+          "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+          "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+        },
+        "started_utc": "2026-11-03T13:31:13.407252+00:00",
+        "status": "passed",
+        "pid": 11205,
+        "exit_code": 0,
+        "elapsed_seconds": 1.08,
+        "finished_utc": "2026-11-03T13:31:14.485426+00:00",
+        "log": "control-accept.log",
+        "case": "accept",
+        "expected_diagnostic": "Your solution is okay!",
+        "expected_behavior_observed": true
+      },
+      {
+        "stage": "control-statement_mismatch",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/statement_mismatch",
+        "environment_overrides": {
+          "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+          "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+        },
+        "started_utc": "2026-11-03T13:31:14.485900+00:00",
+        "status": "rejected_or_failed",
+        "pid": 11215,
+        "exit_code": 1,
+        "elapsed_seconds": 0.97,
+        "finished_utc": "2026-11-03T13:31:15.459643+00:00",
+        "log": "control-statement_mismatch.log",
+        "case": "statement_mismatch",
+        "expected_diagnostic": "Challenge and solution theorem statement do not match: 'comparatorSmoke'",
+        "expected_behavior_observed": true
+      },
+      {
+        "stage": "control-forbidden_axiom",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/forbidden_axiom",
+        "environment_overrides": {
+          "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+          "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+        },
+        "started_utc": "2026-11-03T13:31:15.460109+00:00",
+        "status": "rejected_or_failed",
+        "pid": 11236,
+        "exit_code": 1,
+        "elapsed_seconds": 0.96,
+        "finished_utc": "2026-11-03T13:31:16.421746+00:00",
+        "log": "control-forbidden_axiom.log",
+        "case": "forbidden_axiom",
+        "expected_diagnostic": "Illegal axiom detected: 'unapproved'",
+        "expected_behavior_observed": true
+      },
+      {
+        "stage": "control-definition_mismatch",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "comparator.json"
+        ],
+        "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/definition_mismatch",
+        "environment_overrides": {
+          "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+          "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+        },
+        "started_utc": "2026-11-03T13:31:16.422150+00:00",
+        "status": "rejected_or_failed",
+        "pid": 11246,
+        "exit_code": 1,
+        "elapsed_seconds": 0.97,
+        "finished_utc": "2026-11-03T13:31:17.394991+00:00",
+        "log": "control-definition_mismatch.log",
+        "case": "definition_mismatch",
+        "expected_diagnostic": "Const does not match between challenge and target 'reference'",
+        "expected_behavior_observed": true
+      }
+    ],
+    "passed": true
+  },
+  "tool_pins": [
+    {
+      "name": "comparator",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator",
+      "url": "https://github.com/leanprover/comparator.git",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "tracked_changes": ""
+    },
+    {
+      "name": "lean4export",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export",
+      "url": "https://github.com/leanprover/lean4export.git",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "tracked_changes": ""
+    }
+  ],
+  "binaries": [
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738",
+      "bytes": 104342048
+    },
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export",
+      "sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e",
+      "bytes": 171077280
+    },
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+      "sha256": "167507c89d8b3c7667ad78b50df7b19f89883751a01efd1457404fa34a994e8b",
+      "bytes": 1431
+    }
+  ],
+  "published_review_modules_snapshotted": 41,
+  "review_modules_with_new_project_oleans": [
+    "ClusterCore",
+    "ClusterCones",
+    "SourceScalar",
+    "ClusterKernel",
+    "YangMills.OSRecon.Vendored.Spacetime",
+    "YangMills.OSRecon.Vendored.TensorProduct",
+    "YangMills.OSRecon.Vendored.ZeroDiagonal",
+    "YangMills.OSRecon.Vendored.OSConj",
+    "YangMills.OSRecon.Vendored.Axioms",
+    "Coordinates",
+    "ImportedCenterWeights",
+    "ImportedDiagonalFlatBounds",
+    "TargetKernel",
+    "ClusterTarget",
+    "Temperedness",
+    "ClusterDomination",
+    "ImportedSchwartzDomain",
+    "ImportedSchwartzProduct",
+    "ClusterSchwartz",
+    "Invariance",
+    "ReflectionTransport",
+    "ImportedSchwartzCutoffs",
+    "ImportedReflectionApproximation",
+    "ReflectionPositivity",
+    "YangMills.OSRecon.Growth",
+    "ArityGrowth",
+    "RemainingObligations",
+    "CompleteOS",
+    "ImportedAFGauge",
+    "ImportedAFSpecification",
+    "AFSourceBridge",
+    "CommonScaleAudit",
+    "NonzeroPhysicalObservable",
+    "TwoPointPhysicalObservable",
+    "CompletenessAudit",
+    "WardFormulationAudit",
+    "ImportedLGTData",
+    "LGTWilsonBridge",
+    "AcceptanceSpec",
+    "CombinedAcceptance"
+  ],
+  "fresh_review_project_build": true,
+  "submission_build_reused": true,
+  "mathlib_dependency_cache_reused": true,
+  "source_files_checked": 9507,
+  "source_files_changed_during_run": [],
+  "project_input_files_changed_during_run": [],
+  "preexisting_manifest_differences": [
+    {
+      "path": "verification/declaration-usage.tsv",
+      "expected": "1f16d6cbf7cd650c7edccd08f95967ce92cd7e36ec68cfdd081621aec126c5e9",
+      "actual": "9dc9a62a163d973cb37a94abc74280e7925a83a608e26b731a124d0202be4d2a",
+      "changed_rows": 3,
+      "explanation": "Previously regenerated usage report: source-line numbers only."
+    }
+  ],
+  "log_sha256": "61cb69eeca34f0f9bd918ea16b4362dccb3f843293bb82a335b800c2000eb207",
+  "warning_summary": "warnings.json",
+  "scope": "Checks the exact published combined acceptance theorem, its statement-definition closure, permitted axioms, and proof via the built-in Lean kernel.",
+  "limitations": [
+    "No Linux/Landrun isolation.",
+    "No external/second-kernel check.",
+    "Submission build and dependency cache were reused; this is not a clean rebuild of the whole submission.",
+    "The frozen challenge uses the published AcceptanceSpec; human agreement with the intended physics remains separate.",
+    "IR uniqueness, intrinsic scale completion and deferred perturbative matching are not acceptance clauses.",
+    "No Palomar submission."
+  ]
+}

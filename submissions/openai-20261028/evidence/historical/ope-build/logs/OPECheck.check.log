@@ -1,0 +1,5 @@
+'YMReview.OPE.from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OPE.phase_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OPE.constructed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OPE.channel_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OPE.single_field' depends on axioms: [propext, Classical.choice, Quot.sound]

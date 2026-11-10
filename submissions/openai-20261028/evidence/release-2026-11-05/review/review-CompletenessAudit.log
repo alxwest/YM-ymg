@@ -1,0 +1,8 @@
+'YMReview.OperatorCompleteness.raw_register_exhaustive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OperatorCompleteness.free_no_extra_nulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OperatorCompleteness.free_sector_exhaustive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OperatorCompleteness.local_field_content' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OperatorCompleteness.phase_field_content' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OperatorCompleteness.registered_words_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OperatorCompleteness.quotient_fields_not_lost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.EveryPhase.recognizes' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,21 @@
+{
+  "stage": "control-statement_mismatch",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+    "comparator.json"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/statement_mismatch",
+  "environment_overrides": {
+    "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+    "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+  },
+  "started_utc": "2026-11-03T13:31:14.485900+00:00",
+  "status": "rejected_or_failed",
+  "pid": 11215,
+  "exit_code": 1,
+  "elapsed_seconds": 0.97,
+  "finished_utc": "2026-11-03T13:31:15.459643+00:00",
+  "log": "control-statement_mismatch.log"
+}

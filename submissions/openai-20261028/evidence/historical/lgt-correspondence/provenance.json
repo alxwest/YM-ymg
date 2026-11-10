@@ -1,0 +1,119 @@
+{
+  "lgt_revision": "b8793ccf6a51e00e9e2b1685ba191b8626e37137",
+  "lgt_toolchain": "leanprover/lean4:v4.30.0",
+  "check_toolchain": "leanprover/lean4:v4.32.0",
+  "exact_declarations_modulo_comments_whitespace": [
+    "abbrev FinLatticeSites (d : \u2115) (N : \u2115) := Fin d \u2192 ZMod N",
+    "structure LatticeLink (d : \u2115) (N : \u2115) where",
+    "def siteShift (x : FinLatticeSites d N) (\u03bc : Fin d) :",
+    "theorem siteShift_comm (x : FinLatticeSites d N) (\u03bc \u03bd : Fin d) (h : \u03bc \u2260 \u03bd) :",
+    "def LatticeLink.target {d N : \u2115} (l : LatticeLink d N) :",
+    "structure LatticePlaquette (d : \u2115) (N : \u2115) where",
+    "def LatticePlaquette.boundaryLinks {d N : \u2115}",
+    "def GaugeConnection (G : Type*) (d : \u2115) (N : \u2115) := LatticeLink d N \u2192 G",
+    "def plaquetteHolonomy (U : GaugeConnection G d N) (p : LatticePlaquette d N) : G :=",
+    "def GaugeTransform (G : Type*) (d : \u2115) (N : \u2115) := GaussianField.FinLatticeSites d N \u2192 G",
+    "def gaugeTransformConnection (g : GaugeTransform G d N)",
+    "class HasGaugeTrace (G : Type*) (n : \u2115) [Group G] where",
+    "def gaugeTrace (G : Type*) (n : \u2115) [Group G] [HasGaugeTrace G n] (g : G) : \u2102 :=",
+    "def gaugeReTr (G : Type*) (n : \u2115) [Group G] [HasGaugeTrace G n] (g : G) : \u211d :=",
+    "def wilsonPlaquetteCost (G : Type*) (n : \u2115) [Group G] [HasGaugeTrace G n] (Up : G) : \u211d :=",
+    "instance instMeasurableSpaceGaugeConnection (d N : \u2115) :",
+    "class HasHaarProbability (G : Type*) [MeasurableSpace G] where",
+    "def haarG : Measure G := HasHaarProbability.haar (G := G)",
+    "instance : IsProbabilityMeasure (haarG G) := HasHaarProbability.isProb",
+    "def productHaar : Measure (GaugeConnection G d N) :=",
+    "def wilsonAction (\u03b2 : \u211d) (U : GaugeConnection G d N)",
+    "def boltzmannWeight (\u03b2 : \u211d) (U : GaugeConnection G d N)",
+    "def partitionFn (\u03b2 : \u211d) (plaq : Finset (LatticePlaquette d N)) : \u211d :=",
+    "def ymDensity (\u03b2 : \u211d) (plaq : Finset (LatticePlaquette d N))",
+    "def ymMeasure (\u03b2 : \u211d) (plaq : Finset (LatticePlaquette d N)) :"
+  ],
+  "source_snapshots": [
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/Lattice/CellComplex.lean",
+      "copy": "evidence/lgt/LGT/Lattice/CellComplex.lean",
+      "sha256": "9c6636593a1c35bf71f9fc9fd9b7f999ff3d5b295ddfc5d7b8886b7ccaddbd62"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/GaugeField/Connection.lean",
+      "copy": "evidence/lgt/LGT/GaugeField/Connection.lean",
+      "sha256": "19292c525d51fb46c8cb50340ba847f83d8f6d9ed3578c19e25399ec757c0024"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/GaugeField/GaugeGroup.lean",
+      "copy": "evidence/lgt/LGT/GaugeField/GaugeGroup.lean",
+      "sha256": "48245614dcdd798e63e325e88cd631471148b18983fadab9e6146eb28c90fc58"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/GaugeField/UnitaryGroup.lean",
+      "copy": "evidence/lgt/LGT/GaugeField/UnitaryGroup.lean",
+      "sha256": "7f03bcf7b7a044679b6d3b93a6eb2494c45003bd24c84c4249b921612e136b5a"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/MassGap/YMMeasure.lean",
+      "copy": "evidence/lgt/LGT/MassGap/YMMeasure.lean",
+      "sha256": "fbeb4e5153b97c66aecb968c33efcd0ad0d385d866a52e814bdfc7b507f69287"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/MassGap/StrongCoupling.lean",
+      "copy": "evidence/lgt/LGT/MassGap/StrongCoupling.lean",
+      "sha256": "b94ede83ae5a50984792b92516077f32a706e7b94b0486de1fbfd8766eba694d"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/Gibbs/YMSpec.lean",
+      "copy": "evidence/lgt/LGT/Gibbs/YMSpec.lean",
+      "sha256": "c13e11434254009df42015b23503c4e4b73e72069cd5edc241c58fe50fa5e2cd"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/Gibbs/YMIsGibbs.lean",
+      "copy": "evidence/lgt/LGT/Gibbs/YMIsGibbs.lean",
+      "sha256": "6f855d8a19fc7ae8fdcd7b40dc77e1f5de4fd0ca0487ec90ad79e00014afe862"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/Bridge/ScaleTransfer.lean",
+      "copy": "evidence/lgt/LGT/Bridge/ScaleTransfer.lean",
+      "sha256": "6941b03ea3e7de3c0d8d81322ce93802296fc579eb2b0a806b3229bfae3edbf9"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/WilsonAction/WilsonLoop.lean",
+      "copy": "evidence/lgt/LGT/WilsonAction/WilsonLoop.lean",
+      "sha256": "b09d838f7e34fb42e59cb0ec50db2bbc088f742630b783bd860dfa34149ef24b"
+    },
+    {
+      "source": "/Users/oai/Documents/GitHub/lgt/LGT/GaugeField/Holonomy.lean",
+      "copy": "evidence/lgt/LGT/GaugeField/Holonomy.lean",
+      "sha256": "d1062512c5ad518212b69e2b2e556b88126e75772c875f21a3dd56476b6eb217"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/PublicWilson.lean",
+      "copy": "evidence/submitted/PublicWilson.lean",
+      "sha256": "c1542c816cd42d23448b66b4cb021c7f3bdad64b64f1c643dde27147ce0c3233"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/PublicTheory.lean",
+      "copy": "evidence/submitted/PublicTheory.lean",
+      "sha256": "94111ad258b4218a263fcc0a7136446d5a6eff0e090809b72036fb3a7aecfff8"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/WilsonBridge.lean",
+      "copy": "evidence/submitted/WilsonBridge.lean",
+      "sha256": "e927fd2762c57175faa74f26bbf6cbc9999c20f2bbe4e7bce326b17092814298"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Wilson/Law.lean",
+      "copy": "evidence/submitted/YM/Wilson/Law.lean",
+      "sha256": "8ed074914398a6fe8202cd4bf6ed72e1d8d5263375269c67dc7da1df91bd365c"
+    },
+    {
+      "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source/YM/Gauge/MatrixGroup.lean",
+      "copy": "evidence/submitted/YM/Gauge/MatrixGroup.lean",
+      "sha256": "6f711c96a30764ead7e4ceced4fd76a18c3ee307879945699b5059f3361a59d8"
+    }
+  ],
+  "dependency_site_source": {
+    "url": "https://raw.githubusercontent.com/mrdouglasny/gaussian-field/dc2b3b8378b2b7e33eaa8b61d6e943de11ff3f33/Lattice/Sites.lean",
+    "sha256": "e75af99b835f3a3c4bfd315568a699531229815c0032ec552541f1d2142066e1"
+  },
+  "scope": "Selected exact LGT declarations, with explicit original section context and Mathlib import; not a full build of lgt or its mass-gap results. Neither original repository modified."
+}

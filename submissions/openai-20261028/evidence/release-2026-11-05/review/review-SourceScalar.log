@@ -1,0 +1,3 @@
+'YMOSBridge.scalarKernel_rotation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.scalarKernel_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.scalarKernel_capped' depends on axioms: [propext, Classical.choice, Quot.sound]

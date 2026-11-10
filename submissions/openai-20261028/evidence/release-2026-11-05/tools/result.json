@@ -1,0 +1,152 @@
+{
+  "started_utc": "2026-11-05T22:44:18.867675+00:00",
+  "stage": "tools",
+  "status": "passed",
+  "source": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+  "platform": "macOS-15.7.2-arm64-arm-64bit",
+  "run_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-tool-bootstrap",
+  "commands": [
+    {
+      "name": "clone-comparator",
+      "command": [
+        "git",
+        "clone",
+        "--no-checkout",
+        "https://github.com/leanprover/comparator.git",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM",
+      "started_utc": "2026-11-05T22:44:19.609959+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:44:19.888030+00:00",
+      "seconds": 0.278,
+      "expected_behavior": true,
+      "log": "clone-comparator.log"
+    },
+    {
+      "name": "checkout-comparator",
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "d03acab154d269c06e60e4de7e4cc85deebff94b"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator",
+      "started_utc": "2026-11-05T22:44:19.888478+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:44:19.914128+00:00",
+      "seconds": 0.025,
+      "expected_behavior": true,
+      "log": "checkout-comparator.log"
+    },
+    {
+      "name": "build-comparator",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "build",
+        "comparator"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator",
+      "started_utc": "2026-11-05T22:44:19.939732+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:44:52.534679+00:00",
+      "seconds": 32.594,
+      "expected_behavior": true,
+      "log": "build-comparator.log"
+    },
+    {
+      "name": "clone-lean4export",
+      "command": [
+        "git",
+        "clone",
+        "--no-checkout",
+        "https://github.com/leanprover/lean4export.git",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/lean4export"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM",
+      "started_utc": "2026-11-05T22:44:52.535094+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:44:56.246716+00:00",
+      "seconds": 3.711,
+      "expected_behavior": true,
+      "log": "clone-lean4export.log"
+    },
+    {
+      "name": "checkout-lean4export",
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "4e7915201d3f9f04470d9eae002fa695f7cdc589"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/lean4export",
+      "started_utc": "2026-11-05T22:44:56.246986+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:44:56.261357+00:00",
+      "seconds": 0.014,
+      "expected_behavior": true,
+      "log": "checkout-lean4export.log"
+    },
+    {
+      "name": "build-lean4export",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "build",
+        "lean4export"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/lean4export",
+      "started_utc": "2026-11-05T22:44:56.282841+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:45:01.124791+00:00",
+      "seconds": 4.841,
+      "expected_behavior": true,
+      "log": "build-lean4export.log"
+    }
+  ],
+  "source_build_present_at_start": true,
+  "LEAN_NUM_THREADS": "2",
+  "comparator_mode": "upstream development launcher; no Landrun isolation or external kernel",
+  "integrity_before": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "os_correspondence": {
+    "passed": true,
+    "declarations": [
+      {
+        "name": "OSInnerProduct",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OsterwalderSchraderAxioms",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OSArityLinearGrowthCondition",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Growth.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "BorchersSequence",
+        "upstream": "Specification/Wightman.lean",
+        "local": "YangMills/OSRecon/Vendored/OSConj.lean",
+        "whole_declaration_matches": true
+      }
+    ],
+    "limitation": "Text correspondence after documented normalization; full upstream projects are not jointly compiled."
+  },
+  "integrity_after": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "finished_utc": "2026-11-05T22:45:01.467932+00:00"
+}

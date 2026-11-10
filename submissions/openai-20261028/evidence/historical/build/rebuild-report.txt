@@ -1,0 +1,66 @@
+YM CONSTRUCTION CHALLENGE — INDEPENDENT REBUILD
+
+Overall result: PASS
+Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)
+Lake version 5.0.0-src+8c9756b (Lean version 4.32.0)
+Original archive: /Users/oai/Documents/YM-construction-challenge
+Working copy: /Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source
+Permanent toolchain: /Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0
+
+Source integrity: 9507 manifest entries matched; 0 issues.
+Pinned dependencies: all 9 exact revisions match: True.
+Project modules freshly compiled: 9470.
+Lean source files unchanged after rebuild: 9477; changed or missing: 0.
+No project build artifacts were present at the start. Official Mathlib dependency cache was used.
+The original archive was not modified.
+
+COMMAND RESULTS
+PASSED (2.28 minutes; exit 0): lake exe cache get
+  Log: dependency-cache.log
+PASSED (183.94 minutes; exit 0): lake build WilsonReference WilsonConstruction
+  Log: build.log
+PASSED (8.85 minutes; exit 0): lake env lean -j1 -DmaxHeartbeats=0 -DmaxRecDepth=4096 VerifyJoint.lean
+  Log: verify-joint.log
+PASSED (0.53 minutes; exit 0): lake env lean -j1 -DmaxHeartbeats=0 verification/Usage.lean
+  Log: usage.log
+PASSED (0.18 minutes; exit 0): lake env lean -j1 verification/CompactCheck.lean
+  Log: compact-check.log
+
+VERIFICATION OUTPUT
+TYPE_MATCH YangMills.jointExistence
+ENDPOINT_AXIOMS YangMills.jointExistence [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YangMills.constructed [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YangMills.su2Simple [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YangMills.su2Theory [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Nonperturbative.existence [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Nonperturbative.continuum [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Nonperturbative.continuum_with_position_tests [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Contacts.Solstice.celestial [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Pert.Position.finite_leading [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Pert.Position.normalized_four [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Pert.Parity.parityEndpoint [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Pert.Parity.low_read [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Pert.Asymptotics.comparison [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.SharpGram.habitat [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.SharpGram.inletFirst [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.SharpGram.outletFirst [propext, Classical.choice, Quot.sound]
+ENDPOINT_AXIOMS YM.Independent.Core.point [propext, Classical.choice, Quot.sound]
+REPLAY_PASS project=100168 external=14364 endpoints=17 duplicateAliases=0
+USAGE_PASS headlines=17 project=250319 used=100168 outside=150151 modules=9469 modulesWithNoUsedDeclaration=2946
+COMPACT_ESTIMATE YangMills.CompactCheck.compactCoefficient [propext, Classical.choice, Quot.sound]
+COMPACT_ESTIMATE YangMills.CompactCheck.compactRemainder [propext, Classical.choice, Quot.sound]
+
+WARNINGS: 2453
+Compiler warnings were retained; project sources were not edited to silence them.
+Proof-placeholder warnings:
+warning: Challenge.lean:5:8: declaration uses `sorry`
+
+SCOPE
+This run reproduces the documented compilation and verification commands. It does not constitute an independent review of whether the formal definitions capture the intended physical Yang–Mills theory.
+
+Lean and Lake are installed permanently via Elan. A new zsh session includes ~/.elan/bin in PATH.
+
+RETAINED STORAGE
+project_build: 44.2 GiB
+dependencies: 7.7 GiB
+The working copy retains these artifacts for incremental rebuilds.

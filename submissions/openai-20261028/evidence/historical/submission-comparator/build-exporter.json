@@ -1,0 +1,17 @@
+{
+  "stage": "build-exporter",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "build",
+    "lean4export"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export",
+  "environment_overrides": {},
+  "started_utc": "2026-10-30T13:18:48.328400+00:00",
+  "status": "passed",
+  "pid": 46335,
+  "exit_code": 0,
+  "elapsed_seconds": 9.87,
+  "finished_utc": "2026-10-30T13:18:58.199803+00:00",
+  "log": "/Users/oai/Documents/YM-construction-challenge-derived/outputs/ym-comparator/build-exporter.log"
+}

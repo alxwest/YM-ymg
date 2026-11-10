@@ -1,0 +1,4 @@
+'YMOSBridge.constructed_reflection_positive_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E0_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.completeOS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.constructed_tempered_family' depends on axioms: [propext, Classical.choice, Quot.sound]

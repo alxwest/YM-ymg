@@ -1,0 +1,5 @@
+'YMOSBridge.chamber_ground_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.chamber_mixed_heat_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.chamber_word_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.phase_word_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.phase_mixed_heat_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

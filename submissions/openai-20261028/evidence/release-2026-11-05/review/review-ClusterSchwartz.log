@@ -1,0 +1,3 @@
+'YMOSBridge.cluster_integral_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.weighted_kernel_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.schwinger_cluster_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]

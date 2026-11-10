@@ -1,0 +1,5 @@
+'YMOSBridge.E4_cluster_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.E4_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.verifiedOS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.verifiedOS_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.constructed_OS_family' depends on axioms: [propext, Classical.choice, Quot.sound]

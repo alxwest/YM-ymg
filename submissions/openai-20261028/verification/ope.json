@@ -1,0 +1,12 @@
+{
+  "challenge_module": "OPEChallenge",
+  "solution_module": "OPECheck",
+  "theorem_names": [
+    "YMReview.OPE.constructed"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

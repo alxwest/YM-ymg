@@ -1,0 +1,148 @@
+{
+  "started_utc": "2026-11-05T22:47:26.084670+00:00",
+  "stage": "controls",
+  "status": "passed",
+  "source": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/submission",
+  "platform": "macOS-15.7.2-arm64-arm-64bit",
+  "run_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-controls-final",
+  "commands": [
+    {
+      "name": "control-accept",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-controls-final/controls/accept",
+      "started_utc": "2026-11-05T22:47:26.603353+00:00",
+      "exit_code": 0,
+      "finished_utc": "2026-11-05T22:47:29.436272+00:00",
+      "seconds": 2.833,
+      "expected_behavior": true,
+      "log": "control-accept.log"
+    },
+    {
+      "name": "control-statement_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-controls-final/controls/statement_mismatch",
+      "started_utc": "2026-11-05T22:47:29.436613+00:00",
+      "exit_code": 1,
+      "finished_utc": "2026-11-05T22:47:30.560194+00:00",
+      "seconds": 1.123,
+      "expected_behavior": true,
+      "log": "control-statement_mismatch.log"
+    },
+    {
+      "name": "control-forbidden_axiom",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-controls-final/controls/forbidden_axiom",
+      "started_utc": "2026-11-05T22:47:30.560594+00:00",
+      "exit_code": 1,
+      "finished_utc": "2026-11-05T22:47:31.693142+00:00",
+      "seconds": 1.132,
+      "expected_behavior": true,
+      "log": "control-forbidden_axiom.log"
+    },
+    {
+      "name": "control-definition_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/release-controls-final/controls/definition_mismatch",
+      "started_utc": "2026-11-05T22:47:31.693544+00:00",
+      "exit_code": 1,
+      "finished_utc": "2026-11-05T22:47:32.799483+00:00",
+      "seconds": 1.106,
+      "expected_behavior": true,
+      "log": "control-definition_mismatch.log"
+    }
+  ],
+  "source_build_present_at_start": true,
+  "LEAN_NUM_THREADS": "2",
+  "mathlib_cache_directory": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/runs/cache/mathlib",
+  "input_manifest_hashes": {
+    "provenance/package-files.json": "e7f32de3196b2ce8f8d4c00ac4507713187a9429a8dd566021653278411bdaa9",
+    "provenance/review-imports.json": "f1045a64c01149afb0c0c9d97714ded36e725373ce0f127a3e477e0584860507",
+    "provenance/october-import.json": "1ee2d290dfa6786ccd7888a4db7be48cbb55aad72a53e2533b2e1834b2ff1bb8"
+  },
+  "comparator_mode": "upstream development launcher; no Landrun isolation or external kernel",
+  "integrity_before": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "os_correspondence": {
+    "passed": true,
+    "declarations": [
+      {
+        "name": "OSInnerProduct",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OsterwalderSchraderAxioms",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Vendored/Axioms.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "OSArityLinearGrowthCondition",
+        "upstream": "Specification.lean",
+        "local": "YangMills/OSRecon/Growth.lean",
+        "whole_declaration_matches": true
+      },
+      {
+        "name": "BorchersSequence",
+        "upstream": "Specification/Wightman.lean",
+        "local": "YangMills/OSRecon/Vendored/OSConj.lean",
+        "whole_declaration_matches": true
+      }
+    ],
+    "limitation": "Text correspondence after documented normalization; full upstream projects are not jointly compiled."
+  },
+  "tools": [
+    {
+      "name": "comparator",
+      "url": "https://github.com/leanprover/comparator.git",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "binary_sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738"
+    },
+    {
+      "name": "lean4export",
+      "url": "https://github.com/leanprover/lean4export.git",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "binary_sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e"
+    }
+  ],
+  "launcher_sha256": "167507c89d8b3c7667ad78b50df7b19f89883751a01efd1457404fa34a994e8b",
+  "environment_overrides": {
+    "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/comparator/scripts/fake-landrun.sh",
+    "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-pureYM/.tools/lean4export/.lake/build/bin/lean4export"
+  },
+  "controls_passed": true,
+  "integrity_after": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "finished_utc": "2026-11-05T22:47:33.161531+00:00"
+}

@@ -1,0 +1,102 @@
+{
+  "checked_utc": "2026-11-03T13:31:17.395315+00:00",
+  "results": [
+    {
+      "stage": "control-accept",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/accept",
+      "environment_overrides": {
+        "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+        "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+      },
+      "started_utc": "2026-11-03T13:31:13.407252+00:00",
+      "status": "passed",
+      "pid": 11205,
+      "exit_code": 0,
+      "elapsed_seconds": 1.08,
+      "finished_utc": "2026-11-03T13:31:14.485426+00:00",
+      "log": "control-accept.log",
+      "case": "accept",
+      "expected_diagnostic": "Your solution is okay!",
+      "expected_behavior_observed": true
+    },
+    {
+      "stage": "control-statement_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/statement_mismatch",
+      "environment_overrides": {
+        "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+        "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+      },
+      "started_utc": "2026-11-03T13:31:14.485900+00:00",
+      "status": "rejected_or_failed",
+      "pid": 11215,
+      "exit_code": 1,
+      "elapsed_seconds": 0.97,
+      "finished_utc": "2026-11-03T13:31:15.459643+00:00",
+      "log": "control-statement_mismatch.log",
+      "case": "statement_mismatch",
+      "expected_diagnostic": "Challenge and solution theorem statement do not match: 'comparatorSmoke'",
+      "expected_behavior_observed": true
+    },
+    {
+      "stage": "control-forbidden_axiom",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/forbidden_axiom",
+      "environment_overrides": {
+        "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+        "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+      },
+      "started_utc": "2026-11-03T13:31:15.460109+00:00",
+      "status": "rejected_or_failed",
+      "pid": 11236,
+      "exit_code": 1,
+      "elapsed_seconds": 0.96,
+      "finished_utc": "2026-11-03T13:31:16.421746+00:00",
+      "log": "control-forbidden_axiom.log",
+      "case": "forbidden_axiom",
+      "expected_diagnostic": "Illegal axiom detected: 'unapproved'",
+      "expected_behavior_observed": true
+    },
+    {
+      "stage": "control-definition_mismatch",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+        "comparator.json"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/controls/definition_mismatch",
+      "environment_overrides": {
+        "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+        "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+      },
+      "started_utc": "2026-11-03T13:31:16.422150+00:00",
+      "status": "rejected_or_failed",
+      "pid": 11246,
+      "exit_code": 1,
+      "elapsed_seconds": 0.97,
+      "finished_utc": "2026-11-03T13:31:17.394991+00:00",
+      "log": "control-definition_mismatch.log",
+      "case": "definition_mismatch",
+      "expected_diagnostic": "Const does not match between challenge and target 'reference'",
+      "expected_behavior_observed": true
+    }
+  ],
+  "passed": true
+}

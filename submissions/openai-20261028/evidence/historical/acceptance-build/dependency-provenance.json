@@ -1,0 +1,192 @@
+{
+  "ClusterCore": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ClusterCore.lean",
+    "bundled_path": "dependencies/ClusterCore.lean",
+    "sha256": "8ad237a735261da37012470880e91e713891eef682d703ed443a58c67f81d7ff"
+  },
+  "ClusterCones": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ClusterCones.lean",
+    "bundled_path": "dependencies/ClusterCones.lean",
+    "sha256": "4492d6f336246a82585b0d3538bea6284679ddb3822755a9c7cd6b2cdb677b9f"
+  },
+  "SourceScalar": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/SourceScalar.lean",
+    "bundled_path": "dependencies/SourceScalar.lean",
+    "sha256": "8c39b1a21513d5270c2dacf27857614b2e282dd292b8afe09cafa808dc39be37"
+  },
+  "ClusterKernel": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ClusterKernel.lean",
+    "bundled_path": "dependencies/ClusterKernel.lean",
+    "sha256": "dc25d6d7dc572fecdf2fabccbef8cfcd2861ef497799044259cfb791a01b4c66"
+  },
+  "YangMills.OSRecon.Vendored.Spacetime": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/YangMills/OSRecon/Vendored/Spacetime.lean",
+    "bundled_path": "dependencies/YangMills/OSRecon/Vendored/Spacetime.lean",
+    "sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668"
+  },
+  "YangMills.OSRecon.Vendored.TensorProduct": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/YangMills/OSRecon/Vendored/TensorProduct.lean",
+    "bundled_path": "dependencies/YangMills/OSRecon/Vendored/TensorProduct.lean",
+    "sha256": "78cbd9de644663ed556c3f05f752a040128e7882af28e9627da50a3f5b39f06e"
+  },
+  "YangMills.OSRecon.Vendored.ZeroDiagonal": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/YangMills/OSRecon/Vendored/ZeroDiagonal.lean",
+    "bundled_path": "dependencies/YangMills/OSRecon/Vendored/ZeroDiagonal.lean",
+    "sha256": "160576436d6e809bdf249d1029033ec11f08c7836f63f488d297296dcdc4284d"
+  },
+  "YangMills.OSRecon.Vendored.OSConj": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/YangMills/OSRecon/Vendored/OSConj.lean",
+    "bundled_path": "dependencies/YangMills/OSRecon/Vendored/OSConj.lean",
+    "sha256": "d717b96a013c4f8850e7b5315bdaf97287aeacd5a8cec3382e1a4e34b806f880"
+  },
+  "YangMills.OSRecon.Vendored.Axioms": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/YangMills/OSRecon/Vendored/Axioms.lean",
+    "bundled_path": "dependencies/YangMills/OSRecon/Vendored/Axioms.lean",
+    "sha256": "a0e70dabf0c0ef181193cebdd26ce688e5f431ecbe159e9160ff06e0b6699089"
+  },
+  "Coordinates": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/Coordinates.lean",
+    "bundled_path": "dependencies/Coordinates.lean",
+    "sha256": "58e73fa62750293ff0770f795de30485ffa79334acf7b4ca1c4daadc28e5c0e1"
+  },
+  "ImportedCenterWeights": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ImportedCenterWeights.lean",
+    "bundled_path": "dependencies/ImportedCenterWeights.lean",
+    "sha256": "0df3139e83cc4dea488b032f686689e1b6546aecebb49eb5a60240e725583961"
+  },
+  "ImportedDiagonalFlatBounds": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ImportedDiagonalFlatBounds.lean",
+    "bundled_path": "dependencies/ImportedDiagonalFlatBounds.lean",
+    "sha256": "0dfa0b6b39af9009d848e0d9293cf695a9e69735e6e32d3a8c0ef218651b5ecb"
+  },
+  "TargetKernel": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/TargetKernel.lean",
+    "bundled_path": "dependencies/TargetKernel.lean",
+    "sha256": "e8510fa51b8dd8bf19696fa8003042ecd0b1a3205088dbddee445fd6b842d685"
+  },
+  "ClusterTarget": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ClusterTarget.lean",
+    "bundled_path": "dependencies/ClusterTarget.lean",
+    "sha256": "fa4330a75ad94b410324fb943f5d7cee59164ae11c9b23995e614a85cfca9ee3"
+  },
+  "Temperedness": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/Temperedness.lean",
+    "bundled_path": "dependencies/Temperedness.lean",
+    "sha256": "cdc87faf64a63b8070a2dcbb55097c2a4d35bee84fdcb34cfc9a7ce60fd6913a"
+  },
+  "ClusterDomination": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ClusterDomination.lean",
+    "bundled_path": "dependencies/ClusterDomination.lean",
+    "sha256": "03a2d2c42b486907a9b068d3c2c07334e2b366c143941ff3481c165d792e49c1"
+  },
+  "ImportedSchwartzDomain": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ImportedSchwartzDomain.lean",
+    "bundled_path": "dependencies/ImportedSchwartzDomain.lean",
+    "sha256": "da32cc3c49063f761648b6f5792caf431ac9a3a1111559fd21ae18e1cb4e1e11"
+  },
+  "ImportedSchwartzProduct": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ImportedSchwartzProduct.lean",
+    "bundled_path": "dependencies/ImportedSchwartzProduct.lean",
+    "sha256": "a327d573d777d2552f520c3e8c684c0c1e49ae0a3f61858326f039fc009f8e51"
+  },
+  "ClusterSchwartz": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ClusterSchwartz.lean",
+    "bundled_path": "dependencies/ClusterSchwartz.lean",
+    "sha256": "9ac62c789edac0662fe1ebbe7af9dd16781ddf5fe4330ff6cc724869b69307f5"
+  },
+  "Invariance": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/Invariance.lean",
+    "bundled_path": "dependencies/Invariance.lean",
+    "sha256": "2a0e8864657b99c66e0a0e864e201e71b6a70f92fcf69e087e0e53ce03599f8d"
+  },
+  "ReflectionTransport": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ReflectionTransport.lean",
+    "bundled_path": "dependencies/ReflectionTransport.lean",
+    "sha256": "21c7c59a934a1eb5988d33b5b977bc39c21f6f8c9a34c08586f42c6e8b665d9c"
+  },
+  "ImportedSchwartzCutoffs": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ImportedSchwartzCutoffs.lean",
+    "bundled_path": "dependencies/ImportedSchwartzCutoffs.lean",
+    "sha256": "6f6fdb12027c5de0654c8733a8a7f25d37c033cbbd8ffb1db9cdced1eb9077ad"
+  },
+  "ImportedReflectionApproximation": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ImportedReflectionApproximation.lean",
+    "bundled_path": "dependencies/ImportedReflectionApproximation.lean",
+    "sha256": "9f6ad873fd0df355dcb3a02d62478dda666a5f323bcd72007d5d4d012d3df20f"
+  },
+  "ReflectionPositivity": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ReflectionPositivity.lean",
+    "bundled_path": "dependencies/ReflectionPositivity.lean",
+    "sha256": "a5a1e3456b05c69d0357ceea09c9162ea38a0574099213412e7bbc5f09c88ea0"
+  },
+  "YangMills.OSRecon.Growth": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/YangMills/OSRecon/Growth.lean",
+    "bundled_path": "dependencies/YangMills/OSRecon/Growth.lean",
+    "sha256": "9ceba1c37449effbb1aae62623ceb8aa7ad333f75e1ba95d76c005e3a9f29840"
+  },
+  "ArityGrowth": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/ArityGrowth.lean",
+    "bundled_path": "dependencies/ArityGrowth.lean",
+    "sha256": "cefb98ba14f6da76bb189a669a8e31f9f8ef2d8ad1ac749df9050820a8fa7a5c"
+  },
+  "RemainingObligations": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/RemainingObligations.lean",
+    "bundled_path": "dependencies/RemainingObligations.lean",
+    "sha256": "03c85631c118dce51b71f8d85ece01866e7fb62d250ef019d3e10cffba48cc02"
+  },
+  "CompleteOS": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-os-axiom-bridge/CompleteOS.lean",
+    "bundled_path": "dependencies/CompleteOS.lean",
+    "sha256": "4c4fdc2170e3443c86c55b66407752744f46783abf7a255476f8bc6b2e31936e"
+  },
+  "ImportedAFGauge": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-asymptotic-freedom/ImportedAFGauge.lean",
+    "bundled_path": "dependencies/ImportedAFGauge.lean",
+    "sha256": "136d59e698dde46cdf99e1fa37ce2b94ee210053f0d5f9b2e3b37938f3d4cfd7"
+  },
+  "ImportedAFSpecification": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-asymptotic-freedom/ImportedAFSpecification.lean",
+    "bundled_path": "dependencies/ImportedAFSpecification.lean",
+    "sha256": "a80bf741dd9f71a7ee465601f253a6d09fd2ade88dd4acae2d0446013cab86eb"
+  },
+  "AFSourceBridge": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-asymptotic-freedom/AFSourceBridge.lean",
+    "bundled_path": "dependencies/AFSourceBridge.lean",
+    "sha256": "d018eec939692bec6c39d763c19f3544d67537f92f6308b7a5deccc7e78bb149"
+  },
+  "CommonScaleAudit": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-common-scale/CommonScaleAudit.lean",
+    "bundled_path": "dependencies/CommonScaleAudit.lean",
+    "sha256": "ac9b14ad7532a98156eecd33a29ee05647f5798f2ea0c5f3d13a2d6c711d41d5"
+  },
+  "NonzeroPhysicalObservable": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-common-scale/NonzeroPhysicalObservable.lean",
+    "bundled_path": "dependencies/NonzeroPhysicalObservable.lean",
+    "sha256": "34bf80e0c29281fefb6055ee6f12dbd853401a8ec07682f91e8656e36778b0ef"
+  },
+  "TwoPointPhysicalObservable": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-common-scale/TwoPointPhysicalObservable.lean",
+    "bundled_path": "dependencies/TwoPointPhysicalObservable.lean",
+    "sha256": "bd2a2cc959f3c7f70d2a0e98b9f455f18f165767f0c81f71593e328385ea0ec0"
+  },
+  "CompletenessAudit": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-operator-completeness/CompletenessAudit.lean",
+    "bundled_path": "dependencies/CompletenessAudit.lean",
+    "sha256": "36c15bb8b5e360610afb3eb18dc5d597abc2bbe231a9b6588c23467840f6b3a9"
+  },
+  "WardFormulationAudit": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-ward-audit/WardFormulationAudit.lean",
+    "bundled_path": "dependencies/WardFormulationAudit.lean",
+    "sha256": "5943d1d891f931404368d63a5b75e86e07b2c8a0c85b7df79aa2cb6056b48682"
+  },
+  "ImportedLGTData": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-lgt-comparison/ImportedLGTData.lean",
+    "bundled_path": "dependencies/ImportedLGTData.lean",
+    "sha256": "7e1ff512f0112e0d355033bdc84a49c7b19c1b92b029a4c2cc2a45a8ada47b04"
+  },
+  "LGTWilsonBridge": {
+    "original_path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-lgt-comparison/LGTWilsonBridge.lean",
+    "bundled_path": "dependencies/LGTWilsonBridge.lean",
+    "sha256": "59a4c89ba23ad012d9d2e893cf1da936cdeae0b40e0fac423ccf149ae8b80962"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "all_documented_commands_passed": true,
+  "environment": {
+    "platform": "macOS-15.7.2-arm64-arm-64bit",
+    "architecture": "arm64",
+    "lean": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+    "lake": "Lake version 5.0.0-src+8c9756b (Lean version 4.32.0)",
+    "elan": "elan 4.2.4 (227caca13 2026-08-25)",
+    "source_directory": "/Users/oai/Documents/YM-construction-challenge",
+    "build_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+    "toolchain_directory": "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0",
+    "toolchain_sha256": "4faa4757f7ca5e7d9588a9de779550fa58bdf01498edb966f15029e2ea117e4e",
+    "project_build_cache_present_at_start": false,
+    "dependency_cache": "Mathlib official cache; project sources compiled locally",
+    "LEAN_NUM_THREADS": 8
+  },
+  "initial_source_integrity": {
+    "matched": 9507,
+    "issues": [],
+    "lean_sources": 9477
+  },
+  "pinned_dependencies": {
+    "all_pinned_revisions_match": true,
+    "packages": [
+      {
+        "package": "plausible",
+        "expected": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+        "actual": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+        "matches": true
+      },
+      {
+        "package": "LeanSearchClient",
+        "expected": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "actual": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "matches": true
+      },
+      {
+        "package": "importGraph",
+        "expected": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+        "actual": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+        "matches": true
+      },
+      {
+        "package": "proofwidgets",
+        "expected": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+        "actual": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+        "matches": true
+      },
+      {
+        "package": "aesop",
+        "expected": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+        "actual": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+        "matches": true
+      },
+      {
+        "package": "Qq",
+        "expected": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+        "actual": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+        "matches": true
+      },
+      {
+        "package": "batteries",
+        "expected": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+        "actual": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+        "matches": true
+      },
+      {
+        "package": "Cli",
+        "expected": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+        "actual": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+        "matches": true
+      },
+      {
+        "package": "mathlib",
+        "expected": "81a5d257c8e410db227a6665ed08f64fea08e997",
+        "actual": "81a5d257c8e410db227a6665ed08f64fea08e997",
+        "matches": true
+      }
+    ]
+  },
+  "stages": [
+    {
+      "stage": "dependency-cache",
+      "command": [
+        "lake",
+        "exe",
+        "cache",
+        "get"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+      "started_utc": "2026-10-29T02:29:16.535382+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 136.62,
+      "finished_utc": "2026-10-29T02:31:33.149436+00:00"
+    },
+    {
+      "stage": "build",
+      "command": [
+        "lake",
+        "build",
+        "WilsonReference",
+        "WilsonConstruction"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+      "started_utc": "2026-10-29T02:31:39.339457+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 11036.28,
+      "finished_utc": "2026-10-29T05:35:35.654536+00:00"
+    },
+    {
+      "stage": "verify-joint",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=4096",
+        "VerifyJoint.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+      "started_utc": "2026-10-29T05:35:35.729407+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 530.93,
+      "finished_utc": "2026-10-29T05:44:26.662228+00:00"
+    },
+    {
+      "stage": "usage",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "verification/Usage.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+      "started_utc": "2026-10-29T05:44:26.735315+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 31.94,
+      "finished_utc": "2026-10-29T05:44:58.677314+00:00"
+    },
+    {
+      "stage": "compact-check",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "verification/CompactCheck.lean"
+      ],
+      "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-rebuild/source",
+      "started_utc": "2026-10-29T05:44:58.747925+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 10.59,
+      "finished_utc": "2026-10-29T05:45:09.342538+00:00"
+    }
+  ],
+  "fresh_project_module_builds": 9470,
+  "unique_project_module_builds": 9470,
+  "warning_count": 2453,
+  "sorry_warnings": [
+    "warning: Challenge.lean:5:8: declaration uses `sorry`"
+  ],
+  "lean_source_files_unchanged": 9477,
+  "lean_source_changes": [],
+  "verification_markers": {
+    "dependency-cache": [],
+    "verify-joint": [
+      "TYPE_MATCH YangMills.jointExistence",
+      "ENDPOINT_AXIOMS YangMills.jointExistence [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YangMills.constructed [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YangMills.su2Simple [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YangMills.su2Theory [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Nonperturbative.existence [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Nonperturbative.continuum [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Nonperturbative.continuum_with_position_tests [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Contacts.Solstice.celestial [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Pert.Position.finite_leading [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Pert.Position.normalized_four [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Pert.Parity.parityEndpoint [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Pert.Parity.low_read [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Pert.Asymptotics.comparison [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.SharpGram.habitat [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.SharpGram.inletFirst [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.SharpGram.outletFirst [propext, Classical.choice, Quot.sound]",
+      "ENDPOINT_AXIOMS YM.Independent.Core.point [propext, Classical.choice, Quot.sound]",
+      "REPLAY_PASS project=100168 external=14364 endpoints=17 duplicateAliases=0"
+    ],
+    "usage": [
+      "USAGE_PASS headlines=17 project=250319 used=100168 outside=150151 modules=9469 modulesWithNoUsedDeclaration=2946"
+    ],
+    "compact-check": [
+      "COMPACT_ESTIMATE YangMills.CompactCheck.compactCoefficient [propext, Classical.choice, Quot.sound]",
+      "COMPACT_ESTIMATE YangMills.CompactCheck.compactRemainder [propext, Classical.choice, Quot.sound]"
+    ]
+  },
+  "retained_storage_bytes": {
+    "project_build": 47459459072,
+    "dependencies": 8222945280
+  }
+}

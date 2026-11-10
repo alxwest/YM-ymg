@@ -1,0 +1,6 @@
+'YMReview.NonzeroScale.nonzero_field_detected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NonzeroScale.Probe.dimension_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NonzeroScale.Probe.positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NonzeroScale.Probe.converges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NonzeroScale.probe_from_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NonzeroScale.constructed' depends on axioms: [propext, Classical.choice, Quot.sound]

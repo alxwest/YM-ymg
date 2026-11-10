@@ -1,0 +1,42 @@
+{
+  "warning_lines_in_full_log": 4909,
+  "categories": {
+    "macos_development_shim": {
+      "count": 4,
+      "examples": [
+        "WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build AcceptanceChallenge",
+        "WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export AcceptanceChallenge -- Quot Quot.mk Quot.lift Quot.ind YMReview.Acceptance.combined_acceptance propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam",
+        "WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build CombinedAcceptance",
+        "WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export CombinedAcceptance -- Quot Quot.mk Quot.lift Quot.ind YMReview.Acceptance.combined_acceptance propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam"
+      ]
+    },
+    "reference_placeholder": {
+      "count": 1,
+      "examples": [
+        "warning: AcceptanceChallenge.lean:10:8: declaration uses `sorry`"
+      ]
+    },
+    "submitted_source": {
+      "count": 4904,
+      "examples": [
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Counting.lean:82:10: This simp argument is unused:",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Counting.lean:82:30: This simp argument is unused:",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Counting.lean:85:8: This simp argument is unused:",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Counting.lean:85:28: This simp argument is unused:",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Counting.lean:85:39: This simp argument is unused:",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Held.lean:79:29: 'change \u2016broad q d (LocalH.snap G u) \u2022 _\u2016 \u2264 _' tactic does nothing",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Affine.lean:45:14: Variable name `S` is not explicitly referenced.",
+        "warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Affine.lean:47:14: Variable name `S` is not explicitly referenced."
+      ]
+    },
+    "review_modules": {
+      "count": 0,
+      "examples": []
+    },
+    "other": {
+      "count": 0,
+      "examples": []
+    }
+  },
+  "note": "Lake may replay cached diagnostics. Counts are log occurrences, not newly introduced warnings."
+}

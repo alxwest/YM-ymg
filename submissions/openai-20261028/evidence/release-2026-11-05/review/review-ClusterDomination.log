@@ -1,0 +1,1 @@
+'YMOSBridge.translated_kernel_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]

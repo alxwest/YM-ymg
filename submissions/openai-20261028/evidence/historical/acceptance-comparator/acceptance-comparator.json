@@ -1,0 +1,21 @@
+{
+  "stage": "acceptance-comparator",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+    "comparator.json"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-acceptance-comparator/project",
+  "environment_overrides": {
+    "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+    "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+  },
+  "started_utc": "2026-11-03T13:31:17.395576+00:00",
+  "status": "passed",
+  "pid": 11268,
+  "exit_code": 0,
+  "elapsed_seconds": 964.31,
+  "finished_utc": "2026-11-03T13:47:21.710016+00:00",
+  "log": "acceptance-comparator.log"
+}
