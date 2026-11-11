@@ -36,22 +36,6 @@ The scalar correlation functions are paired with zero-diagonal Schwartz tests. T
 
 These checks do not determine explicit Yang–Mills perturbative coefficient values or prove uniqueness under all choices of operator normalization and OPE prescription. The earlier combined Comparator run predates this adapter and therefore did not check it. Its own evidence is listed separately.
 
-## Supplementary gap-free non-vacuum excitation check (not A1–A8)
-
-The [centered-trace excitation cross-check](excitation-crosscheck.md) proves
-an additional, purely Wightman-theoretic implication for the October public
-`Hierarchy` interface. It uses normalized cyclic Wightman fields,
-faithfulness, centering, and an explicit nonzero trace field to produce an
-actual field word outside the vacuum line. It assumes no mass gap.
-This is a separately reproduced proof and axiom audit, **not an extension of
-the historical 43-module review, acceptance theorem or Comparator runs**.
-The final instantiation with the construction's nonzero-trace theorem remains
-separate.
-
-The [first-coefficient cross-check](first-coefficient-crosscheck.md)
-records the algebraic agreement of the conventional beta-function g³
-coefficients with ym-lean, while making no all-orders or physical-match claim.
-
 ## Admissions, axioms and negative controls
 
 The review runner freshly compiles all 43 review modules and audits 13 declarations: eight combined-check declarations and five OPE declarations. It requires zero review warnings and permits only `propext`, `Classical.choice` and `Quot.sound` in the reported dependencies.

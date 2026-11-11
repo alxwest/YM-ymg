@@ -1,71 +1,99 @@
-# Gap-free centered-trace excitation: a supplementary October cross-check
+# A checked non-vacuum consequence of the constructed centered trace
 
-This is an **additional Lean consequence** of the October submission's public
-Wightman axioms and its `Hierarchy` interface. It is not part of the
-historical A1–A8 package or the existing Comparator endpoints, and does not
-modify any file of the preserved `submission/` distribution.
+This is a **supplementary consequence of results already present in the
+October submission**, not a correction to its proof or an independent
+Yang–Mills construction. It makes the non-vacuum conclusion explicit in a
+form useful for comparing another formal specification.
 
-## Checked implications
+## The connection now checked
 
-The new [ExcitationFromPublic.lean](../checks/ExcitationFromPublic.lean)
-contains two theorems:
+[ExcitationFromConstructed.lean](../checks/ExcitationFromConstructed.lean)
+uses the original source's actual `YM.Spec.Final C p S` and its selected
+physical theory `YangMills.view F.action`. Its two theorems are:
 
-1. `YangMills.WightmanTheory.hasFieldExcitation_of_centered_nonzero`:
-   in the *actual* normalized and cyclic Wightman field system, a field
-   with vanishing vacuum one-point function whose smeared operator is
-   nonzero creates a field word outside the vacuum line.
-2. `YangMills.Hierarchy.nonvacuum_of_reconstructed_nonzero_trace`:
-   a `Hierarchy.Reconstructed` together with its `TraceTest` and
-   `centeredTrace ≠ 0` implies that its very Wightman theory has such
-   an excitation. Injectivity of `toLabel` and field faithfulness are used.
-   No second Hilbert space or state is introduced.
+- `selected_nonvacuum_of_positive_trace`: the selected physical Wightman
+  theory has a field-generated state outside the vacuum line.
+- `selected_constructed_word_outside_vacuum`: that state is literally
+  `F.action.operators.vector word` in the original Hilbert space, outside
+  the complex span of `F.action.operators.vacuum`.
 
-This is stronger than the public
-[`Reconstructed.acts`](../submission/ChallengeSpec.lean) condition, which
-could also be satisfied by the nonzero identity operator.
+Their exact analytic premises are `0 < A` and
+`YM.TraceExtension.EuclideanAsymptotic F A`: the positive short-distance
+trace limit used in the original construction. There is **no independent
+nonzero-trace-field premise** and no second theory or selected phase.
 
-**The explicit nonzero-trace-field hypothesis has NOT been eliminated from
-the second theorem in this supplementary check.** The submitted construction
-has a related `TraceExtension.nonzero_strength` result used by
-[`NonzeroPhysicalObservable.probe_from_trace`](../checks/NonzeroPhysicalObservable.lean).
-The final Lean term applying that internal result to the exact same public
-`hierarchy F Q` has not yet been added here.
+The proof uses only the original source results:
 
-No mass gap, intrinsic positive mass, uniqueness of infinite-volume limit,
-or all-orders perturbative coefficient matching is claimed.
+1. `nonzero_strength F hA hshort` gives a nonzero **actual trace label**.
+2. `F.realization.qt.faithful` gives a nonzero smeared operator of that label.
+3. `pinned_centered F` gives its actual zero vacuum expectation.
+4. `view_axioms F.action F.realization.qt` supplies the source Wightman
+   axioms for the same fields and state space.
+5. The already checked general cyclicity lemma gives the non-vacuum word;
+   `PublicView.vector_eq` identifies it with the original constructed word.
 
-## Reproduce independently (Lean 4.32.0)
+Thus the explicit nonzero-field assumption in the earlier public-hierarchy
+lemma is discharged by the source's own trace result. The global existence
+construction is **not reproved by this corollary**: its final object and
+positive trace asymptotic remain the original construction's inputs.
 
-Use the **original** October submission checkout and its pinned dependency
-cache. From `submissions/openai-20261028/submission/`:
+## What this does, and does not, establish
+
+`Reconstructed.acts` alone means only that some field operator is nonzero;
+the identity operator would satisfy that condition. The original submission
+also contains much stronger trace and faithfulness results. This addition
+packages a consequence of those results; it is **not evidence that the
+original authors omitted a necessary mathematical argument**.
+
+No mass gap, nonzero spectral threshold, uniqueness of phase or thermodynamic
+limit, all-orders perturbative matching, or equivalence to `ym-lean` is
+asserted. The proof does not replace the original field system or use the
+mixed lattice-limit state in place of the selected physical state.
+
+[ExcitationFromPublic.lean](../checks/ExcitationFromPublic.lean) retains the
+general and public-hierarchy lemmas. The new constructed-theory corollary
+uses the actual `Final` directly, avoiding the unrelated, large import graph
+of `HeadlineSpec` and `TraceBridge`.
+
+## Reproduce (original pinned Lean 4.32.0)
+
+From `submissions/openai-20261028/`, with Elan on `PATH` and the dependency
+cache available:
 
 ```sh
-lake exe cache get
-lake build ChallengeSpec
-lake env lean -R ../checks -DautoImplicit=false -DwarningAsError=true \
-  -o .lake/build/lib/lean/ExcitationFromPublic.olean \
-  ../checks/ExcitationFromPublic.lean
-lake env lean -R ../checks -DautoImplicit=false -DwarningAsError=true \
-  ../checks/ExcitationFromPublicAudit.lean
+python3 scripts/verify_excitation.py --threads 3
 ```
 
-The separate [audit](../checks/ExcitationFromPublicAudit.lean) prints
-transitive axioms of both theorems. On 11 November 2026 on `ym-runner-2`
-both checks compiled without errors or warnings; the axiom sets contained
-only `propext`, `Classical.choice`, and `Quot.sound`.
+The dedicated runner:
 
-## Relationship to the other specification
+- checks the original package hashes before and after;
+- builds only `ChallengeSpec`, `PublicView`, and
+  `YM.TraceExtension.Sundial.Grand` with their real dependencies;
+- compiles all four supplementary modules into **fresh** object files,
+  treating warnings as errors;
+- checks every expected axiom report and rejects any additional axiom.
 
-This source-native lemma is part of the same gap-free comparison tracked by
-[alxwest/ym-lean issue #8](https://github.com/alxwest/ym-lean/issues/8)
-and [the target-side PR #11](https://github.com/alxwest/ym-lean/pull/11).
-The `ym-lean` theorem has a closely analogous mathematical conclusion.
-Neither source nor target currently contains a kernel-checked
-cross-repository transport from the selected source Hilbert space, fields
-and full vacuum kernels into `FilteredExistenceCandidate` or even the
-partial `ExistenceKinematics` type.
+The permitted axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+The runner records commands, input hashes, logs, exact declaration types,
+and pass/fail status in a new directory under `runs/excitation-*`.
+The audit modules are [public](../checks/ExcitationFromPublicAudit.lean)
+and [constructed](../checks/ExcitationFromConstructedAudit.lean).
 
-The remaining main obstacles are a common Lean/Mathlib build or verified
-definitional interface, target-side finite component fields, self-adjoint
-full-domain time generator, separability, full joint-Schwartz vacuum
-kernels, and fixed group-dependent perturbative YM identification.
+This is not a fresh replay of the full global construction or Comparator.
+Historical A1–A8 results and verification inputs remain unchanged. In
+particular, the original hashed `docs/checks.md` is preserved verbatim;
+this supplement lives outside that historical manifest.
+
+## Relation to ym-lean
+
+This supplies a source-native consequence for
+[ym-lean issue #8](https://github.com/alxwest/ym-lean/issues/8) and
+[PR #11](https://github.com/alxwest/ym-lean/pull/11).
+The cross-repository field representation, full physical kernel identity,
+Hamiltonian-generator, and generated Yang–Mills matching obligations are
+separate. No complete `FilteredExistenceCandidate` has been constructed by
+this addition.
+
+A suitable description for reviewers is: **an explicitly checked consequence
+of the original positive trace asymptotic, exposing a genuine non-vacuum
+field word in the original selected theory.**
