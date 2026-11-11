@@ -1,0 +1,116 @@
+{
+  "status": "FINITE_SECTOR_DIAGNOSTIC_CHECKED",
+  "scope": "Finite filtered-sector projection/transport diagnostic only",
+  "existence_only_kernel_certificate": false,
+  "full_generated_countermodel_constructed": false,
+  "verifier_revision": "3bc0411516ae9fb01e6992106f4bac122b5af897",
+  "source_sha256": "6f20a69f37938a0e9fce9aa026694a119123af5afe65d3de26e3e69b01df7cbb",
+  "runner_sha256": "c6ef628129b4074fbe731a47e3b68482f28fabef22b516843ff8d7cfe54b5763",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "/workspace/ym-ymg-existence-admission-20261111/integrations/ym-lean/audit/FilteredSectorProbe.lean"
+  ],
+  "lean_exit_code": 0,
+  "axioms": {
+    "YMYMGAudit.highChannel_stripped": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.highChannel_restrict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.restricted_stripped_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shear_incoming": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shear_outgoing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shear_overlap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.projection_shear_failure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shear_filtered": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shear_stripped": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.finite_sector_discrepancy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shearProfile_initial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.rgTime_exp_neg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.shearProfile_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.scaled_shearProfile": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.active_stripped_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.tail_div_gSquared": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.tailRatio_limit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMGAudit.tail_not_flat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "trusted_checkout_unchanged": true,
+  "finished_utc": "2026-11-11T16:41:51.995322+00:00"
+}

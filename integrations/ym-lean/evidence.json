@@ -1,0 +1,82 @@
+{
+  "requested_goal_achieved": false,
+  "unconditional_existence_proof_supplied": false,
+  "existence_only_kernel_certificate": false,
+  "verifier_pin": {
+    "repository": "alxwest/ym-lean",
+    "revision": "3bc0411516ae9fb01e6992106f4bac122b5af897",
+    "target": "YangMills.YangMillsExistenceOnly",
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "sha256": {
+      "scripts/verify_submission.py": "1ec99b3d8f032301ebc9c5bea653140db6f618e0c0c0e17dbd73a1c57a34033c",
+      "scripts/InspectProof.lean": "c7c871708955b30120d89865f4b28991ca4d3163ff21b21953ba4a8f92c9ec14",
+      "YangMills/ExistenceOnly.lean": "956dc0c142b0af06a62b18759f70e3890f16d9412eef0d5f95b4ec0a7bc5a33e"
+    }
+  },
+  "supplementary_lemmas_verified": true,
+  "supplementary_axioms": {
+    "YMYMG.Existence.remainder_bound_of_limits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.all_orders_of_uniform_regulated_estimates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.RegulatedExpansion.continuum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderMultiMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderVacuumWordMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "input_sha256": {
+    "UniformPerturbativeLimit.lean": "a3382ef9bfd1cd9ac41379532e95432b6990736553e656e13e6bdb91a55f8d5e",
+    "UniformPerturbativeLimitAudit.lean": "d671fff15b666b8a0756d16ab6835277c5619237b4ea31cc4431c003a2fcc01f"
+  },
+  "native_no_proof_run": {
+    "finished_utc": "2026-11-11T12:34:50.601059+00:00",
+    "exit_code": 2,
+    "status": "PROOF_NOT_SUBMITTED",
+    "admitted_target": "YangMills.YangMillsExistenceOnly",
+    "existence_only_shape_status": "passed",
+    "existence_only_kernel_certificate": false,
+    "kernel_verification_status": "not_run",
+    "kernel_audit_output_tail": null,
+    "proof_compile_output_tail": null,
+    "reason": "Existence-only target shape checked; no existence proof submitted; mass gap, semantic fidelity and external acceptance not assessed",
+    "error": null
+  },
+  "negative_control": {
+    "purpose": "A conditional theorem must not be mistaken for unconditional existence",
+    "finished_utc": "2026-11-11T12:36:38.772153+00:00",
+    "exit_code": 1,
+    "status": "PROOF_REJECTED",
+    "admitted_target": "YangMills.YangMillsExistenceOnly",
+    "existence_only_shape_status": "passed",
+    "existence_only_kernel_certificate": false,
+    "kernel_verification_status": "rejected",
+    "kernel_audit_output_tail": "REJECTED: proof has wrong, fixed-universe or conditional existence-only type\n",
+    "proof_compile_output_tail": null,
+    "reason": null,
+    "error": "Independent kernel-environment inspection rejected the theorem type and/or transitive axioms"
+  },
+  "status_contract_unit_tests": {
+    "passed": 5,
+    "is_mathematical_proof_acceptance": false
+  },
+  "original_source_modified": false,
+  "source_global_theorem_rebuilt": false,
+  "mass_gap_claimed": false
+}

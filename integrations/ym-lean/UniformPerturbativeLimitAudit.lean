@@ -1,0 +1,7 @@
+import UniformPerturbativeLimit
+
+#print axioms YMYMG.Existence.remainder_bound_of_limits
+#print axioms YMYMG.Existence.all_orders_of_uniform_regulated_estimates
+#print axioms YMYMG.Existence.RegulatedExpansion.continuum
+#print axioms YMYMG.Existence.allOrderMultiMatch_of_regulated
+#print axioms YMYMG.Existence.allOrderVacuumWordMatch_of_regulated

@@ -1,0 +1,11 @@
+{
+  "repository": "alxwest/ym-lean",
+  "revision": "3bc0411516ae9fb01e6992106f4bac122b5af897",
+  "target": "YangMills.YangMillsExistenceOnly",
+  "lean_toolchain": "leanprover/lean4:v4.31.0",
+  "sha256": {
+    "scripts/verify_submission.py": "1ec99b3d8f032301ebc9c5bea653140db6f618e0c0c0e17dbd73a1c57a34033c",
+    "scripts/InspectProof.lean": "c7c871708955b30120d89865f4b28991ca4d3163ff21b21953ba4a8f92c9ec14",
+    "YangMills/ExistenceOnly.lean": "956dc0c142b0af06a62b18759f70e3890f16d9412eef0d5f95b4ec0a7bc5a33e"
+  }
+}
