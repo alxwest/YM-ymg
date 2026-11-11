@@ -1,0 +1,95 @@
+{
+  "status": "PROOF_NOT_SUBMITTED",
+  "existence_only_kernel_certificate": false,
+  "supplementary_lemmas_verified": true,
+  "target": "YangMills.YangMillsExistenceOnly",
+  "verifier_revision": "3bc0411516ae9fb01e6992106f4bac122b5af897",
+  "input_sha256": {
+    "UniformPerturbativeLimit.lean": "a3382ef9bfd1cd9ac41379532e95432b6990736553e656e13e6bdb91a55f8d5e",
+    "UniformPerturbativeLimitAudit.lean": "d671fff15b666b8a0756d16ab6835277c5619237b4ea31cc4431c003a2fcc01f"
+  },
+  "scope": "Exact existence-only admission; no mass-gap claim",
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "YangMills.ExistenceOnly"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/home/.elan/toolchains/leanprover--lean4---v4.31.0/bin/lean",
+        "-R",
+        "/workspace/ym-ymg-existence-admission-20261111/integrations/ym-lean",
+        "-DwarningAsError=true",
+        "-o",
+        "/workspace/ym-lean-existence-verifier-20261111/.lake/ymymg-admission-_aaaxvrm/UniformPerturbativeLimit.olean",
+        "/workspace/ym-ymg-existence-admission-20261111/integrations/ym-lean/UniformPerturbativeLimit.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/home/.elan/toolchains/leanprover--lean4---v4.31.0/bin/lean",
+        "-R",
+        "/workspace/ym-ymg-existence-admission-20261111/integrations/ym-lean",
+        "-DwarningAsError=true",
+        "/workspace/ym-ymg-existence-admission-20261111/integrations/ym-lean/UniformPerturbativeLimitAudit.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/python3",
+        "/workspace/ym-lean-existence-verifier-20261111/scripts/verify_submission.py",
+        "--claim",
+        "existence",
+        "--report",
+        "/workspace/ym-ymg-existence-admission-20261111/integrations/ym-lean/runs/filtered-sector-20261111/native.json"
+      ],
+      "exit_code": 2
+    }
+  ],
+  "supplementary_axioms": {
+    "YMYMG.Existence.remainder_bound_of_limits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.all_orders_of_uniform_regulated_estimates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.RegulatedExpansion.continuum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderMultiMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderVacuumWordMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "native_exit_code": 2,
+  "native_summary": {
+    "status": "PROOF_NOT_SUBMITTED",
+    "admitted_target": "YangMills.YangMillsExistenceOnly",
+    "existence_only_shape_status": "passed",
+    "existence_only_kernel_certificate": false,
+    "kernel_verification_status": "not_run",
+    "kernel_audit_output_tail": null,
+    "proof_compile_output_tail": null,
+    "reason": "Existence-only target shape checked; no existence proof submitted; mass gap, semantic fidelity and external acceptance not assessed",
+    "error": null
+  },
+  "finished_utc": "2026-11-11T16:42:50.852626+00:00"
+}

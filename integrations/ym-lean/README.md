@@ -102,3 +102,17 @@ recorded in the evidence file. Fresh runs write full logs under `runs/`.
 
 Tracking: `alxwest/ym-lean` issues #2 and #8. The broader source-to-target
 specification-equivalence question is not settled by this contribution.
+
+## Filtered-sector diagnostic — 11 November 2026
+
+[A separate checked audit](audit/README.md) identifies a finite-sector
+projection/transport mismatch in the active filtered stripping formula: an
+omitted higher output can contribute at order g² to a retained output even
+when the frame entries agree on their overlap. Its 19 audited declarations
+include an unconditional matrix counterexample, conditional evaluations of
+the actual imported stripping formula, and a non-flat asymptotic tail.
+
+This is not yet a generated-Yang--Mills countermodel or a proof that the
+existence target is inconsistent. The fixed engine must still be shown to
+realize the relevant channel. The native existence certificate remains
+false; neither the target nor the verifier is patched.
