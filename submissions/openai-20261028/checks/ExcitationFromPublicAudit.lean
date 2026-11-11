@@ -1,0 +1,4 @@
+import ExcitationFromPublic
+
+#print axioms YangMills.WightmanTheory.hasFieldExcitation_of_centered_nonzero
+#print axioms YangMills.Hierarchy.nonvacuum_of_reconstructed_nonzero_trace
