@@ -48,6 +48,10 @@ the historical 43-module review, acceptance theorem or Comparator runs**.
 The final instantiation with the construction's nonzero-trace theorem remains
 separate.
 
+The [first-coefficient cross-check](first-coefficient-crosscheck.md)
+records the algebraic agreement of the conventional beta-function g³
+coefficients with ym-lean, while making no all-orders or physical-match claim.
+
 ## Admissions, axioms and negative controls
 
 The review runner freshly compiles all 43 review modules and audits 13 declarations: eight combined-check declarations and five OPE declarations. It requires zero review warnings and permits only `propext`, `Classical.choice` and `Quot.sound` in the reported dependencies.
