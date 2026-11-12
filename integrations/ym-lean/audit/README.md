@@ -1,5 +1,133 @@
 # Checks of extra ym-lean requirements
 
+## Physical-word transport and complete Ward-family equivalence, 12 November
+
+The finite correction now preserves the two physical-state conditions
+left open by the dictionary audit below. **Given an existing native
+`LocalWardFlowFamily`, the corrected dictionary belongs to a complete
+native `LocalWardFlowFamily` for the same fixed flow system.** If the
+correction's lower label has zero weight, the construction has an exact
+inverse. This is a proved equivalence of presentations of this structure.
+
+It is still conditional on an original family. It does **not** produce that
+family from the October YM-ymg existence theorem, transport the separate
+scale-normalization/reconstruction data, or prove equivalence of the full
+ym-lean and YM-ymg existence statements. The existence candidate and native
+verifier have not changed.
+
+The fresh [80-declaration audit](evidence/physical-word-transport-2026-11-12/result.json)
+checks **28 new declarations and 52 dependencies**. Every local dependency
+is rebuilt in an isolated output directory against the pinned native target.
+The [logs](evidence/physical-word-transport-2026-11-12/) and
+[manifest](evidence/physical-word-transport-2026-11-12/manifest.json)
+record source and compiled-module hashes. Compilation treats warnings as
+errors; the transitive-axiom audit allows only `propext`, `Classical.choice`
+and `Quot.sound`. Five audit-log control tests also pass.
+
+### What is transported
+
+Use the same global correction and admissibility hypotheses as below:
+
+```text
+O'_p(mu) = O_p(mu) + hbar g² a(mu) χ(p) O_q(mu).
+```
+
+[`PhysicalWordTransport.lean`](PhysicalWordTransport.lean) proves:
+
+- `wordMap_native` and `exactWordMap_native` identify the finite algebra
+  with the **actual** native `physicalLiftedWordExpansion` and
+  `physicalExactInvariantWord`. The original position slots, continuum
+  distributions, exact primitive, anomaly map and monomial cutoffs are used.
+- `physical_word_null` preserves `InvariantPhysicalNullIdentity`. It uses
+  exactly the old identity's domain: invariant spectators, no elementary
+  external legs, compact tests and separated insertion supports. It does
+  not declare contact terms at coincident insertions to be zero.
+- `physical_word_graph` preserves the distributional vanishing condition
+  `order < 2 * loop` at every arity, including the empty word.
+- `physical_word_null_iff` and `physical_word_graph_iff` give the reverse
+  implications when `χ(q)=0`, using the correction with coefficient `-a`.
+- `changeFamily` fills **every field** of the native `LocalWardFlowFamily`
+  structure. It uses the earlier full Ward-restoration theorem and the two
+  new physical-word theorems. The remaining fields use the same continuum,
+  connected data, contact counterterms, mollifier and fixed flow system.
+- `changeFamily_inverse` proves equality with the original complete family
+  after the two opposite corrections. `changeFamilyEquiv` packages the
+  construction and inverse as an actual Lean equivalence.
+
+The coefficient `a(mu)` can vary with the normalization scale. These family
+conditions are imposed at each scale. This theorem does not infer the
+additional smoothness or derivative identities required by the separate
+scale-insertion conditions.
+
+### Why the physical-state conditions survive
+
+Taylor coefficients of the correction shift coupling order by two and loop
+order by one. Write this operation as `delta`, with zero whenever a shifted
+index would be negative. [`WordJetAlgebra.lean`](WordJetAlgebra.lean) proves
+that `delta` commutes with finite convolution in either factor and with the
+actual finite insertion maps.
+
+Replacing an insertion by its corrected version therefore yields a sum of
+original words, with some invariant labels replaced by `q`, multiplied by
+finite scalar factors and shifted by `delta`. The proof handles every
+position without reordering slots. `wordMap_transfer` formalizes this
+argument for any property closed under addition, scalar multiplication and
+the shift; `labels_of_slots` verifies that the resulting lists still are
+words covered by the original hypotheses.
+
+For the exact-state identity, all resulting original words vanish on the
+same permitted test. For graph order, the nonzero shift takes `(r,l)` to
+`(r-2,l-1)`, and `r < 2*l` implies `r-2 < 2*(l-1)` when both shifted indices
+exist. Boundary cases vanish by the definition of the shift. Neither
+argument exchanges a continuum limit with an infinite sum.
+
+### Two directional Legendre fields
+
+[`ChangedFamilyLegendre.lean`](ChangedFamilyLegendre.lean) goes one step
+further, **assuming an original `GeneratedScaleNormalization` also exists**.
+The native `LegendreFlowAdapters` theorems derive directional compatibility
+from the fixed flow equations and the original background Legendre equation.
+Applying them to the actual changed family proves the exact
+`CompositeCSConditions.lifted_directional` field. The same argument proves
+`exact_directional` for any proposed admissible primitive family.
+
+These are applications of the native theorems to the changed data; the
+original normalization is not constructed. Selecting primitives and mixing
+coefficients that solve the changed scale equation is still required.
+
+### Remaining bridge obligations
+
+This closes the previous **complete changed Ward-family** gap. The next
+unproved transport is `GeneratedScaleNormalization.same_scale_insertion`:
+the actual `CompositeCSConditions` must hold after differentiating the
+changed dictionary in both scale and coupling. Merely retaining the old
+mixing coefficients is not justified. The two directional Legendre fields
+are now checked under an existing normalization. The changed insertion's
+joint scale smoothness and weak UV/IR limits of the computed composite
+residual remain unproved, as do the required transformed mixing and
+primitive data.
+
+Separately, generated coefficient recovery, physical reconstruction and
+all-orders continuum matching remain obligations. The previously computed
+Gaussian channel has not been identified with the actual generated mixing
+coefficient. Most fundamentally, these conditional transport results do not
+construct the original interacting flow family or the missing uniform
+remainder bounds from the available October submission. The broader blocker
+is tracked in [ym-lean #27](https://github.com/alxwest/ym-lean/issues/27).
+
+Reproduce from the YM-ymg checkout, with the pinned ym-lean dependencies built:
+
+```sh
+python3 integrations/ym-lean/audit/check_physical_word_transport.py \
+  --ym-lean ../ym-lean \
+  --out integrations/ym-lean/runs/physical-word-transport-new
+```
+
+The output directory must be new. Success is reported as
+`SCOPED_PHYSICAL_WORD_TRANSPORT_CHECKED`; the report explicitly retains
+`existence_only_kernel_certificate: false` and
+`original_local_ward_flow_family_constructed: false`.
+
 ## Global dictionary and insertion-limit transport, 12 November
 
 The finite correction now extends beyond the individual-observable checks
