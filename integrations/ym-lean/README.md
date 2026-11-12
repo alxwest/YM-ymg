@@ -3,7 +3,36 @@
 **This does not yet pass `ym-lean --claim existence`. No unconditional
 existence theorem is supplied.** The supporting lemmas compile; that is
 not the same as proof acceptance. The native status and certificate are
-recorded separately in [evidence.json](evidence.json).
+recorded separately from the helper checks. [evidence.json](evidence.json)
+is the historical Lean 4.31.0 run; the current pin uses Lean 4.32.0.
+
+## Submit the available October proof on Lean 4.32.0
+
+With the pinned `ym-lean` checkout alongside this repository, run from the
+repository root:
+
+```sh
+python3 integrations/ym-lean/verify_existence.py --ym-lean ../ym-lean --source
+```
+
+This checks original-package integrity, builds and audits the actual source
+translation, checks the supplementary proofs, and submits
+`YMGBridge.jointExistence` to the unchanged native existence verifier. The
+source translation removes the old universe-count mismatch. It does not
+turn `PresentedJointExistence` into `YangMillsExistenceOnly`; the native
+verifier still needs an unconditional theorem of the latter type.
+
+`SpacetimeTransport.lean` now gives a continuous linear coordinate
+equivalence between the source's time-last Euclidean coordinates and the
+target's time-first coordinates. It preserves the Minkowski square,
+forward cone, and spacelike relation, and gives inverse continuous linear
+maps on the actual Schwartz test spaces. This closes these coordinate
+comparisons without changing either definition. It does not construct a
+Wightman field system or a generated Yang–Mills sector.
+
+All original source and historical evidence remain unchanged. The
+`--source` result records source translation, coordinate transport, and
+native acceptance separately; only native acceptance can return zero.
 
 ## What this change proves
 
@@ -45,7 +74,7 @@ from building the source or from matching one conventional beta coefficient.
 ## Exact acceptance command
 
 Prepare a trusted checkout of `alxwest/ym-lean` at the revision in
-[pin.json](pin.json), with its pinned Lean 4.31.0/Mathlib toolchain and cache.
+[pin.json](pin.json), with its pinned Lean 4.32.0/Mathlib toolchain and cache.
 From this integration directory:
 
 ```sh
@@ -56,9 +85,11 @@ python3 verify_existence.py --ym-lean /path/to/ym-lean \
 The proof file must supply an unconditional theorem of the exact type
 `YangMills.YangMillsExistenceOnly.{u}`, with one universe parameter, and
 must be self-contained under the original verifier's import rules.
-The support library is checked separately and is not installed into or
+The support library is compiled into fresh temporary objects and is not
 used to change the pinned verifier. An eventual proof may inline or
-independently arrange imports of these supporting results.
+independently arrange imports of these supporting results. `--source`
+arranges the existing staged source imports automatically; it cannot be
+combined with an explicit proof file.
 
 The runner refuses tracked changes to the pinned verifier, fingerprints
 its trusted files, runs its **unchanged** `scripts/verify_submission.py
@@ -70,7 +101,8 @@ Omitting `--proof-file` and `--theorem` intentionally reports
 `PROOF_NOT_SUBMITTED` and exits 2. It does not create a placeholder proof.
 
 The historical October Lean 4.32.0 source and all original manifests remain
-unchanged. This directory is a separate Lean 4.31.0 target-side integration.
+unchanged. This directory now uses the same Lean 4.32.0 toolchain for the
+source-to-target comparison.
 There is no new mass-gap claim, no weakened target, and no new proof axiom.
 
 ## Rejection controls and reproducibility
@@ -81,13 +113,14 @@ python3 verify_existence.py --ym-lean /path/to/ym-lean
 # Expected exit 2: no complete proof supplied.
 python3 verify_existence.py --ym-lean /path/to/ym-lean \
   --proof-file tests/Conditional.lean --theorem YMYMGControl.conditional
-# Expected exit 1: assuming the entire conclusion is NOT a proof of it.
+# Expected exit 2 with INCOMPATIBLE_PROOF_SIGNATURE: the theorem is conditional.
 ```
 
 The conditional file is a negative control, not a submitted candidate
-construction. Five status-contract unit tests passing is not mathematical
-acceptance. Both native results and all five supporting axiom audits are
-recorded in the evidence file. Fresh runs write full logs under `runs/`.
+construction. Six status-contract unit tests passing is not mathematical
+acceptance. Source mode checks five limit-passage and six coordinate
+declarations against the permitted axioms. Fresh runs write full logs,
+input hashes, and the original native report under `runs/`.
 
 ## Remaining work before this can be a passing fix
 
@@ -102,6 +135,8 @@ recorded in the evidence file. Fresh runs write full logs under `runs/`.
 
 Tracking: `alxwest/ym-lean` issues #2 and #8. The broader source-to-target
 specification-equivalence question is not settled by this contribution.
+Current physical/logic reviews are #24 and #26; the carrier-universe
+translation is ym-lean PR #25.
 
 ## Filtered-sector diagnostic — 11 November 2026
 

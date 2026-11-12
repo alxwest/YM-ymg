@@ -4,8 +4,11 @@
 existence proof, not a full generated-Yang--Mills countermodel, and not a
 proof that the active existence target is inconsistent.**
 
-Target inspected: `alxwest/ym-lean@3bc0411516ae9fb01e6992106f4bac122b5af897`,
-Lean 4.31.0. No target or verifier file is changed. The diagnostic imports
+Historical target inspected: `alxwest/ym-lean@3bc0411516ae9fb01e6992106f4bac122b5af897`,
+Lean 4.31.0. Those recorded results remain historical. The current runner
+uses the updated parent `pin.json` (Lean 4.32.0); the inspected
+`FilteredQuantumRG.lean` definitions are unchanged between these pins.
+No target or verifier file is changed. The diagnostic imports
 `YangMills.FilteredQuantumRG` and evaluates its actual `strippedMultiPairing`.
 
 ## The precise issue

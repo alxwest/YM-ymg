@@ -41,6 +41,14 @@ class AcceptanceContract(unittest.TestCase):
                       existence_only_kernel_certificate=False)
         self.assertFalse(native_accepted(report, 1, "Fixture.proof"))
 
+    def test_source_translation_and_matching_universes_are_not_native_acceptance(self):
+        report = dict(self.good, status="INCOMPATIBLE_PROOF_SIGNATURE",
+                      source_translation_verified=True,
+                      spacetime_transport_verified=True,
+                      existence_only_kernel_certificate=False)
+        self.assertFalse(native_accepted(report, 2, "Fixture.proof"))
+        self.assertFalse(native_accepted(report, 0, "Fixture.proof"))
+
 
 if __name__ == "__main__":
     unittest.main()

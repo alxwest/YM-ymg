@@ -2,7 +2,9 @@
 """Compile supplementary estimates, then delegate to unchanged ym-lean admission.
 
 Exit 0 ONLY if the native verifier accepts an unconditional exact-target proof.
-Exit 2 means no proof was submitted. Exit 1 means rejection/infrastructure error.
+Exit 2 means no proof was submitted or its signature is incompatible.
+Exit 1 means rejection/infrastructure error. --source submits the actual
+universe-translated October theorem, after checking its source proof.
 Passing the supplementary mathematical lemmas does NOT establish existence.
 This is a trusted-code proof workflow, not a sandbox for hostile Lean programs.
 """
@@ -28,6 +30,14 @@ DECLARATIONS = {
     "YMYMG.Existence.RegulatedExpansion.continuum",
     "YMYMG.Existence.allOrderMultiMatch_of_regulated",
     "YMYMG.Existence.allOrderVacuumWordMatch_of_regulated",
+}
+SPACETIME_DECLARATIONS = {
+    "YMYMG.SpacetimeTransport.time_coordinate",
+    "YMYMG.SpacetimeTransport.minkowski_square",
+    "YMYMG.SpacetimeTransport.forward_cone",
+    "YMYMG.SpacetimeTransport.spacelike",
+    "YMYMG.SpacetimeTransport.native_source_test",
+    "YMYMG.SpacetimeTransport.source_native_test",
 }
 
 
@@ -67,11 +77,15 @@ def main() -> int:
     parser.add_argument("--ym-lean", type=Path, required=True)
     parser.add_argument("--proof-file", type=Path)
     parser.add_argument("--theorem")
+    parser.add_argument("--source", action="store_true",
+                        help="Stage and submit this checkout's real October source translation")
     parser.add_argument("--threads", type=int, default=3)
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
     if (args.proof_file is None) != (args.theorem is None):
         parser.error("--proof-file and --theorem must be provided together")
+    if args.source and args.proof_file is not None:
+        parser.error("--source cannot be combined with --proof-file or --theorem")
     if args.threads < 1:
         parser.error("--threads must be positive")
     root = args.ym_lean.resolve()
@@ -82,6 +96,7 @@ def main() -> int:
     summary = {
         "status": "NOT_ACCEPTED", "existence_only_kernel_certificate": False,
         "supplementary_lemmas_verified": False, "target": PIN["target"],
+        "source_translation_verified": False, "spacetime_transport_verified": False,
         "verifier_revision": PIN["revision"], "input_sha256": {},
         "scope": "Exact existence-only admission; no mass-gap claim",
         "commands": [],
@@ -97,8 +112,36 @@ def main() -> int:
     code = 1
     try:
         check_pin(root, env)
-        for name in ["UniformPerturbativeLimit.lean", "UniformPerturbativeLimitAudit.lean"]:
+        proof_file, theorem = args.proof_file, args.theorem
+        modules = [("UniformPerturbativeLimit", DECLARATIONS)]
+        source_root = HERE.parents[1]
+        source_package = source_root / "submissions/openai-20261028"
+        integrity_command = [sys.executable, str(source_package / "scripts/verify.py"), "integrity"]
+        if args.source:
+            summary["source_revision"] = capture(["git", "rev-parse", "HEAD"], source_root, env)
+            integrity = run(integrity_command, "source-integrity-before")
+            if integrity.returncode:
+                raise RuntimeError("Original source package failed its integrity check")
+            env["YM_YMG_ROOT"] = str(source_root)
+            translated = run(["bash", str(root / "scripts/translate_ym_ymg.sh")],
+                             "source-translation")
+            if translated.returncode or "SOURCE_TRANSLATION_CHECKED:" not in translated.stdout:
+                raise RuntimeError("Actual source translation failed its build/signature/axiom check")
+            summary["source_translation_verified"] = True
+            stage = root / ".lake/ym-ymg-integration"
+            env["LEAN_PATH"] = os.pathsep.join([
+                str(stage / ".lake/build/lib/lean"),
+                str(source_package / "submission/.lake/build/lib/lean"),
+                env.get("LEAN_PATH", ""),
+            ])
+            proof_file = stage / "YMGBridge/Solution.lean"
+            theorem = "YMGBridge.jointExistence"
+            modules.append(("SpacetimeTransport", SPACETIME_DECLARATIONS))
+        for name in [name + suffix for name, _ in modules
+                     for suffix in (".lean", "Audit.lean")]:
             summary["input_sha256"][name] = digest(HERE / name)
+        summary["input_sha256"]["verify_existence.py"] = digest(Path(__file__))
+        summary["input_sha256"]["pin.json"] = digest(HERE / "pin.json")
         build = run(["lake", "build", "YangMills.ExistenceOnly"], "target-build")
         if build.returncode:
             raise RuntimeError("Pinned target failed to build")
@@ -106,32 +149,43 @@ def main() -> int:
         lean_path = capture(["lake", "env", "printenv", "LEAN_PATH"], root, env)
         with tempfile.TemporaryDirectory(prefix="ymymg-admission-", dir=root / ".lake") as temp:
             local_env = dict(env, LEAN_PATH=temp + os.pathsep + lean_path)
-            compiled = run([lean, "-R", str(HERE), "-DwarningAsError=true", "-o",
-                            str(Path(temp) / "UniformPerturbativeLimit.olean"),
-                            str(HERE / "UniformPerturbativeLimit.lean")], "support", local_env)
-            if compiled.returncode:
-                raise RuntimeError("Supplementary limit-passage proof did not compile")
-            audited = run([lean, "-R", str(HERE), "-DwarningAsError=true",
-                           str(HERE / "UniformPerturbativeLimitAudit.lean")], "support-audit", local_env)
-            if audited.returncode:
-                raise RuntimeError("Supplementary audit did not compile")
-            matches = re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]", audited.stdout)
-            axioms = {name: sorted(x.strip() for x in names.split(",") if x.strip())
-                      for name, names in matches}
-            if set(axioms) != DECLARATIONS or any(set(xs) - ALLOWED for xs in axioms.values()):
-                raise RuntimeError("Missing, unexpected, or unapproved supplementary axiom report")
+            axioms = {}
+            for module, declarations in modules:
+                compiled = run([lean, "-R", str(HERE), "-DwarningAsError=true", "-o",
+                                str(Path(temp) / (module + ".olean")),
+                                str(HERE / (module + ".lean"))], module, local_env)
+                if compiled.returncode:
+                    raise RuntimeError("Supplementary proof did not compile: " + module)
+                audited = run([lean, "-R", str(HERE), "-DwarningAsError=true",
+                               str(HERE / (module + "Audit.lean"))], module + "-audit", local_env)
+                if audited.returncode:
+                    raise RuntimeError("Supplementary audit did not compile: " + module)
+                matches = re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]", audited.stdout)
+                found = {name: sorted(x.strip() for x in names.split(",") if x.strip())
+                         for name, names in matches}
+                found.update({name: [] for name in re.findall(
+                    r"'([^']+)' does not depend on any axioms", audited.stdout)})
+                if set(found) != declarations or any(set(xs) - ALLOWED for xs in found.values()):
+                    raise RuntimeError("Missing, unexpected, or unapproved axiom report: " + module)
+                axioms.update(found)
             summary["supplementary_lemmas_verified"] = True
             summary["supplementary_axioms"] = axioms
+            summary["spacetime_transport_verified"] = args.source
         command = [sys.executable, str(root / "scripts/verify_submission.py"),
                    "--claim", "existence", "--report", str(out / "native.json")]
-        if args.proof_file is not None:
-            proof = args.proof_file.resolve()
+        if proof_file is not None:
+            proof = proof_file.resolve()
             summary["proof_sha256"] = digest(proof)
-            command += ["--proof-file", str(proof), "--theorem", args.theorem]
+            summary["submitted_theorem"] = theorem
+            command += ["--proof-file", str(proof), "--theorem", theorem]
         result = run(command, "native-verifier")
         report = json.loads((out / "native.json").read_text())
         check_pin(root, env)
-        accepted = native_accepted(report, result.returncode, args.theorem)
+        if args.source:
+            integrity = run(integrity_command, "source-integrity-after")
+            if integrity.returncode:
+                raise RuntimeError("Original source package changed during verification")
+        accepted = native_accepted(report, result.returncode, theorem)
         summary.update(
             status=report.get("status", "VERIFIER_ERROR"),
             existence_only_kernel_certificate=accepted,
@@ -149,6 +203,8 @@ def main() -> int:
     print(json.dumps({"status": summary["status"],
                       "existence_only_kernel_certificate": summary["existence_only_kernel_certificate"],
                       "supplementary_lemmas_verified": summary["supplementary_lemmas_verified"],
+                      "source_translation_verified": summary["source_translation_verified"],
+                      "spacetime_transport_verified": summary["spacetime_transport_verified"],
                       "report": str(out / "result.json")}, indent=2))
     return code
 

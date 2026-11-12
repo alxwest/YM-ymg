@@ -1,11 +1,16 @@
 {
   "repository": "alxwest/ym-lean",
-  "revision": "3bc0411516ae9fb01e6992106f4bac122b5af897",
+  "revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
   "target": "YangMills.YangMillsExistenceOnly",
-  "lean_toolchain": "leanprover/lean4:v4.31.0",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
   "sha256": {
-    "scripts/verify_submission.py": "1ec99b3d8f032301ebc9c5bea653140db6f618e0c0c0e17dbd73a1c57a34033c",
-    "scripts/InspectProof.lean": "c7c871708955b30120d89865f4b28991ca4d3163ff21b21953ba4a8f92c9ec14",
-    "YangMills/ExistenceOnly.lean": "956dc0c142b0af06a62b18759f70e3890f16d9412eef0d5f95b4ec0a7bc5a33e"
+    "scripts/verify_submission.py": "a478100c205d3fe8336bb3ec48410b9584ab6e1b6ef448fb5b673c68b7040b64",
+    "scripts/InspectProof.lean": "76accc17c0958ee6ec28ee469894d4bd0a225edbbe026c8a4bf795d27b1d1439",
+    "YangMills/ExistenceOnly.lean": "956dc0c142b0af06a62b18759f70e3890f16d9412eef0d5f95b4ec0a7bc5a33e",
+    "scripts/prepare_ym_ymg.py": "8a64719d6ab401f7ff800f3a9d260c5233b22f4e32da042841bc5319d2628b03",
+    "scripts/translate_ym_ymg.sh": "177fbb33b0979ab001050c1b6fcbeaeda58bca4f4c4cfde31185ebfcb48bd097",
+    "scripts/InspectYMGTranslation.lean": "b9b27d242e61b7d07d31c1c72e537dca0ef97de22e5179455936d3902d122c28",
+    "integrations/ym_ymg/Translation.lean": "32816dd78685f4862c3d33d54e3f8f71085abccc168135edd60aa75a1f1c48cd",
+    "integrations/ym_ymg/Solution.lean": "56b723bb41f723c0a8d56331a40e6823616ca500ad1aaf22ce205121f02a6d25"
   }
 }
