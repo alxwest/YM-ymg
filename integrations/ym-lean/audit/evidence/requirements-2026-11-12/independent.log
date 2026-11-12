@@ -1,0 +1,54 @@
+{
+  "status": "INDEPENDENT_GAUSSIAN_CHECKS_PASSED",
+  "moment_factors": {
+    "0": "1",
+    "2": "1",
+    "4": "3",
+    "6": "15"
+  },
+  "normal_four_coefficients": {
+    "v_x_squared": "-6",
+    "v_squared": "3"
+  },
+  "radial_checks": [
+    {
+      "infrared": 1.0,
+      "ultraviolet": 2.0,
+      "analytic_variance": 0.04749430483234583,
+      "numerical_variance": 0.047494304832345825,
+      "absolute_error": 6.938893903907228e-18,
+      "resolution_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "infrared": 0.5,
+      "ultraviolet": 3.0,
+      "analytic_variance": 0.25627135315786603,
+      "numerical_variance": 0.2562713531578661,
+      "absolute_error": 5.551115123125783e-17,
+      "resolution_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "infrared": 2.0,
+      "ultraviolet": 5.0,
+      "analytic_variance": 1.9282687761932409,
+      "numerical_variance": 1.9282687761932407,
+      "absolute_error": 2.220446049250313e-16,
+      "resolution_difference": 0.0,
+      "tolerance": 1.928268776193241e-10
+    },
+    {
+      "infrared": 1.0,
+      "ultraviolet": 1.0,
+      "analytic_variance": 0.0,
+      "numerical_variance": 0.0,
+      "absolute_error": 0.0,
+      "resolution_difference": 0.0,
+      "tolerance": 1e-10
+    }
+  ],
+  "radial_check_is_numerical": true,
+  "generated_physical_mixing_coefficient_computed": false,
+  "existence_only_kernel_certificate": false
+}

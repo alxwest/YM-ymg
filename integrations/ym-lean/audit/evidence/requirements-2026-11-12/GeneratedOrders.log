@@ -1,0 +1,5 @@
+'YMYMG.GeneratedAudit.beta_below_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedAudit.beta_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedAudit.gamma_classical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedAudit.gamma_below_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedAudit.gamma_two' depends on axioms: [propext, Classical.choice, Quot.sound]

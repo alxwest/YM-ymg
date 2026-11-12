@@ -1,0 +1,2 @@
+'YMYMG.KernelAudit.covarianceAt_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.KernelAudit.covariance_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]

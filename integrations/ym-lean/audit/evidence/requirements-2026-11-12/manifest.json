@@ -1,0 +1,24 @@
+{
+  "tested_implementation_revision": "c7f53915d2aa074da56d4d93039a4e941fc89da8",
+  "audit_run_base_revision": "cfd6168787df0f2ed759cf58dbd065ad6f7fbdbd",
+  "audit_used_working_tree_changes": true,
+  "all_recorded_audit_input_hashes_match_tested_commit": true,
+  "target_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "audited_declarations": 25,
+  "audit_log_control_tests": 5,
+  "audit_log_controls_exit_code": 0,
+  "audit_log_controls_sha256": "7d615b7f0c4044f7ffa46b22547945899fd29b3b3a3dce8c54ec96d087d60484",
+  "native_existence_verifier_rerun": false,
+  "existence_only_kernel_certificate": false,
+  "generated_physical_mixing_coefficient_computed": false,
+  "necessity_of_full_native_target_established": false,
+  "artifacts_sha256": {
+    "BasisConsistency.log": "ad03769aba910c6406ced449dfa9a41c9e9da89243c2e5951a6889a79a29b643",
+    "CutoffDerivative.log": "a7a90a0fb5c511ece5b4a1d6947a8313a44d817b863edd48cae7e175a8f04a59",
+    "GeneratedOrders.log": "849d55b24d360efbbe2f064203d763a58954841c23cb55cce08bf9a95eeca91e",
+    "KernelCoefficients.log": "47ea1636602cefbc771b6da54c92bbad4c82f5d3c540cc91663ec0561d2b9015",
+    "audit-log-controls.log": "888a0c0ed615e57d32cf72be501b0c355f33b8613c81dfdaa99db33d7959487e",
+    "independent.log": "afa721d12558616a45d46e4dbac0e047157ef37f68ac44be08c1c2835c2ff670",
+    "result.json": "4efeaec80b1901d5c3724e3fc6433e8106bd11c59dff6b115f1cce66d4b154cb"
+  }
+}

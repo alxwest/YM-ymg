@@ -1,0 +1,255 @@
+{
+  "status": "SCOPED_REQUIREMENT_AUDITS_CHECKED",
+  "scope": "Label permutations, finite-cutoff kernels, and generated order reductions",
+  "existence_only_kernel_certificate": false,
+  "full_generated_countermodel_constructed": false,
+  "generated_physical_mixing_coefficient_computed": false,
+  "necessity_of_full_native_target_established": false,
+  "verifier_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "input_sha256": {
+    "audit/BasisConsistency.lean": "ec5f33b5567d305b3d8bf73d3f32c0badaa8c361f1a5b883765cf546e5576ccc",
+    "audit/KernelCoefficients.lean": "43ed30250679c6e206062e5f31217537edcfd4e13679b542fd84b9cc5951215a",
+    "audit/CutoffDerivative.lean": "08eb9433aff28c53457349f3fde58b40b314c2792c8f63109a751ad5c1f5b112",
+    "audit/GeneratedOrders.lean": "0861aa159b89932cd7717825be11434f6c88c4d06ebed8a7142a3fd2ec25f345",
+    "audit/independent_coefficients.py": "fa3f707bfbce7d0756d9142bdb019b14867b66c97da384cdd8ef310646f8c958",
+    "audit/check_requirement_audit.py": "e7790b4160ac7ca1420cc1a19e7f81bab4efbf8fbda64dc2c9dc6641cfab5918",
+    "verify_existence.py": "7d57f7442d0f5f874d9fee29aa967cef2cc6c596474e593b0ce33ec0454ddeb2",
+    "pin.json": "cdc12b858894b11993b10d42f7535f9b502351d2a948776df6e1927155bebe44"
+  },
+  "checks": [
+    {
+      "source": "BasisConsistency.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/BasisConsistency.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.BasisAudit.coordinates_symm_single": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.BasisAudit.conjugate_entry": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.BasisAudit.conjugate_symm_entry": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.BasisAudit.reindexFrame": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.BasisAudit.stripping_reindex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.BasisAudit.all_orders_reindex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.BasisAudit.all_orders_reindex_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "KernelCoefficients.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/KernelCoefficients.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.KernelAudit.wick_four_bosons": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.wick_four_fermions": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.wick_four_equal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.wick_six_equal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.bare_four_equal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.bare_six_equal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.wick_normal_four_vacuum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.wick_normal_four_two_legs": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.normal_four_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.curvature01_integrand": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.normalized_lower_output_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "CutoffDerivative.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/CutoffDerivative.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.KernelAudit.covarianceAt_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.KernelAudit.covariance_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "GeneratedOrders.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/GeneratedOrders.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.GeneratedAudit.beta_below_three": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedAudit.beta_three": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedAudit.gamma_classical": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedAudit.gamma_below_two": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedAudit.gamma_two": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "independent": {
+    "status": "INDEPENDENT_GAUSSIAN_CHECKS_PASSED",
+    "moment_factors": {
+      "0": "1",
+      "2": "1",
+      "4": "3",
+      "6": "15"
+    },
+    "normal_four_coefficients": {
+      "v_x_squared": "-6",
+      "v_squared": "3"
+    },
+    "radial_checks": [
+      {
+        "infrared": 1.0,
+        "ultraviolet": 2.0,
+        "analytic_variance": 0.04749430483234583,
+        "numerical_variance": 0.047494304832345825,
+        "absolute_error": 6.938893903907228e-18,
+        "resolution_difference": 0.0,
+        "tolerance": 1e-10
+      },
+      {
+        "infrared": 0.5,
+        "ultraviolet": 3.0,
+        "analytic_variance": 0.25627135315786603,
+        "numerical_variance": 0.2562713531578661,
+        "absolute_error": 5.551115123125783e-17,
+        "resolution_difference": 0.0,
+        "tolerance": 1e-10
+      },
+      {
+        "infrared": 2.0,
+        "ultraviolet": 5.0,
+        "analytic_variance": 1.9282687761932409,
+        "numerical_variance": 1.9282687761932407,
+        "absolute_error": 2.220446049250313e-16,
+        "resolution_difference": 0.0,
+        "tolerance": 1.928268776193241e-10
+      },
+      {
+        "infrared": 1.0,
+        "ultraviolet": 1.0,
+        "analytic_variance": 0.0,
+        "numerical_variance": 0.0,
+        "absolute_error": 0.0,
+        "resolution_difference": 0.0,
+        "tolerance": 1e-10
+      }
+    ],
+    "radial_check_is_numerical": true,
+    "generated_physical_mixing_coefficient_computed": false,
+    "existence_only_kernel_certificate": false
+  },
+  "trusted_checkout_unchanged": true,
+  "audited_declarations": 25,
+  "finished_utc": "2026-11-12T13:31:03.632349+00:00"
+}

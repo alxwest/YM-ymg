@@ -9,6 +9,10 @@ tests concern logical and mathematical content, not the people involved.
 
 The target remains the unchanged `alxwest/ym-lean` revision
 `baecbb5eba5710fb707cfaecfaf7365d8feff5f7`, using Lean 4.32.0.
+The [recorded results](evidence/requirements-2026-11-12/result.json),
+[axiom logs](evidence/requirements-2026-11-12/), and
+[input-hash manifest](evidence/requirements-2026-11-12/manifest.json)
+identify the tested implementation and the exact scope of success.
 
 | Test | Result | What this establishes |
 | --- | --- | --- |
@@ -67,7 +71,8 @@ The follow-up pursued the suggested curvature/Wick channel and found:
 
 1. The actual free curvature kernel and Wick combinatorics can be computed,
    as above. They do not determine the renormalized operator mixing.
-2. The target's actual `SingleInsertionBoundaryConditions.normalized`
+2. The target's actual
+   [`SingleInsertionBoundaryConditions.normalized`](https://github.com/alxwest/ym-lean/blob/baecbb5eba5710fb707cfaecfaf7365d8feff5f7/YangMills/CompositeExtraction.lean#L305-L329)
    sets every strictly lower-output projector to zero at the subtraction
    point. `normalized_lower_output_zero` proves this directly. Substituting
    a bare contraction for that coefficient would bypass the counterterms.
@@ -78,7 +83,8 @@ The follow-up pursued the suggested curvature/Wick channel and found:
    Promoting this to the physical YM channel requires the corrected
    observable dictionary, actual insertion flow, generated quantum-exact
    terms, and the same-scale Callan–Symanzik equation.
-4. `GeneratedOrders.lean` reduces the disputed leading mixing to
+4. `GeneratedOrders.lean` reduces the disputed leading mixing in
+   [`GeneratedScaleNormalization`](https://github.com/alxwest/ym-lean/blob/baecbb5eba5710fb707cfaecfaf7365d8feff5f7/YangMills/GeneratedScaleNormalization.lean#L33-L73) to
    `N.euclideanGammaLoop basis mu 2 1 output input`. It does not supply that
    value. The conventional `betaTwoLoop` polynomial is not substituted for
    the actual `GeneratedScaleNormalization.betaSeries` either.
@@ -89,7 +95,9 @@ instance of the generated physical coefficient system. The available source
 finite-cutoff expansions likewise do not identify the above native
 renormalized channel. A complete calculation must identify its high-output
 coefficient, its downward transport, and any cancelling retained-output
-terms in one prescription. A nonzero bare contraction, by itself, would not
+terms in one prescription, satisfying the actual
+[`CompositeCSConditions`](https://github.com/alxwest/ym-lean/blob/baecbb5eba5710fb707cfaecfaf7365d8feff5f7/YangMills/CohomologicalScaleInsertion.lean#L286-L312).
+A nonzero bare contraction, by itself, would not
 resolve that calculation.
 
 The next decisive test is therefore precise: compute that one-loop physical
