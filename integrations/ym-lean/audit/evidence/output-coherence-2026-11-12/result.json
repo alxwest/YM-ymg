@@ -1,0 +1,926 @@
+{
+  "status": "SCOPED_OUTPUT_COHERENCE_CHECKED",
+  "scope": "Native exact-image criterion, low-cutoff remainder obstruction and equal-degree all-cutoff outgoing transport",
+  "native_exact_image_criterion_iff_proved": true,
+  "native_primitive_space_empty_through_cutoff_two": true,
+  "cutoff_three_antighost_control_checked": true,
+  "same_degree_recovery_equivalent_for_fixed_raw": true,
+  "same_degree_global_outgoing_table_constructed": true,
+  "same_degree_physical_recovery_field_transported": true,
+  "same_degree_outgoing_graph_order_preserved": true,
+  "same_degree_outgoing_locality_preserved": true,
+  "same_degree_outgoing_power_counting_preserved": true,
+  "requires_existing_recovery_and_distinct_positive_equal_degree_basis_labels": true,
+  "outgoing_transport_holds_raw_data_fixed": true,
+  "strict_lowering_global_recovery_transported": false,
+  "incoming_generated_raw_limits_transported": false,
+  "full_generated_data_compatibility_constructed": false,
+  "generated_coefficient_family_transported": false,
+  "original_local_ward_flow_family_constructed": false,
+  "actual_nonzero_same_flow_obstruction_constructed": false,
+  "full_generated_countermodel_constructed": false,
+  "native_target_inconsistency_established": false,
+  "physical_reconstruction_transported": false,
+  "existence_only_kernel_certificate": false,
+  "necessity_of_full_native_target_established": false,
+  "native_existence_verifier_rerun": false,
+  "verifier_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "input_sha256": {
+    "audit/QuantumClosureShift.lean": "94df1670f4894c93b01942b8ef4356b77de7bd209aeee3be3cedf0f897ed91d4",
+    "audit/DictionaryRenormalization.lean": "04e82f3f17a2dfd2c8a199f1a69c8be8642241ba540154640c508f281d22322f",
+    "audit/CouplingTaylorShift.lean": "2f13ddb11493a94910f17c689fa7c8a380612841aac3f4fcea7b8ff847abc597",
+    "audit/DictionaryInsertionTransport.lean": "e7fcaad3873ff9505345b462a9c5730d9e6d3d1e0b7244631222c7f8a4c2fe42",
+    "audit/WordJetAlgebra.lean": "de1311fd238bdc7000c0a994bd3b5c50a84c44c5635b1da7ee610be5e617816f",
+    "audit/OutputCoefficientShear.lean": "09bbdcd67e77b345489928b0d6ea3453d79ffef958a0675d8b5829c5aca06e02",
+    "audit/OutputRecoveryTransport.lean": "aa1dce11ef52c5623889c834aaba99807748b3080bb85e1fe2a93c3ae64b56c2",
+    "audit/OutputRecoveryCutoffs.lean": "a29dc82b8533731bad8aa0a31650e28fbf69161c91ff6a9a82f01d58613b5e6c",
+    "audit/OutputRecoveryExact.lean": "29d7b2d21face2e179661e2bd1488f4cb6beaf18863f33804e02d5b8a9264e9b",
+    "audit/OutputRecoveryLowCutoff.lean": "8691808d30ecd5d8231ad50c8dae9071207cd71a30d9dd6729c14434cba74bd5",
+    "audit/OutputRecoveryCoherent.lean": "3403e7ccd645a237067a267f4c55d7c44acb9f3cfbb901321dc59aae61c78fd8",
+    "audit/GeneratedOutputTransport.lean": "df10da3b32bc2058c648368e6b2bc2cda12e9240c1e84428690a99c9ef393e9f",
+    "audit/check_output_coherence.py": "ad7588b62dd63de3c5bfc82593f340eb976fa36ca01ad69ee9cfd43630829520",
+    "audit/check_output_recovery.py": "f4c45a1044cb205af9603549d9d012bbc889328f4dfaa4ce9e8912e808b627ee",
+    "audit/check_dictionary_renormalization.py": "68141796843fa4d54a86d760d5db730227f9f551c1e34a74583122765dee677e",
+    "audit/check_requirement_audit.py": "e7790b4160ac7ca1420cc1a19e7f81bab4efbf8fbda64dc2c9dc6641cfab5918",
+    "audit/test_requirement_audit.py": "7d615b7f0c4044f7ffa46b22547945899fd29b3b3a3dce8c54ec96d087d60484",
+    "verify_existence.py": "7d57f7442d0f5f874d9fee29aa967cef2cc6c596474e593b0ce33ec0454ddeb2",
+    "pin.json": "cdc12b858894b11993b10d42f7535f9b502351d2a948776df6e1927155bebe44"
+  },
+  "checks": [
+    {
+      "source": "QuantumClosureShift.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/QuantumClosureShift.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/QuantumClosureShift.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.QuantumShift.wardMap_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.tree_closed_all": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.one_loop_closed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shiftedOne_graph_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shiftedOne_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.closed_all": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_tree": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_closed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_graph_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "1aeed847bc0d22c81a538a9f29ba324d4541c1b2b90573251f6a8bcd23f8f930"
+    },
+    {
+      "source": "DictionaryRenormalization.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/DictionaryRenormalization.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/DictionaryRenormalization.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.DictionaryRenormalization.relations_preserved": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finite_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finite_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.compatible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.unit_dimension": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinateWeight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinates_basis": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinateDirection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinate_weight_selected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinate_weight_lower": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.exists_higher_coordinate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.scaleDirection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.direction_for_pair": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.change_fixed_finite": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.change_fixed_physical": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.change_inverse": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "50ca22f0e7c435e68790fc5c48a75a080ea62605cb4d48fcb30238965329f09a"
+    },
+    {
+      "source": "CouplingTaylorShift.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/CouplingTaylorShift.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/CouplingTaylorShift.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.CouplingTaylor.jet_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.jet_const_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.jet_mul_square": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.convolve_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.convolve_const_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.convolve_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.map_delay": [
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.delay_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "9e23279f1e52c38dbc9dd92c29a42abacc2fbb4feaa657cc520e7eab00ba7b11"
+    },
+    {
+      "source": "DictionaryInsertionTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/DictionaryInsertionTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/DictionaryInsertionTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.DictionaryRenormalization.fullWardRestoration": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.fullWardRestoration_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.limitCompatible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalInsertion_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.ultravioletInsertion_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalInsertion_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.ultravioletInsertion_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteValue_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteIntegrand_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.delayed_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteIntegral_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalJets_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalJets_outside": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.continuumValue_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.continuumValue_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.insertionFunctional_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteInsertion_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteInsertion_succ": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "3751bd7591e7df7dad1b5c5b6dad95fdfff798eacd020e9b3d13931cfee8d06e"
+    },
+    {
+      "source": "WordJetAlgebra.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/WordJetAlgebra.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/WordJetAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.WordJet.convolve_comm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.convolve_add_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.convolve_smul_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.convolve_delay_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.delayMap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.insertionMap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.insertionMap_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "7768433b48ca98cc018c49ea78b5321d84c5dfbcce96cb17e50d24572d5d7b0a"
+    },
+    {
+      "source": "OutputCoefficientShear.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/OutputCoefficientShear.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/OutputCoefficientShear.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.OutputRecovery.weighted_corrected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.weighted_convolve": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.weighted_delay_convolve": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.assemble_dictionary_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.assemble_corrected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.assemble_cancel": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.corrected_graph_order": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "f9664411577a52513a91162e4a98e0163570228d019e3c047037012c8d357215"
+    },
+    {
+      "source": "OutputRecoveryTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/OutputRecoveryTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/OutputRecoveryTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.OutputRecovery.liftedOutput_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.liftedOutput_corrected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.recovery_corrected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.recovery_fixed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.inactive_weights": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.recovery_exists_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.raw_cutoff_difference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecovery.recovery_cutoff_difference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "2653bd4b6268fbfddde3a169c861e792a62f7d3669b8819686c26e8be360b34e"
+    },
+    {
+      "source": "OutputRecoveryCutoffs.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/OutputRecoveryCutoffs.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/OutputRecoveryCutoffs.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.OutputRecoveryCutoffs.weighted_enumeration": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.corrected_enumeration": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.correction_cutoff_difference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.correction_coherent_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.unitJet_convolve": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.convolve_unitJet": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.twoLabel_assemble_low": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.twoLabel_assemble_high": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.simultaneous_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.full_recovery": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.unchanged_recovery": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.leading_tail_obstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.unit_tail_obstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCutoffs.unitJet_graph": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "f7b197eda025f4caff827e0878c8761470b79b40eb24a81071fd266db2e8fa6d"
+    },
+    {
+      "source": "OutputRecoveryExact.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/OutputRecoveryExact.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/OutputRecoveryExact.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.OutputRecoveryExact.supported_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.supported_sub": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.quantumExact_sub": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.rawOutput_sub": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.exactOutput_sub": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.exactOutput_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.recovery_iff_exact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.recovery_of_equal_outputs": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.corrected_recovery_iff_exact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryExact.no_recovery_of_separating_test": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "007d6ef4df5f201ef6fe7a2c6eb820cafdc5b78cc930b32895a27f60d4fe8d27"
+    },
+    {
+      "source": "OutputRecoveryLowCutoff.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/OutputRecoveryLowCutoff.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/OutputRecoveryLowCutoff.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.OutputRecoveryLowCutoff.monomial_dimension_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.primitiveSet_empty": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.supportedPrimitive_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.quantumExact_low_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.exactOutput_low_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.exact_change_iff_equal_outputs": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.recovery_low_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.recovery_low_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.no_low_recovery": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryLowCutoff.antighost_primitive_at_three": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "5b3d07a332c3f7ee1339744dcf5cc3723d9b1cbff0660436dd63401869195f64"
+    },
+    {
+      "source": "OutputRecoveryCoherent.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/OutputRecoveryCoherent.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/OutputRecoveryCoherent.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.OutputRecoveryCoherent.coordinateCorrection_graph": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.coordinateCorrection_inverse": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.weightedOn_coordinate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.correction_enumerated_active": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.correction_enumerated_inactive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.weights_enumerated_inactive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.sector_recovery": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.same_degree_joint": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.outside_window_joint": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.coherent_recovery_of_joint": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.coherent_recovery_same_degree": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.coherent_recovery_same_degree_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.coordinateDirectionLE": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.directionLE_weights": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.OutputRecoveryCoherent.coherent_coordinate_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "64d0c88c721c1c0ba955c13e45396ae8d3576304b0a01a2d0532076e9bcd6781"
+    },
+    {
+      "source": "GeneratedOutputTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/output-coherence-2026-11-12/.build/GeneratedOutputTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/GeneratedOutputTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.GeneratedOutputTransport.local_sub_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.scaling_sub_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.raw_unchanged": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.outputs_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.outputs_graph": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.outputs_local": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.outputs_scaling": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GeneratedOutputTransport.outputs_recovery": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "ed65a09af2af7e37adf9e03331b926e1c9a9bb20ef2d62de52df417ed272166d"
+    }
+  ],
+  "trusted_checkout_unchanged": true,
+  "audited_declarations": 131,
+  "new_audited_declarations": 43,
+  "reused_audited_declarations": 88,
+  "audit_log_control_tests": 5,
+  "finished_utc": "2026-11-12T19:01:10.860015+00:00"
+}

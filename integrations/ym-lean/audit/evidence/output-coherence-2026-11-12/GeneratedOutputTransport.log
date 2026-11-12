@@ -1,0 +1,8 @@
+'YMYMG.GeneratedOutputTransport.local_sub_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.scaling_sub_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.raw_unchanged' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.outputs_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.outputs_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.outputs_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.outputs_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedOutputTransport.outputs_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]
