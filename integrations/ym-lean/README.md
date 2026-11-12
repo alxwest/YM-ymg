@@ -5,6 +5,22 @@ existence theorem is supplied.** The supporting lemmas compile; that is
 not the same as proof acceptance. The native status and certificate are
 recorded separately from the helper checks. [evidence.json](evidence.json)
 is the historical Lean 4.31.0 run; the current pin uses Lean 4.32.0.
+The [12 November evidence](evidence-2026-11-12.json) records a fresh real
+source submission on the new pin: compilation and the source audit passed,
+but native admission exited 2 with `INCOMPATIBLE_PROOF_SIGNATURE` and
+`existence_only_kernel_certificate=false`:
+
+```text
+Expected type: YangMills.YangMillsExistenceOnly.{u}
+Submitted type: YMGBridge.PresentedJointExistence.{u}
+Submitted universe parameters: [u]
+```
+
+The 11 supplementary declaration audits, original-package integrity checks,
+six status-contract tests, conditional-proof rejection control, and the
+19-declaration filtered-sector diagnostic all passed their scoped checks.
+Neither the supplementary results nor the diagnostic establish the missing
+native existence theorem or refute it.
 
 ## Submit the available October proof on Lean 4.32.0
 

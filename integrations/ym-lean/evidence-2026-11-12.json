@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-12",
+  "tested_ym_ymg_revision": "db20ce492f64041b462be45bf7415f2c9a0646ed",
+  "ym_lean_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "command": "python3 integrations/ym-lean/verify_existence.py --ym-lean ../ym-lean --source",
+  "status": "INCOMPATIBLE_PROOF_SIGNATURE",
+  "exit_code": 2,
+  "existence_only_kernel_certificate": false,
+  "source_translation_verified": true,
+  "spacetime_transport_verified": true,
+  "original_package_integrity_before_and_after": "passed",
+  "proof_compile_exit_code": 0,
+  "native_axiom_audit_status": "not_run_signature_mismatch",
+  "native_diagnostic": "INCOMPATIBLE_PROOF_SIGNATURE: proof has wrong, fixed-universe or conditional existence-only type\nExpected type: YangMills.YangMillsExistenceOnly.{u}\nSubmitted type: YMGBridge.PresentedJointExistence.{u}\nSubmitted universe parameters: [u]\nA proved translation is required; the transitive-axiom audit was not run.\n",
+  "input_sha256": {
+    "UniformPerturbativeLimit.lean": "a3382ef9bfd1cd9ac41379532e95432b6990736553e656e13e6bdb91a55f8d5e",
+    "UniformPerturbativeLimitAudit.lean": "d671fff15b666b8a0756d16ab6835277c5619237b4ea31cc4431c003a2fcc01f",
+    "SpacetimeTransport.lean": "b4263541e49d304e61b636e0154b9e76c51287771f66ccb24c67c28dae5b3e0f",
+    "SpacetimeTransportAudit.lean": "6fb926b5609e1ded8d4f2704e855fb4f5eb4f3ef7480acbbd72e46e66d3887ed",
+    "verify_existence.py": "7611f667a1c06d7a169f77812a20ab02e7e6b776a42103fb6561c367a41ae15e",
+    "pin.json": "cdc12b858894b11993b10d42f7535f9b502351d2a948776df6e1927155bebe44"
+  },
+  "supplementary_axioms": {
+    "YMYMG.Existence.remainder_bound_of_limits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.all_orders_of_uniform_regulated_estimates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.RegulatedExpansion.continuum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderMultiMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderVacuumWordMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.time_coordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.minkowski_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.forward_cone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.spacelike": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.native_source_test": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.source_native_test": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "conditional_control": {
+    "status": "INCOMPATIBLE_PROOF_SIGNATURE",
+    "exit_code": 2,
+    "existence_only_kernel_certificate": false,
+    "diagnostic": "INCOMPATIBLE_PROOF_SIGNATURE: proof has wrong, fixed-universe or conditional existence-only type\nExpected type: YangMills.YangMillsExistenceOnly.{u}\nSubmitted type: YangMills.YangMillsExistenceOnly.{u} -> YangMills.YangMillsExistenceOnly.{u}\nSubmitted universe parameters: [u]\nA proved translation is required; the transitive-axiom audit was not run.\n"
+  },
+  "filtered_sector_recheck": {
+    "status": "FINITE_SECTOR_DIAGNOSTIC_CHECKED",
+    "lean_exit_code": 0,
+    "declarations": 19,
+    "source_sha256": "6f20a69f37938a0e9fce9aa026694a119123af5afe65d3de26e3e69b01df7cbb",
+    "existence_only_kernel_certificate": false,
+    "full_generated_countermodel_constructed": false
+  },
+  "python_status_contract_tests": {
+    "passed": 6
+  },
+  "scope": "Source/coordinate and conditional limit lemmas checked; no full native existence proof, no mass gap, and no full-target counterexample.",
+  "finished_utc": "2026-11-12T10:46:09.770337+00:00"
+}
