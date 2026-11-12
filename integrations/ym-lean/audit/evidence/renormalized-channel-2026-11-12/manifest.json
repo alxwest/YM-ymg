@@ -1,0 +1,24 @@
+{
+  "tested_implementation_revision": "681d1d6ec851e2070821de18f490a9f9e9307f89",
+  "audit_run_base_revision": "2722b4b7e88f92021e5ecfb625cc0bc16b69b70f",
+  "audit_used_working_tree_changes": true,
+  "all_recorded_audit_input_hashes_match_tested_commit": true,
+  "target_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "audited_declarations": 47,
+  "audit_log_control_tests": 5,
+  "audit_log_controls_exit_code": 0,
+  "native_existence_verifier_rerun": false,
+  "existence_only_kernel_certificate": false,
+  "generated_physical_mixing_coefficient_computed": false,
+  "complete_changed_prescription_constructed": false,
+  "necessity_of_full_native_target_established": false,
+  "artifacts_sha256": {
+    "CurvatureVariance.log": "77fed88a195f5b6479b1155c51c3800e67ab3b91f7ff6a526a3e1841a6985ca1",
+    "QuantumClosureShift.log": "78b2af3ba7a58374907693d4ab47b438e5fb59c53b3807cb1a3534ada7b0de87",
+    "RenormalizedGaussianChannel.log": "d603490b00dfdc0bfb561fd3cc60506f6f79796c994bdd129b01a2b0bed1eec2",
+    "RenormalizedSectorPairing.log": "05439ee64a63f17a75ec3d9ce1b5a83a1ff9f5c1a9f0cac7b03b0bbd75dfcc27",
+    "audit-log-controls.log": "888a0c0ed615e57d32cf72be501b0c355f33b8613c81dfdaa99db33d7959487e",
+    "independent.log": "37cce143d9d6852706f1138887d0bef84a8a22cba0394101e83ef8b627482924",
+    "result.json": "51eace7a9032f86283f3b2236ec89dd06f37f1dc6e39f6822073803d3b910c5a"
+  }
+}

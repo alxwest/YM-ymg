@@ -1,0 +1,350 @@
+{
+  "status": "SCOPED_RENORMALIZED_CHANNEL_CHECKED",
+  "scope": "Native free curvature integral, subtracted Gaussian channel, conditional sector comparison, and Ward-preserving shifts",
+  "existence_only_kernel_certificate": false,
+  "full_generated_countermodel_constructed": false,
+  "generated_physical_mixing_coefficient_computed": false,
+  "complete_changed_prescription_constructed": false,
+  "necessity_of_full_native_target_established": false,
+  "native_existence_verifier_rerun": false,
+  "verifier_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "input_sha256": {
+    "audit/CurvatureVariance.lean": "f8d4509b39131d881671022e0512765821628251f14a791d207ca8de81a1aeee",
+    "audit/RenormalizedGaussianChannel.lean": "b0dfd656785cf333fbee9c10bb54e3b947a7d593db30c8d9230ed7f466259223",
+    "audit/RenormalizedSectorPairing.lean": "b02a89077ccedd2f54e734360ff4fcecbdc804301cdad0a19388e0480f19e27a",
+    "audit/QuantumClosureShift.lean": "94df1670f4894c93b01942b8ef4356b77de7bd209aeee3be3cedf0f897ed91d4",
+    "audit/independent_renormalized.py": "d4cbc69006c49a04f63519aafe057185f2abd01703e0048e39d6d416760467e1",
+    "audit/check_renormalized_channel.py": "6477c9b47c6fa7ae58ba5aa4b4a04a1ea18e8f03eace2f52802506dea2574094",
+    "audit/check_requirement_audit.py": "e7790b4160ac7ca1420cc1a19e7f81bab4efbf8fbda64dc2c9dc6641cfab5918",
+    "audit/test_requirement_audit.py": "7d615b7f0c4044f7ffa46b22547945899fd29b3b3a3dce8c54ec96d087d60484",
+    "verify_existence.py": "7d57f7442d0f5f874d9fee29aa967cef2cc6c596474e593b0ce33ec0454ddeb2",
+    "pin.json": "cdc12b858894b11993b10d42f7535f9b502351d2a948776df6e1927155bebe44"
+  },
+  "checks": [
+    {
+      "source": "CurvatureVariance.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/CurvatureVariance.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.CurvatureVariance.regulator_product": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.regulator_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.regulator_integral": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.weight_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.weight_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.covariance_weight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.weighted_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.square_permutation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.weighted_integral_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.weighted_integral": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.curvature_variance": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.curvature_integrand": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.curvature_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CurvatureVariance.native_curvature_variance": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "RenormalizedGaussianChannel.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/RenormalizedGaussianChannel.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.RenormalizedGaussian.colorSquare_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.halfLaplacian_square": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.halfLaplacian_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.subtraction_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.quarticShift_flow": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.quarticShift_ir": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.variance_subtraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.quarticShift_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.subtraction_scale_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.gaussianGamma_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.corrected_lower_coefficient": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.corrected_gamma": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.RenormalizedGaussian.one_loop_graph_count": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "RenormalizedSectorPairing.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/RenormalizedSectorPairing.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.GaussianSector.heat3": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.heat2": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.heat_overlap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.heat_composition": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.sum_one_tuple": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.full_pairing": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.small_pairing": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.sector_difference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.difference_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.GaussianSector.finite_gaussian_cancellation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "QuantumClosureShift.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/QuantumClosureShift.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.QuantumShift.wardMap_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.tree_closed_all": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.one_loop_closed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shiftedOne_graph_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shiftedOne_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.closed_all": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_tree": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_closed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_graph_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "independent": {
+    "status": "INDEPENDENT_RENORMALIZED_GAUSSIAN_CHECKS_PASSED",
+    "arithmetic": "exact rational",
+    "complete_generated_YM_prescription": false,
+    "cases": [
+      {
+        "colors": 1,
+        "laplacian_Q_squared_coefficient": 6,
+        "double_contraction_coefficient": 3,
+        "full_minus_small_without_scale_power": "-36/35"
+      },
+      {
+        "colors": 3,
+        "laplacian_Q_squared_coefficient": 10,
+        "double_contraction_coefficient": 15,
+        "full_minus_small_without_scale_power": "-12/7"
+      },
+      {
+        "colors": 8,
+        "laplacian_Q_squared_coefficient": 20,
+        "double_contraction_coefficient": 80,
+        "full_minus_small_without_scale_power": "-24/7"
+      },
+      {
+        "colors": 15,
+        "laplacian_Q_squared_coefficient": 34,
+        "double_contraction_coefficient": 255,
+        "full_minus_small_without_scale_power": "-204/35"
+      }
+    ]
+  },
+  "trusted_checkout_unchanged": true,
+  "audited_declarations": 47,
+  "native_finite_cutoff_covariance_computed": true,
+  "subtracted_gaussian_channel_computed": true,
+  "all_loop_ward_shift_checked": true,
+  "audit_log_control_tests": 5,
+  "finished_utc": "2026-11-12T15:02:21.794656+00:00"
+}

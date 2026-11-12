@@ -1,0 +1,31 @@
+{
+  "status": "INDEPENDENT_RENORMALIZED_GAUSSIAN_CHECKS_PASSED",
+  "arithmetic": "exact rational",
+  "complete_generated_YM_prescription": false,
+  "cases": [
+    {
+      "colors": 1,
+      "laplacian_Q_squared_coefficient": 6,
+      "double_contraction_coefficient": 3,
+      "full_minus_small_without_scale_power": "-36/35"
+    },
+    {
+      "colors": 3,
+      "laplacian_Q_squared_coefficient": 10,
+      "double_contraction_coefficient": 15,
+      "full_minus_small_without_scale_power": "-12/7"
+    },
+    {
+      "colors": 8,
+      "laplacian_Q_squared_coefficient": 20,
+      "double_contraction_coefficient": 80,
+      "full_minus_small_without_scale_power": "-24/7"
+    },
+    {
+      "colors": 15,
+      "laplacian_Q_squared_coefficient": 34,
+      "double_contraction_coefficient": 255,
+      "full_minus_small_without_scale_power": "-204/35"
+    }
+  ]
+}
