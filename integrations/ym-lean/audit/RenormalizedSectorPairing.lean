@@ -20,8 +20,8 @@ def heat3 (n s : ℂ) : (Fin 3 → ℂ) ≃ₗ[ℂ] (Fin 3 → ℂ) where
     else if i = 1 then v 1 + 2*(n+2)*s*v 2 else v 2
   invFun v i := if i = 0 then v 0 - n*s*v 1 + n*(n+2)*s^2*v 2
     else if i = 1 then v 1 - 2*(n+2)*s*v 2 else v 2
-  left_inv v := by ext i; fin_cases i <;> simp; ring
-  right_inv v := by ext i; fin_cases i <;> simp; ring
+  left_inv v := by ext i; fin_cases i <;> simp; ring_nf
+  right_inv v := by ext i; fin_cases i <;> simp; ring_nf
   map_add' v w := by ext i; fin_cases i <;> simp <;> ring
   map_smul' c v := by ext i; fin_cases i <;> simp <;> ring
 
@@ -30,8 +30,8 @@ def heat2 (n s : ℂ) : (Fin 2 → ℂ) ≃ₗ[ℂ] (Fin 2 → ℂ) where
   invFun v i := if i = 0 then v 0 - n*s*v 1 else v 1
   left_inv v := by ext i; fin_cases i <;> simp
   right_inv v := by ext i; fin_cases i <;> simp
-  map_add' v w := by ext i; fin_cases i <;> simp; ring
-  map_smul' c v := by ext i; fin_cases i <;> simp; ring
+  map_add' v w := by ext i; fin_cases i <;> simp; ring_nf
+  map_smul' c v := by ext i; fin_cases i <;> simp; ring_nf
 
 theorem heat_overlap (n s : ℂ) (i j : Fin 2) :
     heat3 n s (Pi.single j.castSucc 1) i.castSucc = heat2 n s (Pi.single j 1) i := by
@@ -79,7 +79,7 @@ theorem full_pairing {labels : Fin 3 → InvariantInsertionLabel G}
     show (0 : Fin 3) ≠ 2 by decide, show (1 : Fin 3) ≠ 2 by decide,
     if_false, add_zero, zero_add, LinearMap.zero_apply]
   norm_cast
-  ring
+  ring_nf
 
 theorem small_pairing {labels : Fin 2 → InvariantInsertionLabel G}
     {gamma : RenormalizationScale → ℕ → Fin 2 → Fin 2 → ℂ}
@@ -98,7 +98,7 @@ theorem small_pairing {labels : Fin 2 → InvariantInsertionLabel G}
   rw [sum_one_tuple]
   norm_num [Fin.sum_univ_succ, channels, heat2, hdegree, Pi.single_apply, Fin.reduceFinMk]
   norm_cast
-  ring
+  ring_nf
 
 /-- Comparison with all incoming identity terms retained. The unknown
 lower-output distribution cancels; the missing high-output channel remains. -/
@@ -122,7 +122,7 @@ theorem sector_difference
       -2*(n+2)*(scale : ℂ)^4*d*unit (OPE.dilateRelative scale test) := by
   rw [full_pairing large n d low unit scale test hl hdl,
     small_pairing small n d low unit scale test hs hds]
-  ring
+  ring_nf
 
 theorem difference_nonzero (n : ℕ) (d u : ℂ) (scale : ℝ)
     (hd : d ≠ 0) (hu : u ≠ 0) (hs : scale ≠ 0) :
