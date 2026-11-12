@@ -1,0 +1,17 @@
+'YMYMG.OutputRecoveryCoherent.coordinateCorrection_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.coordinateCorrection_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.weightedOn_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.correction_enumerated_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.correction_enumerated_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.weights_enumerated_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.sector_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.same_degree_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.outside_window_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.coherent_recovery_of_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.coherent_recovery_same_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.coherent_recovery_same_degree_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMYMG.OutputRecoveryCoherent.coordinateDirectionLE' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.directionLE_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecoveryCoherent.coherent_coordinate_change' depends on axioms: [propext, Classical.choice, Quot.sound]

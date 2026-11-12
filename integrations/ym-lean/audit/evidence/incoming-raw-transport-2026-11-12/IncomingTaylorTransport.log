@@ -1,0 +1,5 @@
+'YMYMG.IncomingExpansion.finiteTransform_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteTransform_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteTransform_smooth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteTransform_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteTransform_jet' depends on axioms: [propext, Classical.choice, Quot.sound]

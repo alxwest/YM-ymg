@@ -1,0 +1,5 @@
+'YMYMG.IncomingExpansion.tupleJet_test_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.tupleJet_test_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.regularity_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.tupleJet_integral_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.tupleJet_limit_change' depends on axioms: [propext, Classical.choice, Quot.sound]

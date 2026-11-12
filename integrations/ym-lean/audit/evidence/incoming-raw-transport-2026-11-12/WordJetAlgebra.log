@@ -1,0 +1,7 @@
+'YMYMG.WordJet.convolve_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.WordJet.convolve_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.WordJet.convolve_smul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.WordJet.convolve_delay_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.WordJet.delayMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.WordJet.insertionMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.WordJet.insertionMap_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
