@@ -54,8 +54,8 @@ to agree across cutoffs. An independent two-label test shows that
 invertibility of the dictionary alone does not guarantee this agreement.
 This is not a generated Yang–Mills counterexample: the actual tails and
 allowed exact remainders have not been evaluated on a same-flow family.
-Incoming raw limits, global coefficient coherence and the all-orders
-continuum matching remain open.
+At that stage, incoming raw limits, global coefficient coherence and the
+all-orders continuum matching remained open.
 
 The [coherence continuation](audit/README.md) closes the outgoing
 all-cutoff step for corrections between distinct labels of the same
@@ -65,9 +65,22 @@ graph-order and collision-scaling fields. It also proves exactly when a
 generated-Q remainder can repair a proposed coefficient change, and that
 no such remainder exists at cutoffs `D ≤ 2`. The fresh
 [131-declaration audit](audit/evidence/output-coherence-2026-11-12/result.json)
-passes. Full generated-data compatibility still needs the changed incoming
-extractor and raw limits; general downward corrections and the source's
-all-orders continuum comparison remain unresolved.
+passes. That audit left the changed incoming extractor and raw limits
+unproved. General downward corrections and the source's all-orders
+continuum comparison remain unresolved.
+
+The [incoming continuation](audit/README.md) now proves the finite
+multilinear change on the actual native regulated extractor, its exact
+coupling jets, all three native regularity fields, and the new local raw
+distribution table's weak UV limits. It includes every incoming slot and
+the anchored final insertion. Its [187-declaration audit](audit/evidence/incoming-raw-transport-2026-11-12/result.json)
+checks 56 new declarations and rebuilds the previous 131. The incoming
+transformation has a proved inverse when the lower label has zero weight.
+These are conditional transport theorems: combining the new raw table
+with outgoing physical recovery and coefficient bounds still needs a full
+compatibility proof. They do not supply the October source's missing
+all-orders continuum bridge. No native existence certificate is claimed;
+the candidate and target are unchanged, and native admission was not rerun.
 
 ## Submit the available October proof on Lean 4.32.0
 

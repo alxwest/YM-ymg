@@ -1,5 +1,71 @@
 # Checks of extra ym-lean requirements
 
+## Native incoming extraction and raw limits, 12 November
+
+**The incoming raw-limit step is now proved, conditional on existing native
+regularity and raw limits.** The proof starts with ym-lean's actual finite
+insertion expansion, differentiates its coupling dependence, integrates
+against its permitted relative tests, and takes the UV limit. It constructs
+one local distribution-valued raw table, rather than selecting numbers
+separately for each test. This works for a filtered direction whose lower
+label is represented in the basis; equal engineering degrees are not needed
+for this incoming result.
+
+For the dictionary change `O'_p = O_p + hbar g^2 a chi(p) O_q`, every
+incoming slot contributes either its original label or its `q` correction.
+The finite expansion includes the final insertion anchored at zero. Its
+coupling jets therefore have the exact form
+
+```text
+R' = (product over incoming slots of (1 + a chi(p) delta replace_by_q)) R,
+delta R(order+2, loop+1) = R(order, loop), zero at the boundary.
+```
+
+The product is a finite multilinear operation on input labels, not an
+infinite perturbative sum. `IncomingFiniteTransport.lean` and
+`IncomingNativeExtractor.lean` identify it with the native
+`liftedInsertionExpansion`, `liftedRegulatedCoefficient` and
+`liftedCouplingCoefficient`. `IncomingTaylorTransport.lean` proves the
+derivative identity, including the factorial normalization and boundary
+orders. `IncomingNativeLimits.lean` transports all three fields of the
+native `LiftedCoefficientRegularity`: coupling smoothness, graph grading
+and test integrability.
+
+[`GeneratedIncomingRaw.lean`](GeneratedIncomingRaw.lean) constructs
+`incomingRaw` and proves the literal native `raw_limit` condition for the
+changed lift, as well as locality of every new raw distribution. The test
+identity is applied on the test's support, where its noncollision guards
+hold; outside the support both integrands vanish. Only finite sums and
+scalar multiples are moved through integration and the UV limit.
+[`IncomingExpansionInverse.lean`](IncomingExpansionInverse.lean) also proves
+that the whole incoming expansion is inverted by negating the weight when
+`chi(q)=0`, and that native regularity is equivalent in the two presentations.
+
+The [fresh audit](evidence/incoming-raw-transport-2026-11-12/result.json)
+checks **187 declarations: 56 new and 131 from the preceding audit**. All
+twenty local modules are rebuilt in an empty output directory with warnings
+as errors, only the three permitted axioms, and five audit-log controls.
+The [manifest](evidence/incoming-raw-transport-2026-11-12/manifest.json)
+records source and compiled-module hashes. The pinned native target is unchanged.
+
+This does **not** yet join the new raw table with the preceding outgoing
+table in a full `GeneratedEuclideanData.Compatible` proof: simultaneous
+incoming/outgoing physical recovery and the associated physical coefficient
+bounds remain to be assembled. It also does not construct the starting
+native family from the October submission, prove its missing all-orders
+continuum comparison, or transport physical reconstruction. Finite weak
+limits of individual coefficients do not establish that all-orders
+comparison. The native existence candidate is unchanged and was not rerun;
+`existence_only_kernel_certificate` remains false.
+
+To reproduce this scope:
+
+```sh
+python3 integrations/ym-lean/audit/check_incoming_raw_transport.py \
+  --ym-lean /path/to/ym-lean \
+  --out /path/to/a/fresh/incoming-raw-audit
+```
+
 ## Exact remainders and coherent outgoing transport, 12 November
 
 **The outgoing cutoff-coherence step is now solved for elementary changes
