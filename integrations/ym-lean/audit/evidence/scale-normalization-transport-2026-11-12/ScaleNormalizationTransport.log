@@ -1,0 +1,5 @@
+'YMYMG.ScaleNormalizationTransport.family_residual_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleNormalizationTransport.family_residual_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleNormalizationTransport.changeNormalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleNormalizationTransport.positiveScale_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleNormalizationTransport.normalization_exists_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,5 @@
+'YMYMG.ExactTransport.changePrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ExactTransport.exactFunctional_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ExactTransport.exactInsertion_functional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ExactTransport.exactInsertion_change_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ExactTransport.exactInsertion_change_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
