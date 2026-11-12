@@ -1,4 +1,135 @@
-# Filtered-sector truncation diagnostic
+# Checks of extra ym-lean requirements
+
+## Results of the 12 November follow-up
+
+The new checks validate several parts of the encoding, but **do not establish
+that every additional condition in ym-lean is necessary for Jaffe–Witten**.
+They also do not establish a physical counterexample to the target. The
+tests concern logical and mathematical content, not the people involved.
+
+The target remains the unchanged `alxwest/ym-lean` revision
+`baecbb5eba5710fb707cfaecfaf7365d8feff5f7`, using Lean 4.32.0.
+
+| Test | Result | What this establishes |
+| --- | --- | --- |
+| Reorder every label consistently | Pass, seven audited declarations | The actual `Frame`, its RG equation, stripping, locality and all-order bounds transport under any permutation. Matching holds **if and only if** it held before reordering. |
+| Four- and six-leg Gaussian coefficients, including fermionic signs | Pass | The actual native Wick engine gives `3 v²` and `15 v³` for repeated bosonic legs. The public vacuum-normalized bare coefficient agrees at order zero, retaining its integrability hypotheses. |
+| Free curvature kernel and cutoff derivative | Pass | The imported propagator gives the expected color-diagonal `F₀₁` kernel. Its scale derivative equals the imported flow kernel, including the zero-momentum branch. |
+| Gaussian subtraction and change of subtraction | Pass | The exact subtraction coefficients are `-6` and `3`; changing the subtraction can produce a lower-degree term. This is Gaussian algebra, not the generated physical YM mixing coefficient. |
+| Reduce the actual generated RG series at its first possible orders | Pass, five audited declarations | Beta coefficients below `g³` and mixing coefficients below `g²` vanish. The `g³` beta and `g²` mixing terms reduce to their actual one-loop components. Their nonzero numerical values have **not** been computed. |
+| Full generated degree-eight to degree-four sector calculation | Unresolved | No same-flow, Ward-compatible physical mixing coefficient and corresponding OPE channel have been identified that settle the proposed truncation objection. |
+
+There are **25 new audited Lean declarations** in
+[`BasisConsistency.lean`](BasisConsistency.lean),
+[`KernelCoefficients.lean`](KernelCoefficients.lean),
+[`CutoffDerivative.lean`](CutoffDerivative.lean), and
+[`GeneratedOrders.lean`](GeneratedOrders.lean).
+Reordering is a restricted basis test: this does not claim invariance under
+every filtered basis change or finite renormalization of the full candidate.
+
+### Independent calculation
+
+[`independent_coefficients.py`](independent_coefficients.py) obtains the
+Gaussian moments from `exp(v t²/2)`, independently of the native recursive
+Wick pairing algorithm. Solving the two cancellation equations for
+`X⁴ + a v X² + b v²` gives `a=-6`, `b=3`, agreeing with the checked native
+identities. The fermionic four-leg identity has signs `+,-,+`.
+
+The formally checked free curvature integrand is
+
+```text
+δ_ab (p₀² + p₁²) C(IR, UV; p) / (2π)⁴.
+```
+
+Using the angular average `1/2` and sphere area `2π²` in four dimensions
+reduces its coincident covariance to
+
+```text
+(1 / (16π²)) ∫₀∞ r³ (exp(-r²/UV²) - exp(-r²/IR²)) dr
+  = (UV⁴ - IR⁴) / (32π²).
+```
+
+Four numerical checks, including equal cutoffs, agree within `10⁻¹⁰` at
+two integration resolutions. The angular reduction and numerical integral
+are **not Lean proofs**; the exact native integrand and cutoff derivative
+are. This is the free component of curvature at finite cutoffs, not the
+full nonlinear gauge-invariant observable or its physical continuum limit.
+The regulator and covariance conventions were checked against
+[Fröb–Holland, §2, equations (2.13)–(2.17)](https://arxiv.org/pdf/1603.08012#page=11),
+in Feynman gauge and the paper's redefined auxiliary-field convention.
+
+### What stopped the decisive sector calculation
+
+The previous finite-sector counterexample below establishes that downward
+filtration and overlap agreement alone do not justify truncating before
+transport. It does not identify an actual generated physical coefficient.
+The follow-up pursued the suggested curvature/Wick channel and found:
+
+1. The actual free curvature kernel and Wick combinatorics can be computed,
+   as above. They do not determine the renormalized operator mixing.
+2. The target's actual `SingleInsertionBoundaryConditions.normalized`
+   sets every strictly lower-output projector to zero at the subtraction
+   point. `normalized_lower_output_zero` proves this directly. Substituting
+   a bare contraction for that coefficient would bypass the counterterms.
+   This vanishing at one point does **not** imply vanishing scale dependence.
+3. The Gaussian identity
+   `H₄(v) = H₄(w) + 6(w-v)H₂(w) + 3(w-v)²`
+   shows explicitly why changes of subtraction can still mix degrees.
+   Promoting this to the physical YM channel requires the corrected
+   observable dictionary, actual insertion flow, generated quantum-exact
+   terms, and the same-scale Callan–Symanzik equation.
+4. `GeneratedOrders.lean` reduces the disputed leading mixing to
+   `N.euclideanGammaLoop basis mu 2 1 output input`. It does not supply that
+   value. The conventional `betaTwoLoop` polynomial is not substituted for
+   the actual `GeneratedScaleNormalization.betaSeries` either.
+
+The inspected `FixedFlowSystem` and `GeneratedScaleNormalization` structures
+specify these equations and conditions. They are not a completed numerical
+instance of the generated physical coefficient system. The available source
+finite-cutoff expansions likewise do not identify the above native
+renormalized channel. A complete calculation must identify its high-output
+coefficient, its downward transport, and any cancelling retained-output
+terms in one prescription. A nonzero bare contraction, by itself, would not
+resolve that calculation.
+
+The next decisive test is therefore precise: compute that one-loop physical
+mixing/OPE channel and compare the two finite-sector stripping expressions.
+A contradiction for every allowed realization would refute the target;
+a mismatch in one chosen prescription would still require checking whether
+an admissible change of prescription removes it. Passing this channel would
+not prove that every condition of the full target follows from Jaffe–Witten.
+
+The [earlier scalar limit obstruction](NonuniformLimit.lean) separately
+rules out promoting finite-cutoff all-orders asymptotics using just
+pointwise convergence and a matching leading term. That is an objective
+failed implication, but its scalar example does not decide implication
+between the complete Yang–Mills existence statements.
+
+### Reproduce the new checks
+
+From the YM-ymg repository, with the pinned ym-lean dependencies built:
+
+```sh
+python3 integrations/ym-lean/audit/check_requirement_audit.py \
+  --ym-lean ../ym-lean --out integrations/ym-lean/runs/requirements-new
+python3 integrations/ym-lean/audit/test_requirement_audit.py
+```
+
+Use a fresh output directory. The runner checks the native pin and source
+hashes before and after compilation, requires the exact audit declaration
+sets, and permits only `propext`, `Classical.choice`, and `Quot.sound`.
+Its success status is `SCOPED_REQUIREMENT_AUDITS_CHECKED`; the JSON explicitly
+keeps existence acceptance, a full countermodel, a computed physical mixing
+coefficient, and necessity of the whole target **false**.
+
+These checks supplement the current rejection recorded in
+[ym-lean #27](https://github.com/alxwest/ym-lean/issues/27), and bear on the
+separate specification review in
+[#26](https://github.com/alxwest/ym-lean/issues/26). They do not change either
+the source theorem's type or the native admission result. No new review of
+these audit artifacts by the YM group is claimed.
+
+## Earlier filtered-sector truncation diagnostic
 
 **Scope: checked finite algebra and an explicit asymptotic tail. Not an
 existence proof, not a full generated-Yang--Mills countermodel, and not a

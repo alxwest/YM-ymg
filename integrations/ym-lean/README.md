@@ -252,3 +252,19 @@ This is not yet a generated-Yang--Mills countermodel or a proof that the
 existence target is inconsistent. The fixed engine must still be shown to
 realize the relevant channel. The native existence certificate remains
 false; neither the target nor the verifier is patched.
+
+## Requirement checks — 12 November 2026
+
+The [follow-up audit](audit/README.md#results-of-the-12-november-follow-up)
+checks label-permutation invariance, actual finite-cutoff Wick and curvature
+kernels, the cutoff derivative, Gaussian subtraction, and the first possible
+orders of the actual generated RG series. All 25 new Lean declarations pass
+their axiom audits; independent Gaussian calculations agree with the scoped
+kernel results. Five negative-control tests check the audit-log acceptance.
+
+The decisive physical sector test remains unresolved: the renormalized
+one-loop mixing coefficient and its associated same-prescription OPE channel
+have not been identified. The audit explains why a bare Wick contraction
+cannot replace that calculation. It proves neither necessity of every native
+condition nor inconsistency of the target, and does not produce existence
+acceptance.
