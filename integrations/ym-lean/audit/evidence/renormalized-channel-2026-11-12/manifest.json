@@ -1,6 +1,6 @@
 {
-  "tested_implementation_revision": "681d1d6ec851e2070821de18f490a9f9e9307f89",
-  "audit_run_base_revision": "2722b4b7e88f92021e5ecfb625cc0bc16b69b70f",
+  "tested_implementation_revision": "7ac6e4d7e0367ca5baafd97b31935a32110880b6",
+  "audit_run_base_revision": "c7e0f382233cdec3a5ddf1294d9dfdd124d5b07d",
   "audit_used_working_tree_changes": true,
   "all_recorded_audit_input_hashes_match_tested_commit": true,
   "target_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
@@ -16,9 +16,9 @@
     "CurvatureVariance.log": "77fed88a195f5b6479b1155c51c3800e67ab3b91f7ff6a526a3e1841a6985ca1",
     "QuantumClosureShift.log": "78b2af3ba7a58374907693d4ab47b438e5fb59c53b3807cb1a3534ada7b0de87",
     "RenormalizedGaussianChannel.log": "d603490b00dfdc0bfb561fd3cc60506f6f79796c994bdd129b01a2b0bed1eec2",
-    "RenormalizedSectorPairing.log": "05439ee64a63f17a75ec3d9ce1b5a83a1ff9f5c1a9f0cac7b03b0bbd75dfcc27",
+    "RenormalizedSectorPairing.log": "d358fd24f0854f46676bf9a50d2abe8ca7112793ed8e1ea616b44234039b3dee",
     "audit-log-controls.log": "888a0c0ed615e57d32cf72be501b0c355f33b8613c81dfdaa99db33d7959487e",
     "independent.log": "37cce143d9d6852706f1138887d0bef84a8a22cba0394101e83ef8b627482924",
-    "result.json": "51eace7a9032f86283f3b2236ec89dd06f37f1dc6e39f6822073803d3b910c5a"
+    "result.json": "a4484ad9fbd02673f4218779990597c32f445077c5cf07bbc5b882cc83838f89"
   }
 }

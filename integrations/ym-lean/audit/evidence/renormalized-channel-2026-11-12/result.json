@@ -11,7 +11,7 @@
   "input_sha256": {
     "audit/CurvatureVariance.lean": "f8d4509b39131d881671022e0512765821628251f14a791d207ca8de81a1aeee",
     "audit/RenormalizedGaussianChannel.lean": "b0dfd656785cf333fbee9c10bb54e3b947a7d593db30c8d9230ed7f466259223",
-    "audit/RenormalizedSectorPairing.lean": "b02a89077ccedd2f54e734360ff4fcecbdc804301cdad0a19388e0480f19e27a",
+    "audit/RenormalizedSectorPairing.lean": "7502d8a2dda65cc9d922fff6049a7bb3c9167b97ea3775333ae00c255f2d5637",
     "audit/QuantumClosureShift.lean": "94df1670f4894c93b01942b8ef4356b77de7bd209aeee3be3cedf0f897ed91d4",
     "audit/independent_renormalized.py": "d4cbc69006c49a04f63519aafe057185f2abd01703e0048e39d6d416760467e1",
     "audit/check_renormalized_channel.py": "6477c9b47c6fa7ae58ba5aa4b4a04a1ea18e8f03eace2f52802506dea2574094",
@@ -346,5 +346,5 @@
   "subtracted_gaussian_channel_computed": true,
   "all_loop_ward_shift_checked": true,
   "audit_log_control_tests": 5,
-  "finished_utc": "2026-11-12T15:02:21.794656+00:00"
+  "finished_utc": "2026-11-12T15:05:46.501678+00:00"
 }
