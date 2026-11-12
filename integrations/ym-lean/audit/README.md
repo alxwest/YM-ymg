@@ -1,6 +1,178 @@
 # Checks of extra ym-lean requirements
 
-## Results of the 12 November follow-up
+## Renormalized channel follow-up, 12 November
+
+The Gaussian part of the proposed degree-eight to degree-four test is now
+computed, including the subtraction counterterm, its scale derivative, and
+the incoming identity terms in the sector comparison. **The full generated
+physical Yang–Mills channel and the existence bridge remain unresolved.**
+
+There are **47 new audited Lean declarations** in this follow-up, against
+the unchanged Lean 4.32.0 target
+`baecbb5eba5710fb707cfaecfaf7365d8feff5f7`:
+
+| File | Checked result | Scope |
+| --- | --- | --- |
+| [CurvatureVariance.lean](CurvatureVariance.lean) | Exact native complex free-curvature integral and integrability | Four-dimensional finite-cutoff Gaussian covariance, with arbitrary color indices |
+| [RenormalizedGaussianChannel.lean](RenormalizedGaussianChannel.lean) | Color combinatorics, subtraction, conditional ODE uniqueness, scale derivative and cancellation | Renormalized Gaussian channel; the reduction of the full insertion flow is not proved |
+| [RenormalizedSectorPairing.lean](RenormalizedSectorPairing.lean) | Actual native stripping with both incoming identity terms; nonzero sector difference | Conditional two/three-label Frame slices, not an exhaustive generated physical sector |
+| [QuantumClosureShift.lean](QuantumClosureShift.lean) | Finite correction preserves the same generated Ward equation at every loop, coupling grading and dimension bounds | Individual corrected representatives; not a complete transformed observable dictionary or flow family |
+
+The [result JSON](evidence/renormalized-channel-2026-11-12/result.json),
+[axiom logs](evidence/renormalized-channel-2026-11-12/), and
+[manifest](evidence/renormalized-channel-2026-11-12/manifest.json) record the
+checked sources. Success uses only `propext`, `Classical.choice` and
+`Quot.sound`. It is not native existence acceptance.
+
+### The calculation
+
+Write `n` for the number of color components, `X_a` for the linearized
+`F₀₁` component, `Q = Σ_a X_a²`, and `P = Q²`. The corresponding source
+normalizations start at `g² Q` and `g⁴ P`. This notation isolates the
+Gaussian component; it does not replace nonlinear curvature with a free
+field in the full Yang–Mills theory.
+
+1. The exact imported covariance gives
+
+   ```text
+   v(Λ, UV) = ∫ (p₀²+p₁²) C(Λ,UV;p) / (2π)⁴ dp
+            = (UV⁴−Λ⁴)/(32π²).
+   ```
+
+   This is now a Lean proof of the actual complex contraction integrand's
+   integral, including its color Kronecker delta and integrability. It uses
+   Cartesian Gaussian products and measure-preserving coordinate swaps;
+   no angular-average formula or numerical quadrature is assumed.
+
+2. The Gaussian generator satisfies
+
+   ```text
+   (½Δ)Q = n,        (½Δ)P = 2(n+2)Q.
+   ```
+
+   Subtracting at `Λ=μ` gives the lower-degree coefficient
+
+   ```text
+   a(μ,Λ) = 2(n+2)[v(Λ,UV)−v(μ,UV)]
+          = (n+2)(μ⁴−Λ⁴)/(16π²).
+   ```
+
+   The UV cutoff cancels, and `a(μ,μ)=0`, as required by the lower-output
+   normalization. The derivative is `∂Λ a = −(n+2)Λ³/(4π²)`.
+   `quarticShift_unique` proves that this is the unique continuous solution
+   with that derivative and subtraction boundary on the positive-cutoff
+   interval. **Identifying the actual insertion-flow right-hand side with
+   this derivative remains a hypothesis of that theorem.** The graph-count
+   lemma excludes cubic/quartic interaction vertices in a four-field to
+   two-field one-loop graph under its explicit counting identities; the
+   native flow-to-graph identification is not supplied by the count alone.
+
+3. In the convention `μ ∂μ O = −γ O`, the Gaussian coefficient of the
+   relative `g²` mixing from `P` to `Q` is
+
+   ```text
+   γ₂(μ) = −(n+2)μ⁴/(4π²),
+   ```
+
+   which is nonzero for positive `μ`. The sign follows the native
+   `compositeResidual` convention. This value is **not** asserted to equal
+   `GeneratedScaleNormalization.euclideanGammaLoop` for a complete native
+   physical prescription.
+
+### Identity mixing does not cancel the sector difference
+
+The full Gaussian change on `(1,Q,P)` has columns
+
+```text
+S(s) = [ 1   n s   n(n+2)s² ]
+       [ 0    1    2(n+2)s  ]
+       [ 0    0       1     ],       S(s) S(t) = S(s+t).
+```
+
+Here `s` is the covariance-change parameter in the chosen normalization;
+for source-normalized fields it includes the corresponding coupling
+factor. With transport `S(−d)`, the native `strippedMultiPairing` yields
+
+```text
+three labels:  λ⁴ [low − 4 d unit]
+two labels:    λ⁴ [low + 2 n d unit]
+difference:  −2(n+2) λ⁴ d unit.
+```
+
+`low` and `unit` denote the respective distributions evaluated on the same
+dilated test. Both `1·Q -> Q` and `Q·1 -> Q` incoming terms are included.
+The unknown `Q·Q -> Q` coefficient cancels in the difference. The
+`Q·Q -> 1` coefficient cannot reach the tested `Q` output under this
+downward transport. The supplied channel table and Frame identifications
+are still explicit hypotheses: this is not an identification with the
+complete, exhaustive physical OPE basis.
+
+### A finite correction removes this Gaussian mixing
+
+At leading loop order, replace the representative by
+
+```text
+O'_P = O_P + hbar g² α(μ) O_Q,
+α(μ) = −a(μ,0) = −(n+2)μ⁴/(16π²).
+```
+
+Then `γ'₂ = γ₂ − μ α'(μ) = 0`, proved by `corrected_gamma`. On the complete
+three-dimensional Gaussian polynomial space, the finite correction
+`S(d)` cancels `S(−d)` exactly, including the double-contraction unit term.
+This addresses the Gaussian obstruction; it does not claim that all other
+degree-lowering mixing in Yang–Mills disappears.
+
+Using the **entire** corrected lower observable extends the local Ward
+check beyond one loop: `shifted_closed` proves that
+`O_p + hbar g² α O_q` obeys the same generated Ward equation at every
+loop whenever the original representatives do. `shifted_graph_grading`
+and `shifted_support` prove the corresponding coupling and support guards.
+The theorem checks an individual pair of labels. It does not construct a
+global linear map respecting all identities on connections, the unit,
+the UV/IR insertion limits, the physical dictionary, or the transformed
+Callan–Symanzik normalization. Those are additional native requirements.
+
+Thus the calculated nonzero term is **prescription dependent in the
+Gaussian sector**. Neither the term nor the sector discrepancy proves an
+unavoidable obstruction for every realization allowed by the existential
+target. Conversely, cancelling it does not prove that every extra
+condition in that target follows from Jaffe–Witten.
+
+### Remaining blocker and reproduction
+
+To finish this test as a statement about the full target requires a
+same-prescription bridge from the actual normalized insertion flows and
+quantum-exact terms to this calculation, a complete allowed change of
+dictionary if the correction is used, and the corresponding generated OPE
+and running Frame in the exhaustive basis. Even that would not supply the
+missing nonperturbative all-orders remainder estimates in the original
+existence bridge. No such theorem has been proved here, and no axiom or
+admission-rule change replaces it.
+
+Reproduce the new check with a fresh output directory:
+
+```sh
+python3 integrations/ym-lean/audit/check_renormalized_channel.py \
+  --ym-lean ../ym-lean --out integrations/ym-lean/runs/renormalized-new
+```
+
+The runner also executes five audit-log controls and
+[independent_renormalized.py](independent_renormalized.py). The latter uses
+exact rational Gaussian moments for 1, 3, 8 and 15 color components and
+evaluates every matrix index in the two/three-label contraction. These are
+independent finite checks, not realizations of the complete gauge theory.
+
+The native target and submitted existence theorem are unchanged, so the
+native existence verifier was not rerun. The last rejection remains
+`INCOMPATIBLE_PROOF_SIGNATURE`, with submitted type
+`YMGBridge.PresentedJointExistence.{u}` instead of
+`YangMills.YangMillsExistenceOnly.{u}`; the translation is still unproved.
+This supplements [ym-lean #27](https://github.com/alxwest/ym-lean/issues/27)
+and the separate specification review
+[#26](https://github.com/alxwest/ym-lean/issues/26). No review of these new
+artifacts by the YM group is claimed.
+
+## Earlier requirement checks, 12 November
 
 The new checks validate several parts of the encoding, but **do not establish
 that every additional condition in ym-lean is necessary for Jaffe–Witten**.
