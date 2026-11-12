@@ -39,6 +39,11 @@ SPACETIME_DECLARATIONS = {
     "YMYMG.SpacetimeTransport.native_source_test",
     "YMYMG.SpacetimeTransport.source_native_test",
 }
+FINITE_REGULATOR_DECLARATIONS = {
+    "YMYMG.FiniteRegulatorTransport.aspiration_has_jet",
+    "YMYMG.FiniteRegulatorTransport.finite_wilson_jet",
+    "YMYMG.FiniteRegulatorTransport.finite_haar_wilson_jet",
+}
 
 
 def digest(path: Path) -> str:
@@ -97,6 +102,7 @@ def main() -> int:
         "status": "NOT_ACCEPTED", "existence_only_kernel_certificate": False,
         "supplementary_lemmas_verified": False, "target": PIN["target"],
         "source_translation_verified": False, "spacetime_transport_verified": False,
+        "finite_regulator_transport_verified": False,
         "verifier_revision": PIN["revision"], "input_sha256": {},
         "scope": "Exact existence-only admission; no mass-gap claim",
         "commands": [],
@@ -137,6 +143,7 @@ def main() -> int:
             proof_file = stage / "YMGBridge/Solution.lean"
             theorem = "YMGBridge.jointExistence"
             modules.append(("SpacetimeTransport", SPACETIME_DECLARATIONS))
+            modules.append(("FiniteRegulatorTransport", FINITE_REGULATOR_DECLARATIONS))
         for name in [name + suffix for name, _ in modules
                      for suffix in (".lean", "Audit.lean")]:
             summary["input_sha256"][name] = digest(HERE / name)
@@ -171,6 +178,7 @@ def main() -> int:
             summary["supplementary_lemmas_verified"] = True
             summary["supplementary_axioms"] = axioms
             summary["spacetime_transport_verified"] = args.source
+            summary["finite_regulator_transport_verified"] = args.source
         command = [sys.executable, str(root / "scripts/verify_submission.py"),
                    "--claim", "existence", "--report", str(out / "native.json")]
         if proof_file is not None:
@@ -205,6 +213,7 @@ def main() -> int:
                       "supplementary_lemmas_verified": summary["supplementary_lemmas_verified"],
                       "source_translation_verified": summary["source_translation_verified"],
                       "spacetime_transport_verified": summary["spacetime_transport_verified"],
+                      "finite_regulator_transport_verified": summary["finite_regulator_transport_verified"],
                       "report": str(out / "result.json")}, indent=2))
     return code
 

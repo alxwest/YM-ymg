@@ -1,0 +1,5 @@
+import FiniteRegulatorTransport
+
+#print axioms YMYMG.FiniteRegulatorTransport.aspiration_has_jet
+#print axioms YMYMG.FiniteRegulatorTransport.finite_wilson_jet
+#print axioms YMYMG.FiniteRegulatorTransport.finite_haar_wilson_jet

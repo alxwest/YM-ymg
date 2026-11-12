@@ -45,6 +45,7 @@ class AcceptanceContract(unittest.TestCase):
         report = dict(self.good, status="INCOMPATIBLE_PROOF_SIGNATURE",
                       source_translation_verified=True,
                       spacetime_transport_verified=True,
+                      finite_regulator_transport_verified=True,
                       existence_only_kernel_certificate=False)
         self.assertFalse(native_accepted(report, 2, "Fixture.proof"))
         self.assertFalse(native_accepted(report, 0, "Fixture.proof"))

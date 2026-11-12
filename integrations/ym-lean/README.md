@@ -16,11 +16,17 @@ Submitted type: YMGBridge.PresentedJointExistence.{u}
 Submitted universe parameters: [u]
 ```
 
-The 11 supplementary declaration audits, original-package integrity checks,
+The 11 supplementary declaration audits in that run, original-package integrity checks,
 six status-contract tests, conditional-proof rejection control, and the
 19-declaration filtered-sector diagnostic all passed their scoped checks.
 Neither the supplementary results nor the diagnostic establish the missing
 native existence theorem or refute it.
+
+The continued investigation adds `FiniteRegulatorTransport.lean`: three
+proved translations of **actual finite-cutoff** Wilson asymptotics into
+ym-lean's `RG.HasPerturbativeJet`. It also adds a checked scalar obstruction
+to passing these jets through a merely pointwise regulator limit. These
+results narrow the remaining work; they do not supply native acceptance.
 
 ## Submit the available October proof on Lean 4.32.0
 
@@ -45,6 +51,15 @@ forward cone, and spacelike relation, and gives inverse continuous linear
 maps on the actual Schwartz test spaces. This closes these coordinate
 comparisons without changing either definition. It does not construct a
 Wightman field system or a generated Yang–Mills sector.
+
+`FiniteRegulatorTransport.lean` uses the stronger source results
+`YM.PertExtension.Orb.finite_formula` and `before_tree_formula`, not just
+the formal series in `YM/Pert/Lattice/Series.lean`. Their remainder is
+bounded by `C * g^(N+1)` at each fixed cutoff. The translation proves the
+native `epsilon * g^N` bound for the same actual expectations and the same
+finite-cutoff coefficients. It includes the source's Haar-expectation
+version before tree reduction, with the source's even-side and observable
+hypotheses preserved. Source mode checks these three declarations as well.
 
 All original source and historical evidence remain unchanged. The
 `--source` result records source translation, coordinate transport, and
@@ -76,6 +91,13 @@ At original source revision `55ba9fc36293b3f4d52c6b1f813169a0be76ee98`:
 - `submission/YM/Pert/Lattice/Series.lean` supplies formal all-order
   coefficients at a **finite** regulator; it does not supply the uniform
   continuum remainder estimate.
+- The stronger `submission/YM/PertExtension/Normalized.lean` supplies
+  actual finite-cutoff expansions. These have now been translated by
+  `FiniteRegulatorTransport.lean`. The constants and small-coupling
+  neighborhoods can depend on the cutoff. The supporting
+  `OrbExpansion.lean`, `Interior.lean`, and `Uniform.lean` estimates retain
+  that dependence; the name `Uniform` does not assert uniformity as the
+  cutoff is removed.
 - `submission/YM/Pert/FirstTarget.lean:FirstExtension.jets` supplies a
   **leading** free comparison along a weak scaling sequence. Its `j`
   quantifier is spatial derivative order, not perturbative loop order.
@@ -134,8 +156,8 @@ python3 verify_existence.py --ym-lean /path/to/ym-lean \
 
 The conditional file is a negative control, not a submitted candidate
 construction. Six status-contract unit tests passing is not mathematical
-acceptance. Source mode checks five limit-passage and six coordinate
-declarations against the permitted axioms. Fresh runs write full logs,
+acceptance. Source mode checks five limit-passage, six coordinate, and
+three finite-regulator declarations against the permitted axioms. Fresh runs write full logs,
 input hashes, and the original native report under `runs/`.
 
 ## Remaining work before this can be a passing fix
@@ -149,10 +171,67 @@ input hashes, and the original native report under `runs/`.
 4. Supply and run the exact unconditional theorem. Only native admission
    can change the recorded existence certificate to true.
 
-Tracking: `alxwest/ym-lean` issues #2 and #8. The broader source-to-target
+Tracking: `alxwest/ym-lean` issues #2 and #8, and the separate
+[all-orders source review, #18](https://github.com/alxwest/ym-lean/issues/18).
+The broader source-to-target
 specification-equivalence question is not settled by this contribution.
 Current physical/logic reviews are #24 and #26; the carrier-universe
 translation is ym-lean PR #25.
+
+## Continued attempt: the remaining analytic obstruction
+
+The finite-cutoff translation closes an actual compatibility step, but
+does not fill `RegulatedExpansion.uniform_remainder`. A direct proof of
+the target's continuum matching could also close the gap; a
+regulator-uniform estimate is sufficient for our route, not a mandated
+proof method of the target.
+
+The attempt to remove this hypothesis by a generic limit argument fails.
+`audit/NonuniformLimit.lean` proves the following smooth scalar example
+against the imported native `HasPerturbativeJet` definition:
+
+```text
+f(r, g) = 1 + g² exp(-r/g),  r > 0, g > 0
+prescribed coefficients: a₀ = 1, aₖ = 0 for k > 0
+```
+
+For every fixed positive `r`, `f(r, ·)` has precisely that asymptotic jet
+to every finite order. The coefficient sequence is constant in `r`, so
+its coefficient limits exist. At every fixed positive `g`, taking `r`
+to zero gives `1 + g²`. This continuum function still tends to 1 as `g`
+goes to zero, so the leading term agrees, but its order-two error against
+the prescribed jet is exactly `g²`; it cannot be at most `g²/2`.
+The file also proves that the uniform order-two remainder bound fails.
+All ten declarations are axiom-audited by:
+
+```sh
+python3 integrations/ym-lean/audit/check_nonuniform_limit.py \
+  --ym-lean ../ym-lean --out integrations/ym-lean/runs/nonuniform-limit
+```
+
+This refutes the **generic promotion step**, not a Yang–Mills existence
+claim, not the full source-to-target implication, and not the possibility
+of establishing stronger estimates for the constructed theory.
+
+Two additional source routes were checked:
+
+- `YM.OPE.Measuring.simultaneous` supplies a common OPE and leading
+  measuring data on the same `Final`. It avoids combining unrelated
+  theories, but does not identify every coefficient in a coupling-power
+  expansion with the native generated coefficients.
+- `YM.PertExtension.Running.ratio` gives a leading running-coupling
+  asymptotic. It does not supply the exact native beta-function jet,
+  running-frame identities, or all-orders remainder estimates.
+
+`FirstExtension.jets` and `Position.Crest` concern the mean hierarchy in
+moving frames along the chosen scaling sequence. The target's
+`AllOrderVacuumWordMatch` concerns the same actual physical vacuum words
+at every sufficiently small real scale. Promoting between these statements
+still needs proved phase/frame, coefficient, and scale identifications.
+The investigation did not produce those estimates from the supplied
+material. The branch therefore remains blocked on a mathematical
+comparison theorem, in addition to the outstanding full candidate
+assembly listed above.
 
 ## Filtered-sector diagnostic — 11 November 2026
 
