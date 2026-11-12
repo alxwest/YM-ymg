@@ -1,5 +1,116 @@
 # Checks of extra ym-lean requirements
 
+## Complete generated-data transport, 12 November
+
+**The incoming/outgoing assembly is finished for distinct basis labels of
+the same positive engineering degree. The requested native existence pass
+is still blocked by the missing source-to-native construction and continuum
+comparison.** These are conditional transport results about existing native
+objects; they do not supply the objects from the October theorem.
+
+[`GeneratedDataTransport.compatible_change`](GeneratedDataTransport.lean)
+constructs the changed raw and physical coefficient tables together and
+proves every field of the actual imported
+`GeneratedEuclideanData.Compatible`. This includes the same-flow condition,
+extractor regularity, raw locality and UV limits, physical locality and
+graph order, every partial-collision scaling bound, and physical recovery
+at every output cutoff. `compatible_exists_iff` proves equivalence of
+existence of such compatible data in the two presentations.
+
+The outgoing inverse correction is applied first; the finite incoming
+expansion then acts on both its physical coefficients and the original raw
+coefficients. [`IncomingRecoveryLinear.lean`](IncomingRecoveryLinear.lean)
+transforms the native quantum-exact primitive with the same addition,
+scalar multiplication and `(2,1)` order shift. It retains the actual Ward
+map and the permitted primitive support. No Q-image is declared zero.
+[`IncomingRecoveryCoherent.lean`](IncomingRecoveryCoherent.lean) reconciles
+different enumerations of each active basis set, so one distribution-valued
+table works at every cutoff. Neither argument assumes independence of the
+quantum fields.
+
+[`IncomingPhysicalBounds.lean`](IncomingPhysicalBounds.lean) proves the
+incoming graph-order and collision bounds using only replacements with
+nonzero weight. Equal engineering degree preserves the dimension of each
+input slot, including the anchored last insertion. Together with the
+outgoing bounds already proved, this supplies the full physical coefficient
+bounds for the combined table.
+
+[`GeneratedCoefficientFamilyTransport.lean`](GeneratedCoefficientFamilyTransport.lean)
+then constructs the actual `LocalWardCoefficientFamily` of the changed
+`LocalWardFlowFamily` at **every** subtraction scale. Its coefficient family
+can be supplied together with the previously constructed
+`GeneratedScaleNormalization`. For a smooth scale-dependent correction,
+existence of these two witnesses together is equivalent in the two
+presentations. The coefficient-family transport itself does not need scale
+smoothness; the normalization transport does.
+
+The [fresh combined audit](evidence/generated-data-transport-2026-11-12/result.json)
+checks **400 declarations: 46 new and 354 from the preceding incoming,
+outgoing, Ward-family and normalization audits**. All forty local modules
+are rebuilt, warnings are errors, and only `propext`, `Classical.choice` and
+`Quot.sound` are permitted. Five audit-log controls pass. The
+[manifest](evidence/generated-data-transport-2026-11-12/manifest.json)
+records the tested revision, all 53 input hashes and compiled-module
+hashes. The pinned ym-lean checkout is unchanged.
+
+### The remaining source-to-native blocker
+
+The old assembly gap is no longer the obstacle for this equal-degree
+change. Applying the theorem to the October submission still requires a
+starting native Ward/coefficient family and its link to the constructed
+physical theory. In particular, the native sector separately requires
+`RG.AllOrderMultiMatch` and `PhysicalWords.AllOrderVacuumWordMatch` for the
+actual physical observations and prescribed generated series. The
+transport above proves neither those matches nor physical reconstruction.
+
+I rechecked the finite-regulator routes rather than assuming their names
+supplied the needed estimate. The original
+[`OrbExpansion.laplace`](../../../submissions/openai-20261028/submission/YM/PertExtension/OrbExpansion.lean),
+[`Normalized.finite_formula`](../../../submissions/openai-20261028/submission/YM/PertExtension/Normalized.lean),
+[`LatticePT.finite`](../../../submissions/openai-20261028/submission/YM/PertExtension/FiltrationRule.lean)
+and [`Mixed.comparison`](../../../submissions/openai-20261028/submission/YM/PertExtension/MixedRule.lean)
+give expansions at each fixed lattice regulator. Their constants and
+small-coupling thresholds are not supplied uniformly as that regulator is
+removed. The fixed finite-dimensional Taylor estimates in
+[`Uniform.lean`](../../../submissions/openai-20261028/submission/YM/PertExtension/Uniform.lean)
+do not remove that dependence.
+
+The continuum
+[`FirstExtension.jets`](../../../submissions/openai-20261028/submission/YM/Pert/FirstTarget.lean)
+controls spatial derivatives of a leading comparison along a scaling
+sequence; its derivative order is not a coupling-loop expansion order.
+The group's separate
+[`AFSourceBridge`](../../../submissions/openai-20261028/checks/AFSourceBridge.lean)
+also gives the stronger full punctured-space *leading trace* comparison.
+That still does not supply arbitrary higher coupling orders. The group's
+[check scope](../../../submissions/openai-20261028/docs/checks.md) explicitly
+distinguishes this leading result from all-orders matching.
+
+One sufficient way past the limit-passage obstacle is the already proved
+[`all_orders_of_uniform_regulated_estimates`](../UniformPerturbativeLimit.lean):
+for each finite order and error tolerance, a small-scale radius must work
+before taking the regulator limit, with the prescribed coefficient limits.
+A direct proof of the continuum matches could also suffice. I have not
+derived either from the available construction. The checked scalar example
+in [`NonuniformLimit.lean`](NonuniformLimit.lean) shows why fixed-regulator
+jets, coefficient limits and a leading continuum limit alone cannot replace
+that step. It is not a Yang--Mills counterexample or a proof that the
+October theory cannot satisfy the native requirement.
+
+Consequently the source existence candidate and its incompatible native
+signature are unchanged. Native admission was not rerun, and
+`existence_only_kernel_certificate` remains false. No passing existence PR
+is claimed. Strict degree-lowering changes also remain outside the full
+transport theorem proved here.
+
+To reproduce the combined scope:
+
+```sh
+python3 integrations/ym-lean/audit/check_generated_data_transport.py \
+  --ym-lean /path/to/ym-lean \
+  --out /path/to/a/fresh/generated-data-audit
+```
+
 ## Native incoming extraction and raw limits, 12 November
 
 **The incoming raw-limit step is now proved, conditional on existing native
@@ -48,10 +159,11 @@ as errors, only the three permitted axioms, and five audit-log controls.
 The [manifest](evidence/incoming-raw-transport-2026-11-12/manifest.json)
 records source and compiled-module hashes. The pinned native target is unchanged.
 
-This does **not** yet join the new raw table with the preceding outgoing
+That audit did **not** yet join the new raw table with the preceding outgoing
 table in a full `GeneratedEuclideanData.Compatible` proof: simultaneous
 incoming/outgoing physical recovery and the associated physical coefficient
-bounds remain to be assembled. It also does not construct the starting
+bounds remained to be assembled; the combined audit above now supplies them
+for the stated equal-degree change. It also does not construct the starting
 native family from the October submission, prove its missing all-orders
 continuum comparison, or transport physical reconstruction. Finite weak
 limits of individual coefficients do not establish that all-orders

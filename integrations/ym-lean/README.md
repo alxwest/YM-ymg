@@ -76,11 +76,28 @@ distribution table's weak UV limits. It includes every incoming slot and
 the anchored final insertion. Its [187-declaration audit](audit/evidence/incoming-raw-transport-2026-11-12/result.json)
 checks 56 new declarations and rebuilds the previous 131. The incoming
 transformation has a proved inverse when the lower label has zero weight.
-These are conditional transport theorems: combining the new raw table
-with outgoing physical recovery and coefficient bounds still needs a full
-compatibility proof. They do not supply the October source's missing
+Those were conditional transport theorems: combining the new raw table
+with outgoing physical recovery and coefficient bounds still needed a full
+compatibility proof at that stage. They do not supply the October source's missing
 all-orders continuum bridge. No native existence certificate is claimed;
 the candidate and target are unchanged, and native admission was not rerun.
+
+The [combined transport](audit/README.md) now supplies that complete native
+`GeneratedEuclideanData.Compatible` proof for distinct basis labels of the
+same positive engineering degree. It constructs the coefficient family at
+every subtraction scale and supplies it together with the changed Ward
+family and scale normalization. Existence of those coefficient and
+normalization witnesses together is proved equivalent in the two
+presentations. The [400-declaration audit](audit/evidence/generated-data-transport-2026-11-12/result.json)
+checks 46 new declarations and rebuilds 354 earlier ones across forty
+modules. **This finishes the conditional generated-data assembly, not the
+source existence proof.** The starting native family, physical
+reconstruction/identification and all-orders continuum comparison have not
+been constructed from the October submission. Its finite-lattice remainder
+bounds do not currently supply the needed passage to those continuum
+matches. The [remaining blocker](audit/README.md#the-remaining-source-to-native-blocker)
+records the source statements checked and the sufficient missing estimate;
+no native existence pass is claimed.
 
 ## Submit the available October proof on Lean 4.32.0
 
