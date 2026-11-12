@@ -1,0 +1,901 @@
+{
+  "status": "SCOPED_SCALE_DERIVATIVE_TRANSPORT_CHECKED",
+  "scope": "Actual Legendre-recursion transport, joint scale smoothness, native CS differential product rules and weak residual limit stability",
+  "original_local_ward_flow_family_constructed": false,
+  "original_scale_normalization_constructed": false,
+  "family_scale_smoothness_requires_existing_normalization_and_smooth_correction": true,
+  "transformed_mixing_constructed": false,
+  "transformed_quantum_exact_primitive_constructed": false,
+  "complete_composite_residual_transport_proved": false,
+  "generated_scale_normalization_transported": false,
+  "generated_physical_mixing_coefficient_computed": false,
+  "existence_only_kernel_certificate": false,
+  "necessity_of_full_native_target_established": false,
+  "native_existence_verifier_rerun": false,
+  "verifier_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "input_sha256": {
+    "audit/QuantumClosureShift.lean": "94df1670f4894c93b01942b8ef4356b77de7bd209aeee3be3cedf0f897ed91d4",
+    "audit/DictionaryRenormalization.lean": "04e82f3f17a2dfd2c8a199f1a69c8be8642241ba540154640c508f281d22322f",
+    "audit/CouplingTaylorShift.lean": "2f13ddb11493a94910f17c689fa7c8a380612841aac3f4fcea7b8ff847abc597",
+    "audit/DictionaryInsertionTransport.lean": "e7fcaad3873ff9505345b462a9c5730d9e6d3d1e0b7244631222c7f8a4c2fe42",
+    "audit/WordJetAlgebra.lean": "de1311fd238bdc7000c0a994bd3b5c50a84c44c5635b1da7ee610be5e617816f",
+    "audit/PhysicalWordTransport.lean": "05b24360b5a9a79874ff7be6ca711eadeb2b735571ea3546d55c96d768340fd1",
+    "audit/ChangedFamilyLegendre.lean": "ca546b7a445f0a31a1993840cd8ca4a1918a33e92f197d4c243b450c92eeb527",
+    "audit/TupleJetShift.lean": "134bae1381588be1fae4abe5492de1e52e38536f353b654d82b6fef21be663f7",
+    "audit/LegendreDictionaryTransport.lean": "84697d0f2910dd7209070ad2fb27d8032b7f771601cc0973f2f0945915bede4e",
+    "audit/ScaleDerivativeTransport.lean": "e9fefff46d805857d180e178967b87375327d5466862ea608cbf7e6ab5e09b1c",
+    "audit/WeakLocalTransport.lean": "856502c0bee1f9638567622dad34afdf91af6b92f53fe24282db75a9fc28472b",
+    "audit/check_scale_derivative_transport.py": "2f8edf533b43586b8ab2dc574988d90186d5b35fe47a53d78f3d382e3abaf8f2",
+    "audit/check_physical_word_transport.py": "83bb23ed382786b066d0fdfcfedae70c31c878a1d491c60f4247a01c51eb071b",
+    "audit/check_dictionary_renormalization.py": "68141796843fa4d54a86d760d5db730227f9f551c1e34a74583122765dee677e",
+    "audit/check_requirement_audit.py": "e7790b4160ac7ca1420cc1a19e7f81bab4efbf8fbda64dc2c9dc6641cfab5918",
+    "audit/test_requirement_audit.py": "7d615b7f0c4044f7ffa46b22547945899fd29b3b3a3dce8c54ec96d087d60484",
+    "verify_existence.py": "7d57f7442d0f5f874d9fee29aa967cef2cc6c596474e593b0ce33ec0454ddeb2",
+    "pin.json": "cdc12b858894b11993b10d42f7535f9b502351d2a948776df6e1927155bebe44"
+  },
+  "checks": [
+    {
+      "source": "QuantumClosureShift.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/QuantumClosureShift.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/QuantumClosureShift.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.QuantumShift.wardMap_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.tree_closed_all": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.one_loop_closed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shiftedOne_graph_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shiftedOne_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.closed_all": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_tree": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_closed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_graph_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.QuantumShift.shifted_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "1aeed847bc0d22c81a538a9f29ba324d4541c1b2b90573251f6a8bcd23f8f930"
+    },
+    {
+      "source": "DictionaryRenormalization.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/DictionaryRenormalization.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/DictionaryRenormalization.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.DictionaryRenormalization.relations_preserved": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finite_grading": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finite_support": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.compatible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.unit_dimension": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinateWeight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinates_basis": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinateDirection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinate_weight_selected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.coordinate_weight_lower": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.exists_higher_coordinate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.scaleDirection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.direction_for_pair": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.change_fixed_finite": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.change_fixed_physical": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.change_inverse": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "50ca22f0e7c435e68790fc5c48a75a080ea62605cb4d48fcb30238965329f09a"
+    },
+    {
+      "source": "CouplingTaylorShift.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/CouplingTaylorShift.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/CouplingTaylorShift.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.CouplingTaylor.jet_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.jet_const_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.jet_mul_square": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.convolve_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.convolve_const_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.convolve_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.map_delay": [
+          "propext"
+        ],
+        "YMYMG.CouplingTaylor.delay_tendsto": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "9e23279f1e52c38dbc9dd92c29a42abacc2fbb4feaa657cc520e7eab00ba7b11"
+    },
+    {
+      "source": "DictionaryInsertionTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/DictionaryInsertionTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/DictionaryInsertionTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.DictionaryRenormalization.fullWardRestoration": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.fullWardRestoration_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.limitCompatible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalInsertion_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.ultravioletInsertion_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalInsertion_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.ultravioletInsertion_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteValue_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteIntegrand_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.delayed_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteIntegral_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalJets_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physicalJets_outside": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.continuumValue_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.continuumValue_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.insertionFunctional_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteInsertion_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.finiteInsertion_succ": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "3751bd7591e7df7dad1b5c5b6dad95fdfff798eacd020e9b3d13931cfee8d06e"
+    },
+    {
+      "source": "WordJetAlgebra.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/WordJetAlgebra.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/WordJetAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.WordJet.convolve_comm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.convolve_add_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.convolve_smul_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.convolve_delay_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.delayMap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.insertionMap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.WordJet.insertionMap_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "7768433b48ca98cc018c49ea78b5321d84c5dfbcce96cb17e50d24572d5d7b0a"
+    },
+    {
+      "source": "PhysicalWordTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/PhysicalWordTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/PhysicalWordTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.DictionaryRenormalization.physical_word_null_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physical_word_graph_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.changeFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.changeFamily_inverse": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.changeFamilyEquiv": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.wordMap_native": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.exactWordMap_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.exactWordMap_native": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.delay_preserves_graph": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.delay_preserves_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physical_word_graph": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.physical_word_null": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.slotMap_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.slotMap_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.wordMap_append": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.wordMap_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.wordMap_change_head": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.wordMap_transfer": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.labels_of_slots": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "0afbfa8c0351458e6c20b1768f9f9c6e612fe9b2025a0cbacb1f018d941fe951"
+    },
+    {
+      "source": "ChangedFamilyLegendre.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/ChangedFamilyLegendre.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/ChangedFamilyLegendre.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.DictionaryRenormalization.changeFamily_lift_directional": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.DictionaryRenormalization.changeFamily_exact_directional": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "fec3944b97f690b8aafcf8366ad166ca4b3ff8c1a24e493994d03118e12e6b96"
+    },
+    {
+      "source": "TupleJetShift.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/TupleJetShift.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/TupleJetShift.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.TupleJet.allocation_le": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.TupleJet.bounded_sum_eq_allocation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.TupleJet.bounded_pair_eq_allocation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.TupleJet.allocation_shift_head": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.TupleJet.delay_if": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.TupleJet.tupleConvolve_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "d3ba4771daca0ac1da8bc16405b76c570f6be244510f688d4ef2b4a5330fac60"
+    },
+    {
+      "source": "LegendreDictionaryTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/LegendreDictionaryTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/LegendreDictionaryTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.LegendreTransport.flowJet_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.liftedGamma_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.positiveScale_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.family_liftedGamma_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.changeFamily_scale_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.partitionValue_eq_tuple": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.partitionValue_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.meanFieldCompose_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.substitutionSummand_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.substitutionSummand_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.lowerComposition_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.lowerComposition_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.lowerComposition_eq_truncate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.truncate_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.meanFieldCompose_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.lowerComposition_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.insertion_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.insertion_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.LegendreTransport.insertion_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "eb1e999b53066a55bd5f5209934e6a7d3ed602e8e2c2f83e7e01dad76efc5f0f"
+    },
+    {
+      "source": "ScaleDerivativeTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/ScaleDerivativeTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/ScaleDerivativeTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.ScaleTransport.beta_correction_four_two": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.beta_correction_four_two_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.amplitudeDelay_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.amplitudeDelay_sub": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.scalarAction_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.scalarAction_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.scalarAction_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.fieldAction_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.fieldAction_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.fieldAction_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.couplingDerivative_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.couplingDerivative_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.couplingDerivative_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.delay_differentiable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.scaleDerivative_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.scaleDerivative_smul_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.compositeResidual_parts": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.differentialPart_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.differentialPart_congr_nhds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.family_scale_differentiable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.family_differential_change": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "b6b9e904ce4042ac1e17fc7bf6d89bbd5e683023bf25be74a05de21c173cd8ff"
+    },
+    {
+      "source": "WeakLocalTransport.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-R",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit",
+        "-DwarningAsError=true",
+        "-o",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/runs/scale-derivative-transport-2026-11-12-checked/.build/WeakLocalTransport.olean",
+        "/Users/alx/source/YM-ymg/integrations/ym-lean/audit/WeakLocalTransport.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "YMYMG.ScaleTransport.weakLocal_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.weakLocal_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.weakLocal_smul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.weakLocal_delay": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "YMYMG.ScaleTransport.weakLocal_congr_eventually": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_module_sha256": "1b858a455630b8c253c6cb31df028e91534015062ab74b31d8cbcacabdaf539e"
+    }
+  ],
+  "trusted_checkout_unchanged": true,
+  "audited_declarations": 131,
+  "new_audited_declarations": 51,
+  "reused_audited_declarations": 80,
+  "native_legendre_recursion_transport_checked": true,
+  "changed_lifted_scale_smoothness_field_checked": true,
+  "native_cs_differential_part_transported": true,
+  "scale_product_rule_term_retained": true,
+  "coupling_product_rule_term_retained": true,
+  "beta_correction_nonzero_control_checked": true,
+  "weak_residual_linear_limit_stability_checked": true,
+  "audit_log_control_tests": 5,
+  "finished_utc": "2026-11-12T17:42:18.915873+00:00"
+}
