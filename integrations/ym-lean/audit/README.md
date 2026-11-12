@@ -1,5 +1,124 @@
 # Checks of extra ym-lean requirements
 
+## Native mixing construction and cancellation, 12 November
+
+The changed **native `CompositeMixing` is now constructed**, including every
+filtration, smoothness, classical, unit and input-linearity field. Its graph
+order is preserved. The actual native differential-plus-mixing expression
+transforms covariantly, with both derivative corrections cancelling at every
+finite coupling and loop order for `0 < mu < UV`.
+
+This resolves the mixing construction left open in the preceding scale
+audit below. It still assumes an existing `LocalWardFlowFamily` and
+`GeneratedScaleNormalization`. Transport of the quantum-exact primitive and
+the complete residual remain open; no complete changed normalization or
+existence certificate is claimed.
+
+The [201-declaration audit](evidence/mixing-transport-2026-11-12/result.json)
+checks **70 new declarations and 131 dependencies**, rebuilding all 16 local
+modules. The [logs](evidence/mixing-transport-2026-11-12/) and
+[manifest](evidence/mixing-transport-2026-11-12/manifest.json) record source
+and compiled-module hashes. Only `propext`, `Classical.choice` and `Quot.sound`
+are permitted; warnings are errors and five audit-log control tests pass.
+
+### Avoiding an extra support assumption
+
+[`FilteredLabelShear.lean`](FilteredLabelShear.lean) constructs the fixed
+linear equivalence
+
+```text
+T(p) = p + χ(p)q,       T^-1(p) = p - χ(p)q,
+```
+
+under the explicit condition `χ(q)=0`. Both directions preserve the intrinsic
+filtration; in fact `dim(T(p)) = dim(p)`. Pushing a finite output coefficient
+table along this fixed equivalence and subtracting the old table defines
+`L = push_T - id`. Each coordinate is exactly
+
+```text
+(L c)(r) = c(T^-1(r)) - c(r).
+```
+
+Thus its smoothness follows from two **fixed** old coordinates. There is no
+derivative of a sum with moving support. For any real-linear observable
+dictionary `J`, the finite evaluation of `L c` is proved to equal
+`(sum_r c(r) χ(r)) J(q)`. This is an identity of evaluations, not a claim
+that `L²=0` as a map on the free coefficient tables.
+
+### The complete coefficient formula
+
+[`MixingCoefficientTransport.lean`](MixingCoefficientTransport.lean) builds
+all the native mixing operations used in the change. Let `delta` mean the
+zero-extended `(2,1)` delay and let `eta` mean the `(1,1)` delay. At a fixed
+scale, the constructed output table for input `p` is
+
+```text
+K'_p = K_p + a χ(p) delta K_q
+       - a delta(L K_p) - a² χ(p) delta²(L K_q)
+       - χ(p) [mu a' pulse_(2,1) + 2a eta(beta)] [q].
+```
+
+Here `[q]` is the singleton output table and `pulse_(2,1)` is one only at
+coupling order two and loop order one. The coefficient function `a` is
+assumed smooth on positive scales. The derivative is the actual real
+derivative of that function. The quadratic cross term is retained even
+when the direction preserves rather than strictly lowers dimension.
+
+`changeMixing_graph` proves the native `order < 2*loop` guard from the old
+mixing guard and `beta(order,loop)=0` for `order < 2*loop+1`. No independent
+new beta, field coefficients or flow are introduced.
+
+### Checked against the native action
+
+[`MixingActionTransport.lean`](MixingActionTransport.lean) and
+[`MixingRateTransport.lean`](MixingRateTransport.lean) prove the formula's
+action using the target's exact finite sums and the column-label convention.
+For `J'_p = J_p + a χ(p) delta J_q`, they establish
+
+```text
+mix(K', J')_p = mix(K, J)_p + a χ(p) delta mix(K, J)_q
+                - mu a' χ(p) delta J_q
+                - 2a χ(p) betaAction(eta J_q).
+```
+
+[`NativeMixingTransport.lean`](NativeMixingTransport.lean) proves that the
+**actual computed** `liftedGamma` is a real-linear dictionary, using the
+original finite lift's linearity, its coupling smoothness and the proved
+Legendre recursion. It then applies the formula to the actual changed
+family. `family_differential_mixing_change` combines it with the previous
+native derivative theorem and proves
+
+```text
+(differentialPart J' + mix(K', J'))_p
+  = (differentialPart J + mix(K, J))_p
+    + a χ(p) delta(differentialPart J + mix(K, J))_q.
+```
+
+The signs, factor of two, scale derivative and quadratic mixing term are
+therefore checked by Lean against the native definitions. This is still
+the expression **before subtracting the quantum-exact insertion**. A new
+`LocalScalePrimitive` and its actual `quantumExactGamma` transport must be
+proved before the weak-limit closure lemmas yield the complete equation.
+
+The earlier nonzero beta-term control shows why keeping the old mixing is
+insufficient in general. The new construction shows how that term is
+absorbed consistently. It does not establish that every extra requirement
+in ym-lean is necessary, nor supply missing all-orders continuum matching
+from the October YM-ymg source. The broader blocker remains
+[ym-lean #27](https://github.com/alxwest/ym-lean/issues/27).
+
+Reproduce from the YM-ymg checkout with a fresh output directory:
+
+```sh
+python3 integrations/ym-lean/audit/check_mixing_transport.py \
+  --ym-lean ../ym-lean \
+  --out integrations/ym-lean/runs/mixing-transport-new
+```
+
+The scoped success status is `SCOPED_MIXING_TRANSPORT_CHECKED`. The changed
+mixing and native differential-plus-mixing flags are true; complete
+residual, scale-normalization and existence-certificate flags remain false.
+
 ## Computed Legendre and scale-derivative transport, 12 November
 
 The correction now passes through the **actual recursive Legendre insertion**,
