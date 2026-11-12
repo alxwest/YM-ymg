@@ -1,5 +1,128 @@
 # Checks of extra ym-lean requirements
 
+## Complete scale-normalization transport, 12 November
+
+The quantum-exact primitive gap is now closed. **Given an existing native
+`GeneratedScaleNormalization`, the corrected dictionary has a complete
+native `GeneratedScaleNormalization`**, with constructed mixing and
+primitive data and the full computed composite residual equation.
+
+There is also a proved equivalence of normalization existence for the two
+presentations, under the explicit hypotheses that the correction is smooth
+on positive scales and `χ(q)=0`:
+
+```text
+Nonempty (GeneratedScaleNormalization (changeFamily family D a))
+  ↔ Nonempty (GeneratedScaleNormalization family).
+```
+
+This is **not** an existence proof for either presentation. The original
+family and its normalization are not constructed from the October YM-ymg
+source. The theorem does not compare the complete ym-lean and YM-ymg
+existence statements or establish necessity of every extra native field.
+
+The [226-declaration audit](evidence/scale-normalization-transport-2026-11-12/result.json)
+checks **25 new declarations and 201 dependencies**, rebuilding all 20 local
+modules against the unchanged pinned target. The
+[logs](evidence/scale-normalization-transport-2026-11-12/) and
+[manifest](evidence/scale-normalization-transport-2026-11-12/manifest.json)
+record source and compiled-module hashes. Warnings are errors; the only
+permitted transitive axioms are `propext`, `Classical.choice` and `Quot.sound`.
+Five audit-log control tests pass.
+
+### Smoothness from the actual finite construction
+
+[`ExactInsertionSmoothness.lean`](ExactInsertionSmoothness.lean) proves the
+coupling smoothness needed before taking Taylor coefficients of the
+quantum-exact insertion. It uses the actual generated Ward coefficient,
+including the classical master-action differential and the same transported
+anomaly, rather than a separately supplied smooth Ward operator.
+
+For the classical part, `actionLinear` proves that the local differential is
+linear in its action argument. Applying a scalar monomial extractor to the
+native finite master-action vertex list then gives a smooth coupling
+polynomial. The anomaly's native graph grading supplies its smoothness.
+
+The primitive's graph power similarly supplies coupling smoothness and
+proves that its support at any coupling is contained in its support at
+coupling one. `exactInsertion_fixed_support` rewrites the native expression
+using those fixed finite sets. This justifies differentiating the finite
+sums without assuming uniform support separately. Coupling smoothness of
+the insertion flow comes from the existing fixed flow equations.
+
+### The primitive and its computed transform
+
+[`PrimitiveTransport.lean`](PrimitiveTransport.lean) constructs
+
+```text
+P'_p(mu,g) = P_p(mu,g) + hbar g² a(mu) χ(p) P_q(mu,g).
+```
+
+`changePrimitive` fills every native `LocalScalePrimitive` field: intrinsic
+support, admissibility, ghost number, parity, joint scale/coupling smoothness,
+classical vanishing and graph power. The support argument uses the same
+filtered direction as the dictionary change; no larger degree bound is
+chosen. The generated-Q insertion identity is proved by reindexing its exact
+finite loop sums, with the original Ward operator and insertion flow.
+
+[`ExactLegendreTransport.lean`](ExactLegendreTransport.lean) passes that
+identity through the actual coupling jets and deterministic Legendre
+recursion. Writing `E_p` for the computed `quantumExactGamma`, it proves
+
+```text
+E'_p = E_p + a(mu) χ(p) delta E_q,
+```
+
+where `delta` is the zero-extended `(2,1)` coupling/loop shift. The smoothness
+proved above justifies the Taylor product rule at every finite order.
+
+### Full residual and normalization
+
+[`ScaleNormalizationTransport.lean`](ScaleNormalizationTransport.lean)
+combines the primitive identity with the preceding mixing calculation.
+For the **complete native residual**, it proves
+
+```text
+R'_p = R_p + a(mu) χ(p) delta R_q.
+```
+
+The identity holds at `0 < mu < UV`. That is enough for the native
+UV-then-IR weak endpoint condition: at each positive IR, the identity holds
+eventually as UV grows, and the old residuals already have zero endpoint
+limits. The compact-test and nonexceptional-support restrictions are
+unchanged. No interchange of limits is introduced.
+
+`changeNormalization` fills every field of the actual
+`GeneratedScaleNormalization (changeFamily family D a)`. The beta, field
+coefficients, background and action primitive are the original ones; the
+constructed mixing and composite primitives account for the dictionary
+change. `normalization_exists_iff` proves the reverse implication using
+the correction with coefficient `-a` and the earlier exact family inverse.
+It asserts equivalence of existence, not equality of the freely represented
+mixing tables after round-trip transport.
+
+This completes the finite dictionary-change test through the full native
+Ward-family and scale-normalization structures. Generated coefficient
+recovery, physical reconstruction and the source's all-orders continuum
+matching remain outside this result. The broader bridge blocker remains
+[ym-lean #27](https://github.com/alxwest/ym-lean/issues/27). The existence
+candidate is unchanged, and no new native admission run was made.
+
+Reproduce from the YM-ymg checkout with a fresh output directory:
+
+```sh
+python3 integrations/ym-lean/audit/check_scale_normalization_transport.py \
+  --ym-lean ../ym-lean \
+  --out integrations/ym-lean/runs/scale-normalization-transport-new
+```
+
+The scoped status is `SCOPED_SCALE_NORMALIZATION_TRANSPORT_CHECKED`.
+Primitive, full residual, scale-normalization transport and normalization
+existence-equivalence flags are true. Original family/normalization
+construction, full existence acceptance and necessity of the complete
+native target remain false. The sections below retain the scopes and open
+obligations of their earlier audits.
+
 ## Native mixing construction and cancellation, 12 November
 
 The changed **native `CompositeMixing` is now constructed**, including every

@@ -34,6 +34,18 @@ still rejected with exit 2 and its certificate false. Both original-source
 integrity checks passed. The native inspector stopped at the incompatible
 statement; it did not independently diagnose an analytic failure.
 
+The [finite dictionary-change audit](audit/README.md) now transports a
+complete **existing** native Ward family and scale normalization through a
+smooth filtered correction. It constructs the new mixing and quantum-exact
+primitive, proves the full computed residual identity and its UV-then-IR
+limit, and proves equivalence of normalization existence for the two
+presentations when the lower label has zero correction weight. The fresh
+[226-declaration audit](audit/evidence/scale-normalization-transport-2026-11-12/result.json)
+passes with only permitted axioms. It does not construct the starting
+family or normalization from the October source, transfer the remaining
+reconstruction data, or supply the missing all-orders continuum bridge.
+The native existence candidate and admission status are unchanged.
+
 ## Submit the available October proof on Lean 4.32.0
 
 With the pinned `ym-lean` checkout alongside this repository, run from the
