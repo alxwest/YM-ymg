@@ -1,0 +1,28 @@
+{
+  "tested_implementation_revision": "addc647bd8f255e690090a98b62dee07bc3eea3e",
+  "audit_run_base_revision": "ddcd3b284613d37b70814277dd65baceb4e82cf6",
+  "audit_used_working_tree_changes": true,
+  "all_recorded_audit_input_hashes_match_tested_commit": true,
+  "all_fresh_compiled_module_hashes_verified": true,
+  "compiled_modules_committed": false,
+  "target_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "audited_declarations": 52,
+  "new_audited_declarations": 42,
+  "reused_audited_declarations": 10,
+  "audit_log_control_tests": 5,
+  "audit_log_controls_exit_code": 0,
+  "native_existence_verifier_rerun": false,
+  "existence_only_kernel_certificate": false,
+  "complete_local_ward_flow_family_constructed": false,
+  "generated_scale_normalization_transported": false,
+  "generated_physical_mixing_coefficient_computed": false,
+  "necessity_of_full_native_target_established": false,
+  "artifacts_sha256": {
+    "CouplingTaylorShift.log": "b7e0a89926448dcbbaffeb99ff7493d22578fa1c4b02469e84d155ccde5eebba",
+    "DictionaryInsertionTransport.log": "1e0f90e1e521c8cdff586c474a58e34baffd607cc8c7f3f7aa6ba15ab9c9dd5b",
+    "DictionaryRenormalization.log": "dd3b091289d39e705fb005029a8c87e724731ded7d9b49795ff27936b23dff13",
+    "QuantumClosureShift.log": "78b2af3ba7a58374907693d4ab47b438e5fb59c53b3807cb1a3534ada7b0de87",
+    "audit-log-controls.log": "888a0c0ed615e57d32cf72be501b0c355f33b8613c81dfdaa99db33d7959487e",
+    "result.json": "44c7f20376c134ee74b9e1c9600110bd4536da7b195ed4d670bac1716dc88232"
+  }
+}
