@@ -1,5 +1,151 @@
 # Checks of extra ym-lean requirements
 
+## Computed Legendre and scale-derivative transport, 12 November
+
+The correction now passes through the **actual recursive Legendre insertion**,
+and the changed family satisfies the native joint scale/position/momentum
+smoothness field when the correction coefficient is smooth. Its complete
+scale/coupling/field differential term has also been transported, retaining
+both product-rule contributions. This closes the Legendre-formula and
+`CompositeCSConditions.lifted_scale_smooth` gaps left by the previous audit.
+
+It does **not** yet construct the changed mixing or quantum-exact primitive,
+prove cancellation of the full composite residual, or supply a complete
+`GeneratedScaleNormalization`. The original interacting family and its
+normalization remain hypotheses, and the existence candidate is unchanged.
+
+The [131-declaration run](evidence/scale-derivative-transport-2026-11-12/result.json)
+checks **51 new declarations and 80 dependencies**, rebuilding all local
+modules afresh against the unchanged pinned target. The
+[logs](evidence/scale-derivative-transport-2026-11-12/) and
+[manifest](evidence/scale-derivative-transport-2026-11-12/manifest.json)
+record the exact source and compiled-module hashes. Warnings are errors;
+only `propext`, `Classical.choice` and `Quot.sound` are allowed as transitive
+axioms. Five audit-log control tests also pass.
+
+### The computed transform, at every finite order
+
+[`TupleJetShift.lean`](TupleJetShift.lean) reindexes the native finite
+coupling/loop allocations. It identifies the bounded `Fin` assignments
+with tuples having the prescribed total, and shifts only the outer vertex's
+orders. The root orders, partitions, signs and covariance are unchanged.
+Boundary cases with insufficient coupling or loop order vanish explicitly.
+
+[`LegendreDictionaryTransport.lean`](LegendreDictionaryTransport.lean)
+uses that reindexing to prove, for the actual native definitions:
+
+- `meanFieldCompose_delay`: the complete finite mean-field composition
+  commutes with the `(2,1)` coupling/loop delay.
+- `insertion_add`, `insertion_smul`, `insertion_delay`: the deterministic
+  `insertionGammaCoeff` recursion is linear and commutes with that delay.
+  These identities do not require a separately assumed inverse equation.
+- `flowJet_change` and `liftedGamma_change`: actual finite insertion jets
+  and their computed Legendre transforms obey the dictionary correction.
+  Coupling smoothness comes from the original insertion-limit compatibility.
+- `family_liftedGamma_change`: the same identity for the exact positive-scale
+  extensions used by the native family and scale-normalization structures.
+- `changeFamily_scale_smooth`: the precise joint smoothness field, using
+  an existing normalization and explicit smoothness of `a(mu)` on positive
+  scales. There is no inference of scale smoothness from pointwise data alone.
+
+Writing `J_p` for the computed insertion, and `delta` for the zero-extended
+shift `(r,l) -> (r-2,l-1)`, the proved formula is
+
+```text
+J'_p(mu) = J_p(mu) + c_p(mu) delta J_q(mu),
+c_p(mu)  = a(mu) χ(p).
+```
+
+### The two derivative terms that must be retained
+
+[`ScaleDerivativeTransport.lean`](ScaleDerivativeTransport.lean) defines
+`differentialPart` as literally the first three terms of the native
+`compositeResidual`:
+
+```text
+L J = mu ∂_mu J + beta ∂_g J - fieldAction J.
+```
+
+Let `eta` denote the zero-extended `(1,1)` delay. For the actual family,
+`family_differential_change` proves
+
+```text
+L J'_p = L J_p + c_p delta(L J_q)
+         + mu c'_p delta J_q
+         + 2 c_p betaAction(eta J_q).
+```
+
+The last line comes from differentiating `g²`; the preceding extra term
+comes from the scale dependence of `a`. Both signs and the factor of two
+are checked against the native operators. The proof uses the same beta,
+field coefficients, cutoffs, insertion position and independent external
+momenta. The derivative identity is established for `0 < mu < UV`, matching
+the native scale-smoothness domain. Equality near `mu` justifies taking the
+derivative of the positive-scale extension.
+
+There is also a concrete check against dropping the coupling term. Using
+the native beta guards, `beta_correction_four_two` proves that its
+`g^4 hbar^2` coefficient is
+
+```text
+2 c_p beta(3,1) J_q(0,0).
+```
+
+`beta_correction_four_two_ne_zero` proves this is nonzero when its three
+variable factors are nonzero. Thus even a scale-independent correction can
+require a change in mixing. This is a conditional coefficient calculation,
+not an evaluation of the unknown constructed theory's beta or insertion.
+
+### Weak residual limits and the remaining construction
+
+[`WeakLocalTransport.lean`](WeakLocalTransport.lean) proves that the actual
+`WeakLocalEndpointZero` predicate is preserved under addition, constant
+complex scaling and the `(2,1)` delay. Integrability is taken from the
+original hypotheses before applying integral linearity; the UV limit is
+still taken first at positive IR, followed by the IR limit.
+
+`weakLocal_congr_eventually` also proves that equality only for sufficiently
+large UV at each positive IR is enough. This permits identities whose
+scale-smoothness proof requires `mu < UV`; it does not require equality at
+every finite UV. These closure lemmas will apply **after** the changed
+residual has been proved to be the required finite combination of old ones.
+That residual identity has not yet been proved.
+
+The next task is to construct native `CompositeMixing` and
+`LocalScalePrimitive` data that cancel the displayed product-rule terms and
+the mixing induced by the change of labels. Those data must satisfy their
+own filtration, unit, linearity, graph-order and smoothness fields. With
+`χ(q)=0`, the earlier correction has a finite inverse. In the native
+column-label convention, the candidate matrix rule is
+`K' = M^-1 K M - M^-1 (mu ∂_mu + beta ∂_g) M`, with
+`M = I + hbar g² a(mu) N` and `N(p)=χ(p)q`. This rule is a construction
+plan, not a theorem asserted by this audit.
+
+One technical point in that construction is that `CompositeMixing.smooth`
+is stated for each fixed output label. It does not by itself justify taking
+a derivative of a sum with scale-dependent output support. A possible way
+to avoid that step is a fixed invertible label map `p -> p + χ(p)q` when
+`χ(q)=0`, using finite differences of reindexed output coefficients and the
+linearity of the observable dictionary. This has not yet been implemented.
+
+Beyond this conditional scale-normalization transport, generated coefficient
+recovery, physical reconstruction and all-orders continuum matching remain
+open, as does construction of the original interacting family from the
+available October source. See [ym-lean #27](https://github.com/alxwest/ym-lean/issues/27)
+for the broader bridge blocker. No new native existence submission was made.
+
+Reproduce from the YM-ymg checkout:
+
+```sh
+python3 integrations/ym-lean/audit/check_scale_derivative_transport.py \
+  --ym-lean ../ym-lean \
+  --out integrations/ym-lean/runs/scale-derivative-transport-new
+```
+
+The output directory must be new. The scoped success status is
+`SCOPED_SCALE_DERIVATIVE_TRANSPORT_CHECKED`; the full scale-normalization,
+full residual-transport and existence-certificate flags remain false.
+
 ## Physical-word transport and complete Ward-family equivalence, 12 November
 
 The finite correction now preserves the two physical-state conditions
