@@ -27,6 +27,12 @@ proved translations of **actual finite-cutoff** Wilson asymptotics into
 ym-lean's `RG.HasPerturbativeJet`. It also adds a checked scalar obstruction
 to passing these jets through a merely pointwise regulator limit. These
 results narrow the remaining work; they do not supply native acceptance.
+The [continued-run evidence](evidence-2026-11-12-finite-regulator.json)
+records all 14 supplementary declaration audits passing, all 10 scalar
+diagnostic declarations passing, and the native existence submission
+still rejected with exit 2 and its certificate false. Both original-source
+integrity checks passed. The native inspector stopped at the incompatible
+statement; it did not independently diagnose an analytic failure.
 
 ## Submit the available October proof on Lean 4.32.0
 

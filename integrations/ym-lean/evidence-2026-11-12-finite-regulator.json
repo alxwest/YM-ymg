@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-12",
+  "tested_input_commit": "6c6918584150220d810a759673463e75080064dc",
+  "source_revision_at_run_start": "57b9b1815d67f0d14fdc05fb00d96982e8d9e715",
+  "revision_note": "The run began before the bridge commit. Every recorded tested input hash was independently checked against tested_input_commit; the original October submission was unchanged.",
+  "ym_lean_revision": "baecbb5eba5710fb707cfaecfaf7365d8feff5f7",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "command": "python3 integrations/ym-lean/verify_existence.py --ym-lean ../ym-lean --source",
+  "status": "INCOMPATIBLE_PROOF_SIGNATURE",
+  "exit_code": 2,
+  "existence_only_kernel_certificate": false,
+  "source_translation_verified": true,
+  "spacetime_transport_verified": true,
+  "finite_regulator_transport_verified": true,
+  "supplementary_declarations": 14,
+  "supplementary_axioms": {
+    "YMYMG.Existence.remainder_bound_of_limits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.all_orders_of_uniform_regulated_estimates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.RegulatedExpansion.continuum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderMultiMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.Existence.allOrderVacuumWordMatch_of_regulated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.time_coordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.minkowski_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.forward_cone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.spacelike": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.native_source_test": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.SpacetimeTransport.source_native_test": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.FiniteRegulatorTransport.aspiration_has_jet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.FiniteRegulatorTransport.finite_wilson_jet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YMYMG.FiniteRegulatorTransport.finite_haar_wilson_jet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "original_package_integrity_before_and_after": "passed",
+  "proof_compile_exit_code": 0,
+  "native_axiom_audit_status": "not_run_signature_mismatch",
+  "native_diagnostic": "INCOMPATIBLE_PROOF_SIGNATURE: proof has wrong, fixed-universe or conditional existence-only type\nExpected type: YangMills.YangMillsExistenceOnly.{u}\nSubmitted type: YMGBridge.PresentedJointExistence.{u}\nSubmitted universe parameters: [u]\nA proved translation is required; the transitive-axiom audit was not run.\n",
+  "input_sha256": {
+    "UniformPerturbativeLimit.lean": "a3382ef9bfd1cd9ac41379532e95432b6990736553e656e13e6bdb91a55f8d5e",
+    "UniformPerturbativeLimitAudit.lean": "d671fff15b666b8a0756d16ab6835277c5619237b4ea31cc4431c003a2fcc01f",
+    "SpacetimeTransport.lean": "b4263541e49d304e61b636e0154b9e76c51287771f66ccb24c67c28dae5b3e0f",
+    "SpacetimeTransportAudit.lean": "6fb926b5609e1ded8d4f2704e855fb4f5eb4f3ef7480acbbd72e46e66d3887ed",
+    "FiniteRegulatorTransport.lean": "422fd826506486ac923a49f4189196a27ca9886882a68bbe3692022f1da93365",
+    "FiniteRegulatorTransportAudit.lean": "8d57598c32c00c68608c82a76de895dbe1137429f45aed0679711d8ed9eaf90b",
+    "verify_existence.py": "7d57f7442d0f5f874d9fee29aa967cef2cc6c596474e593b0ce33ec0454ddeb2",
+    "pin.json": "cdc12b858894b11993b10d42f7535f9b502351d2a948776df6e1927155bebe44",
+    "audit/NonuniformLimit.lean": "7e089accb7927e2d6550eeff74172db8d1e27eccce476ad8ad75d2b5fd93442c",
+    "audit/check_nonuniform_limit.py": "de580ba9ac3f81a3ae70188157fb40e08e19801752fac3bfa3b9015c2081a990",
+    "test_driver.py": "2544a2d5ebd9531e4c4803f59baa26ca26f52134ed7f0af16ccfa1813c99b9dd"
+  },
+  "nonuniform_limit_diagnostic": {
+    "status": "NONUNIFORM_LIMIT_COUNTEREXAMPLE_CHECKED",
+    "scope": "Scalar counterexample to exchanging regulator and perturbative limits",
+    "lean_exit_code": 0,
+    "existence_only_kernel_certificate": false,
+    "yang_mills_countermodel_constructed": false,
+    "axioms": {
+      "YMYMG.LimitAudit.partial_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.tail_ratio_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.tail_has_zero_jet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.fixed_regulator_jet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.pointwise_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.coefficient_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.continuum_leading": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.continuum_not_prescribed_jet": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.no_uniform_order_two_remainder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "YMYMG.LimitAudit.regulated_smooth": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "trusted_checkout_unchanged": true
+  },
+  "diagnostic_command": "python3 integrations/ym-lean/audit/check_nonuniform_limit.py --ym-lean ../ym-lean --out integrations/ym-lean/runs/nonuniform-limit",
+  "python_status_contract_tests": {
+    "passed": 6
+  },
+  "scope": "Actual finite-cutoff Wilson jets translated; generic pointwise limit promotion refuted by a scalar example. Neither native Yang-Mills existence nor a Yang-Mills countermodel is established.",
+  "finished_utc": "2026-11-12T11:57:59.877404+00:00"
+}
