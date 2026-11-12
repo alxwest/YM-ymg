@@ -46,6 +46,17 @@ family or normalization from the October source, transfer the remaining
 reconstruction data, or supply the missing all-orders continuum bridge.
 The native existence candidate and admission status are unchanged.
 
+The [output-recovery follow-up](audit/README.md) now transports the actual
+native outgoing recovery relation at each fixed cutoff, retaining its
+generated-Q primitive. Its [88-declaration audit](audit/evidence/output-recovery-2026-11-12/result.json)
+also proves the exact condition for these inverse coefficient corrections
+to agree across cutoffs. An independent two-label test shows that
+invertibility of the dictionary alone does not guarantee this agreement.
+This is not a generated Yang–Mills counterexample: the actual tails and
+allowed exact remainders have not been evaluated on a same-flow family.
+Incoming raw limits, global coefficient coherence and the all-orders
+continuum matching remain open.
+
 ## Submit the available October proof on Lean 4.32.0
 
 With the pinned `ym-lean` checkout alongside this repository, run from the

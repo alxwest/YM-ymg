@@ -1,5 +1,162 @@
 # Checks of extra ym-lean requirements
 
+## Output recovery at fixed and varying cutoffs, 12 November
+
+**The dictionary correction now transports the actual native outgoing
+recovery relation at a fixed cutoff.** Existence of recovery is equivalent
+before and after the correction, with its hypotheses retained. Transport
+of one global generated coefficient family is still unproved: the explicit
+inverse corrections at different cutoffs need not agree.
+
+The [88-declaration audit](evidence/output-recovery-2026-11-12/result.json)
+checks **29 new declarations and 59 dependencies**, rebuilding eight local
+modules against the unchanged pinned target. The
+[logs](evidence/output-recovery-2026-11-12/) and
+[manifest](evidence/output-recovery-2026-11-12/manifest.json) record source
+and compiled-module hashes. Warnings are errors; only `propext`,
+`Classical.choice` and `Quot.sound` are permitted. Five audit-log controls
+pass. This is a scoped helper audit, not native existence admission.
+
+### What is transported
+
+At a fixed scale, write the corrected dictionary as
+
+```text
+J'_i = J_i + a w_i delta J_k,       w_k = 0,
+```
+
+where `delta` shifts coupling/loop order by `(2,1)` with zero extension.
+For a finite active set `S` containing the lower label `k`, define
+
+```text
+T_S = sum_{j in S} w_j C_j
+C'_{S,i} = C_i - [i=k] a delta T_S.
+```
+
+[`OutputCoefficientShear.lean`](OutputCoefficientShear.lean) proves exact
+cancellation through the double Cauchy convolution and preservation of
+the coefficient graph bound `order < 2*loop → C = 0`.
+[`OutputRecoveryTransport.lean`](OutputRecoveryTransport.lean) identifies
+this assembly with the imported `liftedOutputDistribution` and proves
+`recovery_corrected` for the **complete** `QuantumPhysicalOutputRecovery`
+predicate. Its generated-Q primitive is unchanged; the compatibility,
+insertion limits, Ward identities and primitive support are retained.
+
+If the correction vanishes on the active labels, `recovery_fixed` retains
+the old coefficients. `inactive_weights` derives this case when the cutoff
+is no greater than the lower label's degree. `recovery_exists_iff` uses
+the inverse correction `-a` to prove equivalence of recovery existence
+when the lower label is active or all active weights vanish.
+
+The raw vector is held fixed in these theorems. Changing the dictionary
+also changes **incoming** regulated products in the full generated-data
+structure. Their new raw limits and power-counting bounds have not been
+transported here. Thus these results discharge the outgoing recovery step
+conditionally, not all of `GeneratedEuclideanData.Compatible`.
+
+### The additional condition across cutoffs
+
+The native [`GeneratedEuclideanData.Compatible.physical_recovery`](https://github.com/alxwest/ym-lean/blob/baecbb5eba5710fb707cfaecfaf7365d8feff5f7/YangMills/GeneratedEuclideanCoefficients.lean#L111-L118)
+uses restrictions of the **same** `E.physical` for every engineering cutoff
+`D`. Meanwhile [`rawOutputDistribution`](https://github.com/alxwest/ym-lean/blob/baecbb5eba5710fb707cfaecfaf7365d8feff5f7/YangMills/QuantumOutputRecovery.lean#L29-L36)
+truncates the raw monomial outputs using `monomialsBelow G D`. That
+projection is specified independently of the corrected dictionary.
+
+[`OutputRecoveryCutoffs.lean`](OutputRecoveryCutoffs.lean) proves that the
+finite-enumeration correction above is exactly the active-set formula,
+independently of enumeration order. For `S ⊆ T`, the two corrections differ
+at the common lower label by
+
+```text
+C'_{T,k}(r+2,l+1) - C'_{S,k}(r+2,l+1)
+  = -a sum_{j in T\S} w_j C_j(r,l).
+```
+
+`correction_coherent_iff` proves that these corrected coefficients agree
+on the overlap **if and only if** this weighted omitted tail, multiplied
+by `a`, vanishes at every coupling and loop order. This criterion concerns
+the explicit inverse correction. It does not prove uniqueness of quantum
+physical coefficients or exclude another choice differing by allowed
+exact terms.
+
+Two further theorems use the actual native definitions.
+`raw_cutoff_difference` is the exact sum over the added raw monomials.
+`recovery_cutoff_difference` proves that two native recovery witnesses obey
+
+```text
+raw_T - raw_S = (lifted_T - lifted_S) + (Q-remainder_T - Q-remainder_S).
+```
+
+Both generated-Q remainders, their genuine primitive witnesses and their
+cutoff-specific supports remain explicit. No physical Ward quotient is
+assumed, and no exact remainder is silently set to zero.
+
+### A decisive finite test, with a limited scope
+
+The two-label test takes independent coordinates `L,H` and changes
+`H` to `H + a delta L`, leaving `L` fixed. The raw vector has low part
+`R_L` and high part `R_H`. A shared pair of coefficients `A,B` must solve
+
+```text
+small cutoff:  A = R_L
+large cutoff:  A + a delta B = R_L,     B = R_H.
+```
+
+`simultaneous_iff` proves that a solution exists exactly when
+`a R_H(r,l)=0` for every `r,l`. With `a=1`, `R_L=0` and the constant unit
+jet `R_H=1`, no shared pair exists: the first discrepancy is at `(2,1)`.
+The two assembly lemmas check these coordinate equations using the same
+finite Cauchy-convolution operation as native output recovery.
+
+Positive controls prove recovery before the change (`a=0`) and full-space
+recovery afterwards with `A=R_L-a delta R_H`, `B=R_H`. The constant high
+jet respects the coefficient graph-order bound. Thus the obstruction is
+simultaneous agreement with the smaller raw projection, not failure to
+invert the dictionary or an impermissible loop degree.
+
+**This is a finite algebraic model with independent directions and no exact
+remainder. It is not a generated Yang–Mills model, does not establish
+inconsistency of ym-lean, and does not show that the October theory has a
+nonzero obstructing channel.** The native basis has classical independence;
+quantum independence and detection of exact terms do not follow from that.
+
+### What is still needed
+
+To extend the completed normalization transport to the full generated
+coefficient family, one must handle the incoming raw limits and establish
+coherence of outgoing recovery. The explicit correction works globally
+if its weighted tails vanish. More generally, the native recovery equation
+allows a different coefficient choice if the discrepancy can be absorbed
+by its permitted generated-Q primitives. Neither property has been proved
+for a concrete same-flow family supplied by the October construction.
+
+Conversely, demonstrating a real obstruction would require an actual
+nonzero generated tail and a permitted test or proved quotient on which
+the relevant exact remainders vanish. The finite test alone supplies
+neither. Changing the target's raw projection or dropping coherence is
+therefore not justified by this audit.
+
+The earlier normalization-existence equivalence remains valid within its
+stated scope. The source's missing all-orders continuum matching also
+remains unresolved, as tracked in [ym-lean #27](https://github.com/alxwest/ym-lean/issues/27).
+The earlier filtered-sector diagnostic below concerns a related projection
+issue in RG stripping; this result checks the separate outgoing recovery
+clause before RG matching. The native existence candidate is unchanged,
+so admission was not rerun and no new verifier rejection is claimed.
+
+Reproduce from the YM-ymg checkout with a fresh output directory:
+
+```sh
+python3 integrations/ym-lean/audit/check_output_recovery.py \
+  --ym-lean ../ym-lean \
+  --out integrations/ym-lean/runs/output-recovery-new
+```
+
+The success status is `SCOPED_OUTPUT_RECOVERY_CHECKED`. The flags for full
+generated-family transport, a same-flow nonzero tail, a generated
+countermodel, native-target inconsistency and existence acceptance remain
+false. The sections below retain the scopes of their earlier audits.
+
 ## Complete scale-normalization transport, 12 November
 
 The quantum-exact primitive gap is now closed. **Given an existing native
