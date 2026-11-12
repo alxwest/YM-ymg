@@ -1,0 +1,6 @@
+'YMYMG.IncomingRecovery.lifted_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingRecovery.recovery_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingRecovery.coherent_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingRecovery.coherent_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingRecovery.coherent_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingRecovery.expand_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]

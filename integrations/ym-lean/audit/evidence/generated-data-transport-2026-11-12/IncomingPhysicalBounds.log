@@ -1,0 +1,8 @@
+'YMYMG.IncomingPhysicalBounds.expand_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.expand_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.scaling_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.scaling_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.scaling_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.clusterInputDegrees_tuple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.incomingPhysical_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingPhysicalBounds.incomingPhysical_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]

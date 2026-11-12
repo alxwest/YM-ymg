@@ -1,0 +1,5 @@
+'YMYMG.GeneratedDataTransport.coordinate_lower_weight_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedDataTransport.changeCoefficientFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedDataTransport.coefficientFamily_exists_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedDataTransport.changeNormalizedData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.GeneratedDataTransport.normalizedData_exists_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

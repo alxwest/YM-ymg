@@ -1,0 +1,7 @@
+'YMYMG.OutputRecovery.weighted_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecovery.weighted_convolve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecovery.weighted_delay_convolve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecovery.assemble_dictionary_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecovery.assemble_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecovery.assemble_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.OutputRecovery.corrected_graph_order' depends on axioms: [propext, Classical.choice, Quot.sound]

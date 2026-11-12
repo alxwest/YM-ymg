@@ -1,0 +1,8 @@
+'YMYMG.IncomingExpansion.coefficientFunctional_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteSlot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteSlot_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteSlot_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteSlot_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteWord_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteWord_native' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.IncomingExpansion.finiteWord_change' depends on axioms: [propext, Classical.choice, Quot.sound]

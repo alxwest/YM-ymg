@@ -1,0 +1,8 @@
+'YMYMG.CouplingTaylor.jet_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.CouplingTaylor.jet_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.CouplingTaylor.jet_mul_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.CouplingTaylor.convolve_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.CouplingTaylor.convolve_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.CouplingTaylor.convolve_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.CouplingTaylor.map_delay' depends on axioms: [propext]
+'YMYMG.CouplingTaylor.delay_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
