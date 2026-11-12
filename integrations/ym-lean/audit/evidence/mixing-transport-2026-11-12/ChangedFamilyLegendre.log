@@ -1,0 +1,6 @@
+'YMYMG.DictionaryRenormalization.changeFamily_lift_directional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMYMG.DictionaryRenormalization.changeFamily_exact_directional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

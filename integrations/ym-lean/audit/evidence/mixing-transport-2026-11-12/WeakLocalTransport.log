@@ -1,0 +1,5 @@
+'YMYMG.ScaleTransport.weakLocal_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleTransport.weakLocal_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleTransport.weakLocal_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleTransport.weakLocal_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.ScaleTransport.weakLocal_congr_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]

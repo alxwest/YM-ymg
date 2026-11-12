@@ -1,0 +1,6 @@
+'YMYMG.TupleJet.allocation_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.TupleJet.bounded_sum_eq_allocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.TupleJet.bounded_pair_eq_allocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.TupleJet.allocation_shift_head' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.TupleJet.delay_if' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMYMG.TupleJet.tupleConvolve_delay' depends on axioms: [propext, Classical.choice, Quot.sound]
