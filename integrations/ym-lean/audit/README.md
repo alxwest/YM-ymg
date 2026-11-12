@@ -1,5 +1,145 @@
 # Checks of extra ym-lean requirements
 
+## Global dictionary and insertion-limit transport, 12 November
+
+The finite correction now extends beyond the individual-observable checks
+below. **The complete native `QuantumObservableLift.Compatible` and
+`QuantumObservableLift.LimitCompatible` structures are preserved.** For an
+elementary strictly degree-lowering correction, the native
+`FullMultiWardRestoration` proposition holds **if and only if** it held
+before the correction. The original action, insertion flows, continuum
+data, anomaly maps and contact Ward equations are the same on both sides.
+
+This closes the earlier global dictionary/weak-insertion-limit gap. It does
+**not** construct an original interacting flow witness, a complete changed
+`LocalWardFlowFamily`, or an accepted existence proof. In particular,
+equivalence of this Ward-restoration fragment is not equivalence of the
+complete ym-lean and YM-ymg existence statements.
+
+There are **42 new audited declarations**, plus 10 reused Ward-shift
+helpers, in the fresh [52-declaration run](evidence/dictionary-renormalization-2026-11-12/result.json).
+The [logs](evidence/dictionary-renormalization-2026-11-12/) and
+[manifest](evidence/dictionary-renormalization-2026-11-12/manifest.json)
+record source hashes and the unchanged native target. Five negative/control
+tests for the axiom-log checker also pass. Only `propext`, `Classical.choice`
+and `Quot.sound` are permitted.
+
+### The global correction and its inverse
+
+For a lower label `q`, a real linear functional `χ` on **all** invariant
+labels, and a real coefficient `a`, define
+
+```text
+O'_p = O_p + hbar g² a χ(p) O_q.
+```
+
+The same formula defines both finite-cutoff and physical coefficients,
+using the entire lower observable at every loop. Its required properties
+are explicit: `χ(1)=0`, classically identical labels have equal weights,
+and a nonzero `χ(p)` requires `dim(q) ≤ dim(p)`.
+
+[`DictionaryRenormalization.lean`](DictionaryRenormalization.lean) proves:
+
+- `compatible`: every field of the actual native compatibility structure,
+  including global linearity, fixed tree normalization, the unit, support,
+  coupling smoothness/grading, coefficient limits and all-loop closure.
+- `relations_preserved`: the original quantum-exact primitives still prove
+  label identities, since related labels receive exactly equal corrections.
+- `direction_for_pair`: given the target's actual `FilteredBasis` and any
+  two labels `P,q` with `dim(q) < dim(P)`, there exists such a functional
+  with `χ(P)=1` and `χ(q)=0`. It uses the basis's actual connection
+  coordinates; `P` need not itself be a basis label. A nonzero higher
+  coordinate follows from intrinsic degree and finite reconstruction.
+- `change_inverse`: if `χ(q)=0`, applying the same construction with `-a`
+  recovers the original dictionary exactly, including finite-cutoff data.
+
+Thus a correction of the previously considered form can be extended
+consistently to all labels under these explicit hypotheses. Applying it
+to the concrete curvature example still requires identifying the actual
+labels and their strict intrinsic-degree relation with that calculation.
+
+### Coupling derivatives and the ordered continuum limits
+
+[`CouplingTaylorShift.lean`](CouplingTaylorShift.lean) proves the exact
+Taylor identity for a smooth function, with no analyticity assumption:
+
+```text
+[g^r](g² f(g)) = 0                  for r < 2,
+              = [g^(r−2)]f(g)      for r ≥ 2.
+```
+
+Together with the one-loop shift, the correction is a delay by `(2,1)` in
+coupling/loop order. Its finite Cauchy convolution is proved directly.
+
+[`DictionaryInsertionTransport.lean`](DictionaryInsertionTransport.lean)
+evaluates the **actual** native `finiteInsertion`, `finiteIntegrand`,
+`ultravioletInsertion` and `physicalInsertion` definitions. For the last
+two, for example,
+
+```text
+J'_p(r,l) = J_p(r,l) + a χ(p) J_q(r−2,l−1),
+```
+
+where the second term is zero when either shifted order is negative.
+The support proof justifies reducing the monomial sum from `p`'s degree
+bound to `q`'s; it is not an assumed equality of unrelated cutoffs.
+Finite-cutoff coupling derivatives use the existing joint smoothness
+condition, and integral addition uses the existing integrability guards.
+
+`limitCompatible` then proves all four native limit fields: joint
+coupling/momentum smoothness, compact-test integrability, the positive-IR
+UV limit and the subsequent nonexceptional IR limit. The argument uses
+finite linearity and the original limits. It does not exchange a limit
+with an uncontrolled infinite sum or derivative.
+
+Finally, `fullWardRestoration` preserves the whole native restoration
+bundle, and `fullWardRestoration_iff` uses the exact inverse to prove its
+logical equivalence before and after the change.
+
+### What remains beyond this theorem
+
+The scalar `a` may be chosen separately at each subtraction scale, so the
+previous Gaussian cancelling coefficient is available pointwise. The
+complete scale-dependent theory has further conditions:
+
+1. `LocalWardFlowFamily` additionally requires invariant physical-state
+   null identities and coupling/loop grading of whole vacuum words. This
+   run does not transport those two fields or construct a full new family.
+2. `GeneratedScaleNormalization` differentiates the dictionary in the
+   subtraction scale and coupling. Its same-flow Callan–Symanzik residual,
+   quantum-exact terms, and transformed mixing must still be checked.
+   Pointwise Ward compatibility does not supply that equation.
+3. The full interacting coefficient/OPE identification, exhaustive physical
+   sectors and nonperturbative all-orders remainder estimates are still
+   missing. The Gaussian coefficient is not promoted to the complete
+   generated physical coefficient by the present structural theorem.
+
+The result therefore establishes that these **dictionary, Ward and weak
+insertion-limit requirements** do not by themselves prohibit the finite
+correction. It does not decide necessity or consistency of the full target.
+
+Reproduce with a fresh output directory:
+
+```sh
+python3 integrations/ym-lean/audit/check_dictionary_renormalization.py \
+  --ym-lean ../ym-lean --out integrations/ym-lean/runs/dictionary-new
+```
+
+The runner rebuilds all local dependency modules into that directory,
+checks the native pin and input hashes before and after compilation, and
+requires the exact declaration/axiom sets. Compiled `.olean` files are
+rebuildable outputs; the published evidence contains their hashes and the
+compiler logs. The success status is
+`SCOPED_DICTIONARY_RENORMALIZATION_CHECKED`, with full existence acceptance
+and generated scale-normalization transport explicitly false.
+
+The submitted existence theorem and verifier are unchanged. The last
+native signature rejection in [ym-lean #27](https://github.com/alxwest/ym-lean/issues/27)
+therefore remains unresolved; no new native existence run is claimed.
+This result also bears on the separate specification review in
+[#26](https://github.com/alxwest/ym-lean/issues/26). No YM-group review of
+these new artifacts is claimed.
+
 ## Renormalized channel follow-up, 12 November
 
 The Gaussian part of the proposed degree-eight to degree-four test is now
