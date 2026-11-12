@@ -57,6 +57,18 @@ allowed exact remainders have not been evaluated on a same-flow family.
 Incoming raw limits, global coefficient coherence and the all-orders
 continuum matching remain open.
 
+The [coherence continuation](audit/README.md) closes the outgoing
+all-cutoff step for corrections between distinct labels of the same
+positive engineering degree, with raw data fixed. It constructs one
+distribution-valued output table and proves the native recovery, locality,
+graph-order and collision-scaling fields. It also proves exactly when a
+generated-Q remainder can repair a proposed coefficient change, and that
+no such remainder exists at cutoffs `D ≤ 2`. The fresh
+[131-declaration audit](audit/evidence/output-coherence-2026-11-12/result.json)
+passes. Full generated-data compatibility still needs the changed incoming
+extractor and raw limits; general downward corrections and the source's
+all-orders continuum comparison remain unresolved.
+
 ## Submit the available October proof on Lean 4.32.0
 
 With the pinned `ym-lean` checkout alongside this repository, run from the

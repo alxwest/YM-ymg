@@ -1,5 +1,166 @@
 # Checks of extra ym-lean requirements
 
+## Exact remainders and coherent outgoing transport, 12 November
+
+**The outgoing cutoff-coherence step is now solved for elementary changes
+between distinct basis labels of the same positive engineering degree,
+with the raw data held fixed.** A single distribution-valued coefficient
+table satisfies the actual native recovery field at every cutoff, as well
+as its locality, graph-order and partial-collision scaling bounds.
+
+For general coefficient changes, the permitted quantum-exact remainder is
+now handled by a necessary-and-sufficient native criterion. At cutoffs
+`D ≤ 2` that remainder is proved to vanish because there are no allowed
+primitives. These results do not construct an original interacting family,
+transport the changed incoming extractor, or prove all-orders continuum
+matching. Native existence admission remains incomplete.
+
+The [131-declaration audit](evidence/output-coherence-2026-11-12/result.json)
+checks **43 new declarations and 88 dependencies**, rebuilding all twelve
+local modules. The [logs](evidence/output-coherence-2026-11-12/) and
+[manifest](evidence/output-coherence-2026-11-12/manifest.json) record source
+and compiled-module hashes. Warnings are errors, only `propext`,
+`Classical.choice` and `Quot.sound` are permitted, and five audit-log controls
+pass. The pinned ym-lean target is unchanged.
+
+### Exactly when a remainder repairs recovery
+
+[`OutputRecoveryExact.lean`](OutputRecoveryExact.lean) keeps the native
+`quantumExactOutputVector`, its finite primitive support, the same `W` and
+`Q`, and the compact nonexceptional external tests. Given an old recovery
+and a proposed coefficient table obeying the required graph bound,
+`recovery_iff_exact` proves:
+
+```text
+the proposed table has native recovery
+  iff
+its outgoing distribution minus the old outgoing distribution
+  is Q(h) for one allowed primitive h, on every allowed test.
+```
+
+If the old primitive is `p`, the constructed new primitive is `p-h`.
+Conversely, any new recovery supplies such an `h` by subtracting its
+primitive from `p`. The support and linearity arguments are checked
+against the actual imported expressions. This is an exact criterion for
+recovery, not an assertion that a required primitive has been found for
+the October theory.
+
+`corrected_recovery_iff_exact` applies the criterion after the preceding
+finite dictionary correction. `recovery_of_equal_outputs` also proves
+that numerical coefficient tables need not be identical when their
+outgoing distributions agree on the allowed tests. Thus the earlier
+weighted-tail condition is necessary for equality of that explicit
+coefficient construction, but need not be necessary for physical recovery.
+
+`no_recovery_of_separating_test` gives a converse test: one allowed test
+that annihilates the image of **every** supported primitive and detects the
+output difference rules out recovery. No arbitrary Q-image is silently
+declared zero.
+
+### Where the remainder definitely cannot help
+
+[`OutputRecoveryLowCutoff.lean`](OutputRecoveryLowCutoff.lean) proves that
+every engineering-dimension-zero native monomial is the constant monomial.
+Its ghost number is zero. For `D ≤ 2`, a permitted primitive would need
+both `dimension + 1 < D` and ghost number `-1`, which is impossible.
+Consequently:
+
+```text
+outputPrimitiveMonomials G D = empty,              D ≤ 2
+rawOutputDistribution W D (quantumExactOutputVector Q D p) = 0.
+```
+
+The second statement holds for arbitrary `Q` and `p`: it does not replace
+the actual Ward map by zero or require a physical quotient theorem.
+`recovery_low_iff` reduces recovery at these cutoffs to equality of the
+actual outgoing distributions. `no_low_recovery` rules out repairing a
+nonzero difference detected by one permitted test. Neither theorem assumes
+injectivity of the quantum field correspondence.
+
+The bound is checked against a positive control. At cutoff three, the
+native single antighost monomial has degree one, ghost number `-1` and odd
+parity, and is an allowed primitive. Its color index is explicit. The
+empty-primitive argument therefore cannot be extended to that cutoff.
+Existence of a primitive does not establish that its Q-image can absorb a
+particular discrepancy.
+
+### A common table that works at every cutoff
+
+[`OutputRecoveryCoherent.lean`](OutputRecoveryCoherent.lean) constructs the
+coordinate direction for two distinct positive-degree basis labels and
+the global inverse coefficient correction
+
+```text
+J'_high = J_high + a delta J_low
+C'_i = C_i - [i=low] a delta C_high.
+```
+
+Here `delta` is the zero-extended `(2,1)` coupling/loop shift. The native
+unit condition and intrinsic filtration of the direction are proved.
+When the two labels have the same engineering degree, every active set
+contains either both labels or neither. The finite-cutoff recovery proofs
+therefore use restrictions of this **one** table. The coefficient inverse
+and dictionary inverse establish
+`coherent_recovery_same_degree_iff` for the complete outgoing all-cutoff
+relation, with the raw vector fixed.
+
+For a strictly downward correction, `sector_recovery` and
+`outside_window_joint` show that the same construction works outside
+
+```text
+dimension(low) < D ≤ dimension(high).
+```
+
+Only that finite interval separates the selected coordinate labels. The
+exact-image criterion above identifies what would repair the discrepancy
+inside the interval; no such same-flow repair is claimed here.
+
+[`GeneratedOutputTransport.lean`](GeneratedOutputTransport.lean) constructs
+`changeOutputs E high low a` as one `GeneratedEuclideanData` record. Its
+physical entries are actual linear distributions, defined independently
+of the test later applied. The following native fields are proved for the
+changed outgoing table, given an original compatible `E`:
+
+- `outputs_recovery`: the literal `physical_recovery` quantifier, using
+  the changed dictionary and the same corrected table for every cutoff.
+- `outputs_graph`: the required lower bound on coupling order at each loop.
+- `outputs_local`: finite-order local distribution continuity.
+- `outputs_scaling`: the original partial-collision power-counting bounds.
+
+Equal output degrees justify the last field. The finite linear combination
+preserves the bounds for every collision cluster; no ultraviolet or
+infrared limit is interchanged. The original raw data are retained.
+
+### Remaining bridge
+
+`changeOutputs` is **not** accompanied by a proof of the full native
+`GeneratedEuclideanData.Compatible` structure. Changing the dictionary
+also changes the incoming products used to generate `raw`. Their extractor
+regularity and actual weak raw limits still need transport. Keeping the
+old raw data is justified here only for the isolated outgoing step.
+General strictly downward changes also retain the finite-interval
+exact-image obligation described above.
+
+No nonzero obstruction has been computed for the actual October same-flow
+theory; no inconsistency of either existence target follows. The earlier
+normalization equivalence remains valid, and the all-orders continuum
+comparison in [ym-lean #27](https://github.com/alxwest/ym-lean/issues/27)
+remains unproved. The submitted existence theorem is unchanged, so no
+new native admission run or rejection is claimed.
+
+Reproduce from the YM-ymg checkout with a fresh directory:
+
+```sh
+python3 integrations/ym-lean/audit/check_output_coherence.py \
+  --ym-lean ../ym-lean \
+  --out integrations/ym-lean/runs/output-coherence-new
+```
+
+The scoped status is `SCOPED_OUTPUT_COHERENCE_CHECKED`. Exact-image,
+low-cutoff and equal-degree outgoing-field flags are true. Full generated
+compatibility, incoming raw-limit transport, general downward recovery,
+a concrete same-flow obstruction and existence acceptance remain false.
+
 ## Output recovery at fixed and varying cutoffs, 12 November
 
 **The dictionary correction now transports the actual native outgoing
