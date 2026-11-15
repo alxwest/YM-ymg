@@ -12,6 +12,7 @@ Each submission has a complete package containing the original source, our check
 |---|---|---|
 | [OpenAI, 28 October 2026](submissions/openai-20261028/README.md) | [Assessment 1 (PDF)](docs/assessment-1.pdf) | [Check scope](submissions/openai-20261028/docs/checks.md) · [dated results](submissions/openai-20261028/evidence/README.md) · [rerun instructions](submissions/openai-20261028/docs/rerun.md) |
 | OpenAI, 4 November 2026 | work in progress | — |
+| Alpöge and Sussman, 15 November 2026 | work in progress | — |
 
 The October package includes the original Lean sources, the combined acceptance theorem, bridges to previous relevant formalizations, and a separate OPE check. Its historical evidence records what was built and which Comparator checks were run, including their limitations.
 
