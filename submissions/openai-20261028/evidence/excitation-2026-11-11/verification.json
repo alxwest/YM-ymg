@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "scope": "Supplementary non-vacuum consequence of the original selected Final and positive trace asymptotic; no mass gap",
+  "original_submission_commit": "55ba9fc36293b3f4d52c6b1f813169a0be76ee98",
+  "date_utc": "2026-11-11T11:43:14.845628+00:00",
+  "device": "ym-runner-2",
+  "lean_version": "Lean (version 4.32.0, aarch64-unknown-linux-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "reproduce": "python3 scripts/verify_excitation.py --threads 3",
+  "supplementary_objects": "fresh directory",
+  "source_dependencies": "incremental build of original pinned imports",
+  "global_existence_rebuilt": false,
+  "comparator_run": false,
+  "analytic_hypotheses": [
+    "F : YM.Spec.Final C p S",
+    "0 < A",
+    "YM.TraceExtension.EuclideanAsymptotic F A"
+  ],
+  "independent_nonzero_trace_hypothesis": false,
+  "input_sha256": {
+    "checks/ExcitationFromPublic.lean": "6d3a5a918f0f86be826d4b6c2396a550ba589fed1b446ef90247e51cd054bf4c",
+    "checks/ExcitationFromConstructed.lean": "239e40190585cedf24ad41dad3b9a603c61938afde42c8c9b06135a08d560a2d",
+    "checks/ExcitationFromPublicAudit.lean": "235158616ff1d080e6ea17f337158629624f3637dd821fcfe17f579b7ef112ca",
+    "checks/ExcitationFromConstructedAudit.lean": "6dc47c58cd371094cc1b19a6f4de60f39df6b87991e7ae197706cb79e35f08b1"
+  },
+  "runner_sha256": "3d8ad696ae9ad1e2b64380bb2863f7583ac420f32951d9c7467ac68710e06c25",
+  "audit_axioms": {
+    "YangMills.WightmanTheory.hasFieldExcitation_of_centered_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YangMills.Hierarchy.nonvacuum_of_reconstructed_nonzero_trace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YangMills.selected_nonvacuum_of_positive_trace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "YangMills.selected_constructed_word_outside_vacuum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "original_package_integrity": {
+    "submission_files": 9508,
+    "review_modules": 43,
+    "submission_manifest_sha256": "7b4aefb2b7554495342c87ae9123e3e4137d02f0c03a08ed3eefe5988f4d9329",
+    "passed": true
+  },
+  "command_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "limits": "Does not instantiate ym-lean or reprove the original global existence/positive-asymptotic theorem; records the checked consequence for its actual data."
+}

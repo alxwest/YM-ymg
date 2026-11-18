@@ -1,0 +1,6 @@
+'YangMills.WightmanTheory.hasFieldExcitation_of_centered_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMills.Hierarchy.nonvacuum_of_reconstructed_nonzero_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

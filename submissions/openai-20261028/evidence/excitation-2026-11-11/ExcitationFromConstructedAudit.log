@@ -1,0 +1,9 @@
+'YangMills.selected_nonvacuum_of_positive_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMills.selected_constructed_word_outside_vacuum' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.selected_nonvacuum_of_positive_trace {G : YM.Gauge} {C : YM.Family G} {p : YM.Extraction.Order}
+  {S : YM.Table C.book} (F : YM.Spec.Final C p S) {A : ℝ} (hA : 0 < A)
+  (hshort : YM.TraceExtension.EuclideanAsymptotic F A) : (YangMills.view F.action).HasFieldExcitation
+YangMills.selected_constructed_word_outside_vacuum {G : YM.Gauge} {C : YM.Family G} {p : YM.Extraction.Order}
+  {S : YM.Table C.book} (F : YM.Spec.Final C p S) {A : ℝ} (hA : 0 < A)
+  (hshort : YM.TraceExtension.EuclideanAsymptotic F A) :
+  ∃ word, F.action.operators.vector word ∉ ℂ ∙ F.action.operators.vacuum
