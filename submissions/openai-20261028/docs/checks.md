@@ -36,10 +36,14 @@ The scalar correlation functions are paired with zero-diagonal Schwartz tests. T
 
 These checks do not determine explicit Yang–Mills perturbative coefficient values or prove uniqueness under all choices of operator normalization and OPE prescription. The earlier combined Comparator run predates this adapter and therefore did not check it. Its own evidence is listed separately.
 
+## Compact-mass Wick profiles
+
+The 19 November 2026 supplement extends the October centered stress-trace test to finite sums of products of mass-shell kernels averaged over finite measures on compact positive mass intervals. Dilation of the mass-one kernel gives a uniform remainder over each interval. Integration preserves the expansion in powers of distance and logarithms, so the required leading behavior `r⁻⁸ / log²(1/r)` excludes these Wick profiles. [Lean proof](../checks/CompactMassTrace.lean)
+
+The audit checks normalization and absence of atoms for the pushforward of normalized Lebesgue mass-squared measure on `[1, 4]`. It applies the theorem to the scalar Wick-square two-point function from the countermodel family in issue #5. General composite assignments and unbounded mass distributions remain open. [Lean audit](../checks/CompactMassTraceAudit.lean) · [ym-lean issue #5](https://github.com/alxwest/ym-lean/issues/5)
+
 ## Admissions, axioms and negative controls
 
-The review runner freshly compiles all 43 review modules and audits 13 declarations: eight combined-check declarations and five OPE declarations. It requires zero review warnings and permits only `propext`, `Classical.choice` and `Quot.sound` in the reported dependencies.
+The review runner freshly compiles all 45 review modules and audits 18 declarations across the combined check, the OPE check, and the compact-mass trace check. It requires zero review warnings and permits only `propext`, `Classical.choice` and `Quot.sound` in the reported dependencies.
 
 Comparator has separate reference and solution modules. The reference proofs deliberately use `sorry`; they state what the solutions must prove. The solution theorem must not depend on `sorryAx` or any other unapproved axiom. Four small control projects check ordinary acceptance and rejection of a changed proposition, an added axiom and a changed definition. The deliberate bad examples are confined to `verification/controls/`.
-
-Exploratory tests beyond the October submitted claims are outside this initial package. The November submission and its additional perturbative matching claims are also outside its scope.

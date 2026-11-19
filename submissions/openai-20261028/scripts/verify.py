@@ -19,6 +19,10 @@ import time
 
 ROOT = Path(__file__).resolve().parent.parent
 PERMITTED = {"propext", "Classical.choice", "Quot.sound"}
+COMPACT_MASS_ENDPOINTS = {"YMReview.CompactMassTrace." + name for name in [
+    "AveragedMode.ofShell_eval", "excludes", "uniformMassSquared_probability",
+    "uniformMassSquared_singleton", "excludes_uniformMassSquaredWickSquare",
+]}
 
 
 def now():
@@ -115,18 +119,20 @@ def prepare(project, source):
 
 
 
-def review_audit(logs):
-    """Audit all module diagnostics, requiring each of the 13 endpoints exactly once."""
+def review_audit(logs, *, compact_mass_only):
+    """Audit all module diagnostics, requiring each selected endpoint exactly once."""
     reports = []
     for module, log in logs.items():
         require(not re.search(r"\b(?:error|warning):", log), "Review warning/error in " + module)
         reports += re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]", log, re.S)
-    expected = {"YMReview.Acceptance." + n for n in ["finite_law_on_family", "lattice_and_scale", "phase_and_os",
-        "translation_ward", "operator_content", "leading_trace", "accepted_of_source", "combined_acceptance"]}
-    expected |= {"YMReview.OPE." + n for n in ["from_source", "phase_difference", "constructed", "channel_assembly", "single_field"]}
+    expected = COMPACT_MASS_ENDPOINTS.copy()
+    if not compact_mass_only:
+        expected |= {"YMReview.Acceptance." + n for n in ["finite_law_on_family", "lattice_and_scale", "phase_and_os",
+            "translation_ward", "operator_content", "leading_trace", "accepted_of_source", "combined_acceptance"]}
+        expected |= {"YMReview.OPE." + n for n in ["from_source", "phase_difference", "constructed", "channel_assembly", "single_field"]}
     endpoints = [(n, a) for n, a in reports if n in expected]
     require({n for n, _ in endpoints} == expected and len(endpoints) == len(expected),
-            "Axiom audit did not cover exactly the 13 expected endpoints")
+            f"Axiom audit did not cover exactly the {len(expected)} expected endpoints")
     for name, axioms in reports:
         require(set(re.findall(r"[\w.]+", axioms)) <= PERMITTED, "Unexpected axioms: " + name + " " + axioms)
     return dict(modules=len(logs), warnings=0,
@@ -136,7 +142,10 @@ def review_audit(logs):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("stage", choices=["integrity", "build", "review", "tools", "prepare", "controls", "comparator", "all"])
+    parser.add_argument("stage", choices=[
+        "integrity", "build", "review", "compact-mass-trace", "tools", "prepare",
+        "controls", "comparator", "all",
+    ])
     parser.add_argument("--run-dir", type=Path, help="New output directory; must not already exist")
     parser.add_argument("--source", type=Path, default=ROOT / "submission", help="Exact original source, optionally already built")
     parser.add_argument("--tools-dir", type=Path, default=ROOT / ".tools")
@@ -191,7 +200,8 @@ def main():
             record["dependencies"] = dependency_pins(source, env, args.lake)
             log = run("submission-build", [args.lake, "build", "WilsonReference", "WilsonConstruction"], source)
             record["submission_warning_lines"] = [s for s in log.splitlines() if "warning:" in s]
-        if args.stage in {"review", "all"}:
+        if args.stage in {"review", "compact-mass-trace", "all"}:
+            compact_mass_only = args.stage == "compact-mass-trace"
             record["dependencies"] = dependency_pins(source, env, args.lake)
             build = out / "review-objects"
             build.mkdir()
@@ -211,9 +221,11 @@ def main():
                 visiting.remove(name)
                 ordered.append(name)
 
-            visit("AxiomAudit")
-            visit("OPECheck")
-            require(set(ordered) == set(local), "Review bundle contains unbuilt modules")
+            visit("CompactMassTraceAudit")
+            if not compact_mass_only:
+                visit("AxiomAudit")
+                visit("OPECheck")
+                require(set(ordered) == set(local), "Review bundle contains unbuilt modules")
             logs = {}
             for name in ordered:
                 target = build / (name.replace(".", "/") + ".olean")
@@ -221,7 +233,8 @@ def main():
                 log = run("review-" + name, [lean, "--root=" + str(ROOT / "checks"), "-o", str(target), str(local[name])],
                           source, {"LEAN_PATH": str(build) + os.pathsep + base})
                 logs[name] = log
-            record["review"] = dict(review_audit(logs), fresh_review_objects=True)
+            record["review"] = dict(review_audit(logs, compact_mass_only=compact_mass_only),
+                                    fresh_review_objects=True)
         if args.stage in {"tools", "all"}:
             toolroot.mkdir(parents=True, exist_ok=True)
             for pin in json.loads((ROOT / "verification/tool-pins.json").read_text())["tools"]:
