@@ -23,7 +23,7 @@ The full command performs these steps in order:
 
 1. Check every original submitted file, the imported review modules and the packaged verification inputs against their hashes. Compare the four independent OS declarations with the bundled upstream snapshots.
 2. Download the pinned dependency cache, check dependency Git revisions, and run `lake build WilsonReference WilsonConstruction` in `submission/`.
-3. Compile the 43 review modules into a fresh object directory, require zero warnings, and audit the 13 expected declarations for unapproved axioms.
+3. Compile the 45 review modules into a fresh object directory, require zero warnings, and audit the 18 expected declarations for unapproved axioms.
 4. Fetch and build Comparator and `lean4export` at the commits in `verification/tool-pins.json`.
 5. Run the four Comparator controls. A rejected negative control is a success only when the expected diagnostic is also present.
 6. Run Comparator on `YangMills.jointExistence`, `YMReview.Acceptance.combined_acceptance`, and `YMReview.OPE.constructed`, each against its own reference statement.
@@ -38,6 +38,7 @@ These commands create separate evidence directories. They are useful when resumi
 ```sh
 python3 scripts/verify.py build
 python3 scripts/verify.py review
+python3 scripts/verify.py compact-mass-trace
 python3 scripts/verify.py tools
 python3 scripts/verify.py controls
 python3 scripts/verify.py comparator --target submission
@@ -46,6 +47,13 @@ python3 scripts/verify.py comparator --target ope
 ```
 
 `review` needs an already built submission. It always builds fresh review objects. `comparator` needs built tools and can reuse the submission build; it creates a fresh review project and runs the controls before the requested endpoint. `prepare` only creates that review project and does not claim a compilation or Comparator result.
+
+To run just the compact-mass trace check, build its submission dependencies and run the focused stage. It checks the package integrity, compiles the two added review modules, and audits their five declarations.
+
+```sh
+(cd submission && lake build +ChallengeSpec +YM.TraceExtension.Wick.Log +YM.TraceExtension.Wick.PolynomialField)
+python3 scripts/verify.py compact-mass-trace
+```
 
 Optional arguments are `--lake /path/to/lake`, `--tools-dir /path/to/pinned/tools`, `--source /path/to/exact/submission`, and `--run-dir /path/to/new/output`. The runner uses `runs/cache/mathlib` for downloaded Mathlib cache files by default; set `MATHLIB_CACHE_DIR` to reuse another writable cache directory. The source override must match every original input, including its reports. Tool overrides must have the pinned commits and no tracked modifications. Generated Lake manifests may contain absolute paths for that run; no such machine-specific path is required in the committed configuration.
 
